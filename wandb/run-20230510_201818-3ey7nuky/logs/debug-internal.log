@@ -1,0 +1,57 @@
+2023-05-10 20:18:18,815 INFO    StreamThr :427567 [internal.py:wandb_internal():88] W&B internal server running at pid: 427567, started at: 2023-05-10 20:18:18.814626
+2023-05-10 20:18:18,817 DEBUG   HandlerThread:427567 [handler.py:handle_request():138] handle_request: status
+2023-05-10 20:18:18,819 DEBUG   SenderThread:427567 [sender.py:send_request():317] send_request: status
+2023-05-10 20:18:18,821 INFO    WriterThread:427567 [datastore.py:open_for_write():75] open: /home/gwy/BaseSAT/BaseGAT/wandb/run-20230510_201818-3ey7nuky/run-3ey7nuky.wandb
+2023-05-10 20:18:18,821 DEBUG   SenderThread:427567 [sender.py:send():303] send: header
+2023-05-10 20:18:18,821 DEBUG   SenderThread:427567 [sender.py:send():303] send: run
+2023-05-10 20:18:19,764 DEBUG   HandlerThread:427567 [handler.py:handle_request():138] handle_request: check_version
+2023-05-10 20:18:19,769 INFO    SenderThread:427567 [dir_watcher.py:__init__():216] watching files in: /home/gwy/BaseSAT/BaseGAT/wandb/run-20230510_201818-3ey7nuky/files
+2023-05-10 20:18:19,769 INFO    SenderThread:427567 [sender.py:_start_run_threads():928] run started: 3ey7nuky with start time 1683721098.808553
+2023-05-10 20:18:19,769 DEBUG   SenderThread:427567 [sender.py:send():303] send: summary
+2023-05-10 20:18:19,770 INFO    SenderThread:427567 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-05-10 20:18:19,770 DEBUG   SenderThread:427567 [sender.py:send_request():317] send_request: check_version
+2023-05-10 20:18:20,330 DEBUG   HandlerThread:427567 [handler.py:handle_request():138] handle_request: run_start
+2023-05-10 20:18:20,350 DEBUG   HandlerThread:427567 [meta.py:__init__():34] meta init
+2023-05-10 20:18:20,350 DEBUG   HandlerThread:427567 [meta.py:__init__():49] meta init done
+2023-05-10 20:18:20,350 DEBUG   HandlerThread:427567 [meta.py:probe():215] probe
+2023-05-10 20:18:20,391 DEBUG   HandlerThread:427567 [git.py:repo():40] git repository is invalid
+2023-05-10 20:18:20,391 DEBUG   HandlerThread:427567 [meta.py:_save_pip():53] save pip
+2023-05-10 20:18:20,391 DEBUG   HandlerThread:427567 [meta.py:_save_pip():67] save pip done
+2023-05-10 20:18:20,391 DEBUG   HandlerThread:427567 [meta.py:_save_conda():74] save conda
+2023-05-10 20:18:20,772 INFO    Thread-13 :427567 [dir_watcher.py:_on_file_created():275] file/dir created: /home/gwy/BaseSAT/BaseGAT/wandb/run-20230510_201818-3ey7nuky/files/conda-environment.yaml
+2023-05-10 20:18:20,773 INFO    Thread-13 :427567 [dir_watcher.py:_on_file_created():275] file/dir created: /home/gwy/BaseSAT/BaseGAT/wandb/run-20230510_201818-3ey7nuky/files/requirements.txt
+2023-05-10 20:18:20,773 INFO    Thread-13 :427567 [dir_watcher.py:_on_file_created():275] file/dir created: /home/gwy/BaseSAT/BaseGAT/wandb/run-20230510_201818-3ey7nuky/files/wandb-summary.json
+2023-05-10 20:18:24,292 DEBUG   HandlerThread:427567 [meta.py:_save_conda():84] save conda done
+2023-05-10 20:18:24,292 DEBUG   HandlerThread:427567 [meta.py:probe():253] probe done
+2023-05-10 20:18:24,356 DEBUG   SenderThread:427567 [sender.py:send():303] send: files
+2023-05-10 20:18:24,357 INFO    SenderThread:427567 [sender.py:_save_file():1171] saving file wandb-metadata.json with policy now
+2023-05-10 20:18:24,358 DEBUG   HandlerThread:427567 [handler.py:handle_request():138] handle_request: stop_status
+2023-05-10 20:18:24,364 DEBUG   SenderThread:427567 [sender.py:send_request():317] send_request: stop_status
+2023-05-10 20:18:24,774 INFO    Thread-13 :427567 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/gwy/BaseSAT/BaseGAT/wandb/run-20230510_201818-3ey7nuky/files/conda-environment.yaml
+2023-05-10 20:18:24,774 INFO    Thread-13 :427567 [dir_watcher.py:_on_file_created():275] file/dir created: /home/gwy/BaseSAT/BaseGAT/wandb/run-20230510_201818-3ey7nuky/files/wandb-metadata.json
+2023-05-10 20:18:24,817 DEBUG   SenderThread:427567 [sender.py:send():303] send: telemetry
+2023-05-10 20:18:24,818 DEBUG   SenderThread:427567 [sender.py:send():303] send: config
+2023-05-10 20:18:25,473 INFO    Thread-17 :427567 [upload_job.py:push():143] Uploaded file /tmp/tmp6mnyxkn6wandb/xk3mogmb-wandb-metadata.json
+2023-05-10 20:18:25,774 INFO    Thread-13 :427567 [dir_watcher.py:_on_file_created():275] file/dir created: /home/gwy/BaseSAT/BaseGAT/wandb/run-20230510_201818-3ey7nuky/files/output.log
+2023-05-10 20:18:27,775 INFO    Thread-13 :427567 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/gwy/BaseSAT/BaseGAT/wandb/run-20230510_201818-3ey7nuky/files/output.log
+2023-05-10 20:18:29,775 INFO    Thread-13 :427567 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/gwy/BaseSAT/BaseGAT/wandb/run-20230510_201818-3ey7nuky/files/output.log
+2023-05-10 20:18:31,776 INFO    Thread-13 :427567 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/gwy/BaseSAT/BaseGAT/wandb/run-20230510_201818-3ey7nuky/files/output.log
+2023-05-10 20:18:33,777 INFO    Thread-13 :427567 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/gwy/BaseSAT/BaseGAT/wandb/run-20230510_201818-3ey7nuky/files/output.log
+2023-05-10 20:18:35,778 INFO    Thread-13 :427567 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/gwy/BaseSAT/BaseGAT/wandb/run-20230510_201818-3ey7nuky/files/output.log
+2023-05-10 20:18:37,778 INFO    Thread-13 :427567 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/gwy/BaseSAT/BaseGAT/wandb/run-20230510_201818-3ey7nuky/files/output.log
+2023-05-10 20:18:39,779 INFO    Thread-13 :427567 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/gwy/BaseSAT/BaseGAT/wandb/run-20230510_201818-3ey7nuky/files/output.log
+2023-05-10 20:18:39,842 DEBUG   HandlerThread:427567 [handler.py:handle_request():138] handle_request: stop_status
+2023-05-10 20:18:39,842 DEBUG   SenderThread:427567 [sender.py:send_request():317] send_request: stop_status
+2023-05-10 20:18:41,780 INFO    Thread-13 :427567 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/gwy/BaseSAT/BaseGAT/wandb/run-20230510_201818-3ey7nuky/files/output.log
+2023-05-10 20:18:43,781 INFO    Thread-13 :427567 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/gwy/BaseSAT/BaseGAT/wandb/run-20230510_201818-3ey7nuky/files/output.log
+2023-05-10 20:18:45,781 INFO    Thread-13 :427567 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/gwy/BaseSAT/BaseGAT/wandb/run-20230510_201818-3ey7nuky/files/output.log
+2023-05-10 20:18:47,782 INFO    Thread-13 :427567 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/gwy/BaseSAT/BaseGAT/wandb/run-20230510_201818-3ey7nuky/files/output.log
+2023-05-10 20:18:49,783 INFO    Thread-13 :427567 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/gwy/BaseSAT/BaseGAT/wandb/run-20230510_201818-3ey7nuky/files/output.log
+2023-05-10 20:18:49,783 INFO    Thread-13 :427567 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/gwy/BaseSAT/BaseGAT/wandb/run-20230510_201818-3ey7nuky/files/config.yaml
+2023-05-10 20:18:50,706 DEBUG   SenderThread:427567 [sender.py:send():303] send: stats
+2023-05-10 20:18:51,784 INFO    Thread-13 :427567 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/gwy/BaseSAT/BaseGAT/wandb/run-20230510_201818-3ey7nuky/files/output.log
+2023-05-10 20:18:53,785 INFO    Thread-13 :427567 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/gwy/BaseSAT/BaseGAT/wandb/run-20230510_201818-3ey7nuky/files/output.log
+2023-05-10 20:18:55,314 DEBUG   HandlerThread:427567 [handler.py:handle_request():138] handle_request: stop_status
+2023-05-10 20:18:55,315 DEBUG   SenderThread:427567 [sender.py:send_request():317] send_request: stop_status
+2023-05-10 20:18:57,337 INFO    MainThread:427567 [internal.py:handle_exit():78] Internal process exited
+2023-05-10 20:18:57,338 WARNING MsgRouterThr:427567 [router.py:message_loop():74] EOFError seen in message_loop

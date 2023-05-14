@@ -1,0 +1,45 @@
+loadding data
+reading category information
+
+
+
+
+
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 136710/136710 [00:13<00:00, 9938.84it/s]
+reading train data
+
+
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 2571752/2571752 [00:05<00:00, 460449.99it/s]
+reading valid data
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 845781/845781 [00:01<00:00, 485937.34it/s]
+reading test data
+get weight for each sample
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 136710/136710 [00:00<00:00, 2683429.66it/s]
+train loss = 0.3392277657985687
+loss: 0.37952420115470886, Performance is better... saving the model
+train loss = 0.3034776449203491
+loss: 0.3537481129169464, Performance is better... saving the model
+train loss = 0.27119117975234985
+Starting new HTTPS connection (1): o151352.ingest.sentry.io:443
+https://o151352.ingest.sentry.io:443 "POST /api/5288891/envelope/ HTTP/1.1" 200 2
+loss: 0.3330322206020355, Performance is better... saving the model
+train loss = 0.24722811579704285
+loss: 0.31949877738952637, Performance is better... saving the model
+train loss = 0.23000670969486237
+loss: 0.3061616122722626, Performance is better... saving the model
+train loss = 0.21589946746826172
+loss: 0.2955533564090729, Performance is better... saving the model
+train loss = 0.20385587215423584
+loss: 0.2868603467941284, Performance is better... saving the model
+train loss = 0.19377672672271729
+loss: 0.2762514352798462, Performance is better... saving the model
+train loss = 0.1852608025074005
+loss: 0.26982271671295166, Performance is better... saving the model
+train loss = 0.1774144172668457
+  0%|                                                                                                                                        | 0/41 [00:00<?, ?it/s]
+Traceback (most recent call last):
+  File "main.py", line 82, in <module>
+    res,ndcg5_std,ndcg10_std,mrr_std,auc_std=tester.test()
+  File "/home/gwy/BaseSAT/BaseGAT/utils/tester.py", line 115, in test
+    item=int(torch.randint(item_num,size=(1,1)))
+NameError: name 'item_num' is not defined

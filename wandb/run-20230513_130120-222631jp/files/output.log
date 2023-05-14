@@ -1,0 +1,45 @@
+loadding data
+reading category information
+
+
+
+
+
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 136710/136710 [00:13<00:00, 10160.99it/s]
+reading train data
+
+
+
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 2571752/2571752 [00:05<00:00, 476640.88it/s]
+reading valid data
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 845781/845781 [00:01<00:00, 482053.31it/s]
+reading test data
+get weight for each sample
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 136710/136710 [00:00<00:00, 2598936.23it/s]
+model already setting
+tensor(0.0616, device='cuda:0', grad_fn=<AddBackward0>)
+tensor(0.0609, device='cuda:0', grad_fn=<AddBackward0>)
+tensor(0.0610, device='cuda:0', grad_fn=<AddBackward0>)
+Starting new HTTPS connection (1): o151352.ingest.sentry.io:443
+https://o151352.ingest.sentry.io:443 "POST /api/5288891/envelope/ HTTP/1.1" 200 2
+train loss = 0.24724596738815308
+tensor(0.0611, device='cuda:0', grad_fn=<AddBackward0>)
+loss: 0.3251078724861145, Performance is better... saving the model
+tensor(0.1380, device='cuda:0', grad_fn=<AddBackward0>)
+tensor(0.1395, device='cuda:0', grad_fn=<AddBackward0>)
+tensor(0.1388, device='cuda:0', grad_fn=<AddBackward0>)
+tensor(0.1370, device='cuda:0', grad_fn=<AddBackward0>)
+Traceback (most recent call last):
+  File "main.py", line 54, in <module>
+    score_pos, score_neg,loss_moe = model(graph_pos, graph_neg)
+  File "/home/gwy/anaconda3/envs/PyTorch/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/gwy/BaseSAT/BaseGAT/models/models.py", line 69, in forward
+    h,loss = self.get_embedding()
+  File "/home/gwy/BaseSAT/BaseGAT/models/models.py", line 227, in get_embedding
+    expert_outputs.append(self.attention_experts[i](expert_inputs_user[i]))
+  File "/home/gwy/anaconda3/envs/PyTorch/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/gwy/BaseSAT/BaseGAT/models/models.py", line 254, in forward
+    muti_int = torch.sum(muti_int * weight, dim = 1)#65000 32 32 32 1
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 2.00 MiB (GPU 0; 9.78 GiB total capacity; 8.08 GiB already allocated; 2.31 MiB free; 8.50 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF

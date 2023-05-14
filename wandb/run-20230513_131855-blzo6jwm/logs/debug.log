@@ -1,0 +1,27 @@
+2023-05-13 13:18:55,801 INFO    MainThread:42824 [wandb_setup.py:_flush():68] Configure stats pid to 42824
+2023-05-13 13:18:55,801 INFO    MainThread:42824 [wandb_setup.py:_flush():68] Loading settings from /home/gwy/.config/wandb/settings
+2023-05-13 13:18:55,801 INFO    MainThread:42824 [wandb_setup.py:_flush():68] Loading settings from /home/gwy/BaseSAT/BaseGAT/wandb/settings
+2023-05-13 13:18:55,801 INFO    MainThread:42824 [wandb_setup.py:_flush():68] Loading settings from environment variables: {'_require_service': 'True'}
+2023-05-13 13:18:55,801 INFO    MainThread:42824 [wandb_setup.py:_flush():68] Inferring run settings from compute environment: {'program_relpath': 'main.py', 'program': 'main.py'}
+2023-05-13 13:18:55,802 INFO    MainThread:42824 [wandb_init.py:_log_setup():476] Logging user logs to /home/gwy/BaseSAT/BaseGAT/wandb/run-20230513_131855-blzo6jwm/logs/debug.log
+2023-05-13 13:18:55,802 INFO    MainThread:42824 [wandb_init.py:_log_setup():477] Logging internal logs to /home/gwy/BaseSAT/BaseGAT/wandb/run-20230513_131855-blzo6jwm/logs/debug-internal.log
+2023-05-13 13:18:55,802 INFO    MainThread:42824 [wandb_init.py:init():516] calling init triggers
+2023-05-13 13:18:55,802 INFO    MainThread:42824 [wandb_init.py:init():519] wandb.init called with sweep_config: {}
+config: {}
+2023-05-13 13:18:55,803 INFO    MainThread:42824 [wandb_init.py:init():569] starting backend
+2023-05-13 13:18:55,803 INFO    MainThread:42824 [wandb_init.py:init():573] setting up manager
+2023-05-13 13:18:55,806 INFO    MainThread:42824 [backend.py:_multiprocessing_setup():102] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2023-05-13 13:18:55,808 INFO    MainThread:42824 [wandb_init.py:init():580] backend started and connected
+2023-05-13 13:18:55,810 INFO    MainThread:42824 [wandb_init.py:init():658] updated telemetry
+2023-05-13 13:18:55,811 INFO    MainThread:42824 [wandb_init.py:init():693] communicating run to backend with 60 second timeout
+2023-05-13 13:18:56,724 INFO    MainThread:42824 [wandb_run.py:_on_init():2000] communicating current version
+2023-05-13 13:18:57,295 INFO    MainThread:42824 [wandb_run.py:_on_init():2004] got version response upgrade_message: "wandb version 0.15.2 is available!  To upgrade, please run:\n $ pip install wandb --upgrade"
+
+2023-05-13 13:18:57,295 INFO    MainThread:42824 [wandb_init.py:init():728] starting run threads in backend
+2023-05-13 13:19:00,902 INFO    MainThread:42824 [wandb_run.py:_console_start():1980] atexit reg
+2023-05-13 13:19:00,903 INFO    MainThread:42824 [wandb_run.py:_redirect():1838] redirect: SettingsConsole.WRAP_RAW
+2023-05-13 13:19:00,903 INFO    MainThread:42824 [wandb_run.py:_redirect():1903] Wrapping output streams.
+2023-05-13 13:19:00,903 INFO    MainThread:42824 [wandb_run.py:_redirect():1925] Redirects installed.
+2023-05-13 13:19:00,904 INFO    MainThread:42824 [wandb_init.py:init():765] run started, returning control to user process
+2023-05-13 13:19:00,908 INFO    MainThread:42824 [wandb_run.py:_config_callback():1160] config_cb None None {'dataset': 'TaoBao', 'seed': 2022, 'embed_size': 16, 'lr': 0.05, 'weight_decay': 8e-08, 'model': 'moe', 'epoch': 1000, 'patience': 10, 'batch_size': 2048, 'layers': 1, 'gpu': 0, 'k_list': [100, 300], 'k': 20, 'neg_number': 4, 'metrics': ['recall', 'hit_ratio', 'coverage'], 'sigma': 1.0, 'gamma': 2.0, 'category_balance': True, 'beta_class': 0.9, 'context_code_dim': 16, 'num_context_codes': 16, 'n_experts': 5, 'wandb_enable': True, 'hidden_size': 32, 'k_experts': 2, 'moe': True}
+2023-05-13 13:19:33,495 WARNING MsgRouterThr:42824 [router.py:message_loop():77] message_loop has been closed

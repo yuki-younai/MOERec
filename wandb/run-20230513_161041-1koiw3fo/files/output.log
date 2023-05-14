@@ -1,0 +1,33 @@
+loadding data
+reading category information
+
+
+
+
+
+
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 136710/136710 [00:14<00:00, 9664.46it/s]
+reading train data
+
+
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 2571752/2571752 [00:05<00:00, 463697.86it/s]
+reading valid data
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 845781/845781 [00:01<00:00, 464157.34it/s]
+reading test data
+get weight for each sample
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 136710/136710 [00:00<00:00, 2382103.58it/s]
+model already setting
+Traceback (most recent call last):
+  File "main.py", line 54, in <module>
+    score_pos, score_neg,loss_moe = model(graph_pos, graph_neg)
+  File "/home/gwy/anaconda3/envs/PyTorch/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/gwy/BaseSAT/BaseGAT/models/models.py", line 73, in forward
+    score_pos = self.predictor(graph_pos, h, 'rate')
+  File "/home/gwy/anaconda3/envs/PyTorch/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/gwy/BaseSAT/BaseGAT/models/models.py", line 20, in forward
+    graph.ndata['h'] = h
+  File "/home/gwy/anaconda3/envs/PyTorch/lib/python3.8/site-packages/dgl/view.py", line 86, in __setitem__
+    assert isinstance(val, dict), (
+AssertionError: Current HeteroNodeDataView has multiple node types, please passing the node type and the corresponding data through a dict.

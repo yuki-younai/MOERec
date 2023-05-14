@@ -1,0 +1,239 @@
+loadding data
+reading category information
+
+
+
+
+
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 136710/136710 [00:13<00:00, 9804.35it/s]
+reading train data
+
+
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 2571752/2571752 [00:05<00:00, 485140.58it/s]
+reading valid data
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 845781/845781 [00:01<00:00, 472038.04it/s]
+reading test data
+get weight for each sample
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 136710/136710 [00:00<00:00, 2433913.72it/s]
+train loss = 1.2836737632751465
+loss: 1.4166152477264404, Performance is better... saving the model
+train loss = 1.155205249786377
+loss: 1.330509901046753, Performance is better... saving the model
+train loss = 1.0381972789764404
+Starting new HTTPS connection (1): o151352.ingest.sentry.io:443
+https://o151352.ingest.sentry.io:443 "POST /api/5288891/envelope/ HTTP/1.1" 200 2
+loss: 1.2564759254455566, Performance is better... saving the model
+train loss = 0.9470488429069519
+loss: 1.2087292671203613, Performance is better... saving the model
+train loss = 0.882951021194458
+loss: 1.164375901222229, Performance is better... saving the model
+train loss = 0.8294819593429565
+loss: 1.1270805597305298, Performance is better... saving the model
+train loss = 0.7835390567779541
+loss: 1.097325086593628, Performance is better... saving the model
+train loss = 0.7442805171012878
+loss: 1.0625072717666626, Performance is better... saving the model
+train loss = 0.710846483707428
+loss: 1.0390191078186035, Performance is better... saving the model
+train loss = 0.6796851754188538
+loss: 1.0140565633773804, Performance is better... saving the model
+train loss = 0.6531354188919067
+loss: 0.9873027801513672, Performance is better... saving the model
+train loss = 0.6293264031410217
+loss: 0.9663257002830505, Performance is better... saving the model
+train loss = 0.6064419150352478
+loss: 0.9456061720848083, Performance is better... saving the model
+train loss = 0.5860642194747925
+loss: 0.9280602335929871, Performance is better... saving the model
+train loss = 0.567680835723877
+loss: 0.9110086560249329, Performance is better... saving the model
+train loss = 0.5502248406410217
+loss: 0.8973280191421509, Performance is better... saving the model
+train loss = 0.5342242121696472
+loss: 0.885995090007782, Performance is better... saving the model
+train loss = 0.5196254253387451
+loss: 0.872417151927948, Performance is better... saving the model
+train loss = 0.5056313872337341
+loss: 0.862434446811676, Performance is better... saving the model
+train loss = 0.49323275685310364
+loss: 0.85142982006073, Performance is better... saving the model
+train loss = 0.4815104007720947
+loss: 0.8456935882568359, Performance is better... saving the model
+train loss = 0.47061043977737427
+loss: 0.8379309177398682, Performance is better... saving the model
+train loss = 0.46041056513786316
+loss: 0.835132360458374, Performance is better... saving the model
+train loss = 0.45072510838508606
+loss: 0.8286354541778564, Performance is better... saving the model
+train loss = 0.4418196678161621
+loss: 0.8273999094963074, Performance is better... saving the model
+train loss = 0.4334116280078888
+loss: 0.8208646774291992, Performance is better... saving the model
+train loss = 0.42558443546295166
+loss: 0.8204932808876038, Performance is better... saving the model
+train loss = 0.4180619716644287
+loss: 0.8153718113899231, Performance is better... saving the model
+train loss = 0.4093407392501831
+loss: 0.8089441657066345, Performance is better... saving the model
+train loss = 0.4003717601299286
+loss: 0.8073586225509644, Performance is better... saving the model
+train loss = 0.39339736104011536
+loss: 0.7984781265258789, Performance is better... saving the model
+train loss = 0.3842950463294983
+loss: 0.7922971248626709, Performance is better... saving the model
+train loss = 0.37567561864852905
+loss: 0.7922734618186951, Performance is better... saving the model
+train loss = 0.36845383048057556
+loss: 0.7803200483322144, Performance is better... saving the model
+train loss = 0.35958898067474365
+loss: 0.7750141620635986, Performance is better... saving the model
+train loss = 0.35177892446517944
+loss: 0.769081175327301, Performance is better... saving the model
+train loss = 0.34436264634132385
+loss: 0.7604101896286011, Performance is better... saving the model
+train loss = 0.3360065817832947
+loss: 0.7531929016113281, Performance is better... saving the model
+train loss = 0.32784825563430786
+loss: 0.7469538450241089, Performance is better... saving the model
+train loss = 0.3219234347343445
+loss: 0.740628182888031, Performance is better... saving the model
+train loss = 0.31603190302848816
+loss: 0.7295579314231873, Performance is better... saving the model
+train loss = 0.30617964267730713
+loss: 0.7217274308204651, Performance is better... saving the model
+train loss = 0.29860547184944153
+loss: 0.7150101065635681, Performance is better... saving the model
+train loss = 0.29230690002441406
+loss: 0.7077154517173767, Performance is better... saving the model
+train loss = 0.28442373871803284
+loss: 0.7002484798431396, Performance is better... saving the model
+train loss = 0.2787531018257141
+loss: 0.6916224360466003, Performance is better... saving the model
+train loss = 0.27134624123573303
+loss: 0.6852268576622009, Performance is better... saving the model
+train loss = 0.26491063833236694
+loss: 0.677465558052063, Performance is better... saving the model
+train loss = 0.2581453025341034
+loss: 0.6703324913978577, Performance is better... saving the model
+train loss = 0.2521494925022125
+loss: 0.6623985767364502, Performance is better... saving the model
+train loss = 0.24620318412780762
+loss: 0.6567740440368652, Performance is better... saving the model
+train loss = 0.24043002724647522
+loss: 0.6504026651382446, Performance is better... saving the model
+train loss = 0.2342512607574463
+loss: 0.6444404721260071, Performance is better... saving the model
+train loss = 0.22891758382320404
+loss: 0.6374396085739136, Performance is better... saving the model
+train loss = 0.22345668077468872
+loss: 0.6329108476638794, Performance is better... saving the model
+train loss = 0.21851889789104462
+loss: 0.6280131936073303, Performance is better... saving the model
+train loss = 0.21316984295845032
+loss: 0.6217334866523743, Performance is better... saving the model
+train loss = 0.20846298336982727
+loss: 0.6171143651008606, Performance is better... saving the model
+train loss = 0.2036007195711136
+loss: 0.6131845116615295, Performance is better... saving the model
+train loss = 0.19908079504966736
+loss: 0.6092020869255066, Performance is better... saving the model
+train loss = 0.19503866136074066
+loss: 0.6051937937736511, Performance is better... saving the model
+train loss = 0.19042472541332245
+loss: 0.6014573574066162, Performance is better... saving the model
+train loss = 0.18681736290454865
+loss: 0.5980133414268494, Performance is better... saving the model
+train loss = 0.18275566399097443
+loss: 0.5940894484519958, Performance is better... saving the model
+train loss = 0.17913547158241272
+loss: 0.5895270705223083, Performance is better... saving the model
+train loss = 0.1758110076189041
+loss: 0.5861032605171204, Performance is better... saving the model
+train loss = 0.17252278327941895
+loss: 0.5840383768081665, Performance is better... saving the model
+train loss = 0.16936643421649933
+loss: 0.5812726616859436, Performance is better... saving the model
+train loss = 0.1660090535879135
+loss: 0.5780988335609436, Performance is better... saving the model
+train loss = 0.16307541728019714
+loss: 0.5761796236038208, Performance is better... saving the model
+train loss = 0.1605316698551178
+loss: 0.571681022644043, Performance is better... saving the model
+train loss = 0.157941997051239
+loss: 0.5684380531311035, Performance is better... saving the model
+train loss = 0.1552180051803589
+loss: 0.5668495893478394, Performance is better... saving the model
+train loss = 0.15267537534236908
+loss: 0.5633581280708313, Performance is better... saving the model
+train loss = 0.1503758430480957
+loss: 0.562390148639679, Performance is better... saving the model
+train loss = 0.14814534783363342
+loss: 0.5584792494773865, Performance is better... saving the model
+train loss = 0.14603734016418457
+loss: 0.5570712089538574, Performance is better... saving the model
+train loss = 0.143740713596344
+loss: 0.5541138648986816, Performance is better... saving the model
+train loss = 0.14182189106941223
+loss: 0.5529532432556152, Performance is better... saving the model
+train loss = 0.14015284180641174
+loss: 0.5493150353431702, Performance is better... saving the model
+train loss = 0.13840258121490479
+loss: 0.548616886138916, Performance is better... saving the model
+train loss = 0.13649240136146545
+loss: 0.5467966198921204, Performance is better... saving the model
+train loss = 0.1347537487745285
+loss: 0.5435973405838013, Performance is better... saving the model
+train loss = 0.13317835330963135
+loss: 0.541938841342926, Performance is better... saving the model
+train loss = 0.13159851729869843
+loss: 0.5394417643547058, Performance is better... saving the model
+train loss = 0.13015799224376678
+loss: 0.5382897257804871, Performance is better... saving the model
+train loss = 0.12876340746879578
+loss: 0.537865936756134, Performance is better... saving the model
+train loss = 0.12721334397792816
+loss: 0.5353493094444275, Performance is better... saving the model
+train loss = 0.12603750824928284
+loss: 0.5337225198745728, Performance is better... saving the model
+train loss = 0.12483955919742584
+loss: 0.5333883762359619, Performance is better... saving the model
+train loss = 0.12342661619186401
+loss: 0.5312508940696716, Performance is better... saving the model
+train loss = 0.12215527892112732
+loss: 0.529677152633667, Performance is better... saving the model
+train loss = 0.1211290955543518
+loss: 0.5287654399871826, Performance is better... saving the model
+train loss = 0.11981149017810822
+loss: 0.5257341265678406, Performance is better... saving the model
+train loss = 0.11874447017908096
+loss: 0.5265021920204163, EarlyStopping counter: 1 out of 10
+train loss = 0.11763034760951996
+loss: 0.525255560874939, Performance is better... saving the model
+train loss = 0.1167590469121933
+loss: 0.5227901935577393, Performance is better... saving the model
+train loss = 0.11566199362277985
+loss: 0.5203667283058167, Performance is better... saving the model
+train loss = 0.11458417028188705
+loss: 0.5215754508972168, EarlyStopping counter: 1 out of 10
+train loss = 0.11366552114486694
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 41/41 [00:30<00:00,  1.36it/s]
+Traceback (most recent call last):
+  File "main.py", line 82, in <module>
+    res=tester.test()
+  File "/home/gwy/BaseSAT/BaseGAT/utils/tester.py", line 84, in test
+    res.append(result[k][metric])
+NameError: name 'result' is not defined

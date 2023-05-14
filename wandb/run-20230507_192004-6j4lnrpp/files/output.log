@@ -1,0 +1,46 @@
+loadding data
+reading category information
+
+
+
+
+
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 136710/136710 [00:13<00:00, 10382.61it/s]
+reading train data
+
+
+
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 2571752/2571752 [00:05<00:00, 498888.59it/s]
+reading valid data
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 845781/845781 [00:01<00:00, 480251.75it/s]
+reading test data
+get weight for each sample
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 136710/136710 [00:00<00:00, 2649456.39it/s]
+train loss = 0.3392277657985687
+loss: 0.3795258402824402, Performance is better... saving the model
+train loss = 0.30347830057144165
+loss: 0.35378262400627136, Performance is better... saving the model
+train loss = 0.2711961269378662
+Starting new HTTPS connection (1): o151352.ingest.sentry.io:443
+https://o151352.ingest.sentry.io:443 "POST /api/5288891/envelope/ HTTP/1.1" 200 2
+loss: 0.333036333322525, Performance is better... saving the model
+train loss = 0.24721911549568176
+loss: 0.3195230960845947, Performance is better... saving the model
+train loss = 0.23001733422279358
+loss: 0.3061777651309967, Performance is better... saving the model
+train loss = 0.21588967740535736
+loss: 0.29553914070129395, Performance is better... saving the model
+train loss = 0.20384781062602997
+loss: 0.286849707365036, Performance is better... saving the model
+train loss = 0.19379083812236786
+loss: 0.2762265205383301, Performance is better... saving the model
+train loss = 0.18524077534675598
+loss: 0.2698032557964325, Performance is better... saving the model
+train loss = 0.1774078607559204
+  0%|                                                                                                                                                                            | 0/41 [00:00<?, ?it/s]
+Traceback (most recent call last):
+  File "main.py", line 82, in <module>
+    res,ndcg5_std,ndcg10_std,mrr_std,auc_std=tester.test()
+  File "/home/gwy/BaseSAT/BaseGAT/utils/tester.py", line 115, in test
+    item=int(torch.randint(self.item_number,size=(1,1)))
+AttributeError: 'Tester' object has no attribute 'item_number'

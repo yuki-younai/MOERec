@@ -1,0 +1,526 @@
+Sat, 13 May 2023 09:27:44  INFO loadding data
+Sat, 13 May 2023 09:27:44  INFO reading category information
+Sat, 13 May 2023 09:27:58  INFO reading train data
+Sat, 13 May 2023 09:28:05  INFO reading valid data
+Sat, 13 May 2023 09:28:07  INFO reading test data
+Sat, 13 May 2023 09:28:10  INFO get weight for each sample
+Sat, 13 May 2023 09:28:15  INFO train loss = 0.27945855259895325
+Sat, 13 May 2023 09:28:19  INFO loss: 0.2913389205932617, Performance is better... saving the model
+Sat, 13 May 2023 09:28:23  INFO train loss = 0.2491663694381714
+Sat, 13 May 2023 09:28:26  INFO loss: 0.2752937972545624, Performance is better... saving the model
+Sat, 13 May 2023 09:28:31  INFO train loss = 0.23114418983459473
+Sat, 13 May 2023 09:28:34  INFO loss: 0.2624798119068146, Performance is better... saving the model
+Sat, 13 May 2023 09:28:38  INFO train loss = 0.2175297886133194
+Sat, 13 May 2023 09:28:42  INFO loss: 0.2537120282649994, Performance is better... saving the model
+Sat, 13 May 2023 09:28:46  INFO train loss = 0.20696613192558289
+Sat, 13 May 2023 09:28:50  INFO loss: 0.24606171250343323, Performance is better... saving the model
+Sat, 13 May 2023 09:28:54  INFO train loss = 0.1987714171409607
+Sat, 13 May 2023 09:28:57  INFO loss: 0.23988643288612366, Performance is better... saving the model
+Sat, 13 May 2023 09:29:02  INFO train loss = 0.19180716574192047
+Sat, 13 May 2023 09:29:05  INFO loss: 0.2340770661830902, Performance is better... saving the model
+Sat, 13 May 2023 09:29:09  INFO train loss = 0.1855183243751526
+Sat, 13 May 2023 09:29:12  INFO loss: 0.22856925427913666, Performance is better... saving the model
+Sat, 13 May 2023 09:29:17  INFO train loss = 0.1801583170890808
+Sat, 13 May 2023 09:29:20  INFO loss: 0.22410669922828674, Performance is better... saving the model
+Sat, 13 May 2023 09:29:24  INFO train loss = 0.17554061114788055
+Sat, 13 May 2023 09:29:28  INFO loss: 0.21947063505649567, Performance is better... saving the model
+Sat, 13 May 2023 09:29:32  INFO train loss = 0.17111104726791382
+Sat, 13 May 2023 09:29:36  INFO loss: 0.21544140577316284, Performance is better... saving the model
+Sat, 13 May 2023 09:29:40  INFO train loss = 0.16733282804489136
+Sat, 13 May 2023 09:29:44  INFO loss: 0.21253471076488495, Performance is better... saving the model
+Sat, 13 May 2023 09:29:48  INFO train loss = 0.1637633889913559
+Sat, 13 May 2023 09:29:51  INFO loss: 0.2090682089328766, Performance is better... saving the model
+Sat, 13 May 2023 09:29:55  INFO train loss = 0.16049546003341675
+Sat, 13 May 2023 09:29:59  INFO loss: 0.20633868873119354, Performance is better... saving the model
+Sat, 13 May 2023 09:30:03  INFO train loss = 0.1575433611869812
+Sat, 13 May 2023 09:30:06  INFO loss: 0.2034299075603485, Performance is better... saving the model
+Sat, 13 May 2023 09:30:11  INFO train loss = 0.1547825038433075
+Sat, 13 May 2023 09:30:14  INFO loss: 0.200888991355896, Performance is better... saving the model
+Sat, 13 May 2023 09:30:18  INFO train loss = 0.1521579623222351
+Sat, 13 May 2023 09:30:22  INFO loss: 0.1983984261751175, Performance is better... saving the model
+Sat, 13 May 2023 09:30:26  INFO train loss = 0.14974325895309448
+Sat, 13 May 2023 09:30:30  INFO loss: 0.19636790454387665, Performance is better... saving the model
+Sat, 13 May 2023 09:30:34  INFO train loss = 0.14749014377593994
+Sat, 13 May 2023 09:30:38  INFO loss: 0.1943262368440628, Performance is better... saving the model
+Sat, 13 May 2023 09:30:42  INFO train loss = 0.14521652460098267
+Sat, 13 May 2023 09:30:45  INFO loss: 0.19253310561180115, Performance is better... saving the model
+Sat, 13 May 2023 09:30:49  INFO train loss = 0.1430702805519104
+Sat, 13 May 2023 09:30:53  INFO loss: 0.19056624174118042, Performance is better... saving the model
+Sat, 13 May 2023 09:30:57  INFO train loss = 0.14098481833934784
+Sat, 13 May 2023 09:31:01  INFO loss: 0.18886731564998627, Performance is better... saving the model
+Sat, 13 May 2023 09:31:05  INFO train loss = 0.13899163901805878
+Sat, 13 May 2023 09:31:08  INFO loss: 0.18725597858428955, Performance is better... saving the model
+Sat, 13 May 2023 09:31:12  INFO train loss = 0.13704092800617218
+Sat, 13 May 2023 09:31:16  INFO loss: 0.18594276905059814, Performance is better... saving the model
+Sat, 13 May 2023 09:31:20  INFO train loss = 0.13502854108810425
+Sat, 13 May 2023 09:31:23  INFO loss: 0.18435800075531006, Performance is better... saving the model
+Sat, 13 May 2023 09:31:27  INFO train loss = 0.13317865133285522
+Sat, 13 May 2023 09:31:31  INFO loss: 0.18311312794685364, Performance is better... saving the model
+Sat, 13 May 2023 09:31:35  INFO train loss = 0.13130903244018555
+Sat, 13 May 2023 09:31:38  INFO loss: 0.1819053292274475, Performance is better... saving the model
+Sat, 13 May 2023 09:31:42  INFO train loss = 0.1294289231300354
+Sat, 13 May 2023 09:31:46  INFO loss: 0.18034978210926056, Performance is better... saving the model
+Sat, 13 May 2023 09:31:50  INFO train loss = 0.12757200002670288
+Sat, 13 May 2023 09:31:53  INFO loss: 0.179230198264122, Performance is better... saving the model
+Sat, 13 May 2023 09:31:58  INFO train loss = 0.12579956650733948
+Sat, 13 May 2023 09:32:01  INFO loss: 0.1780141443014145, Performance is better... saving the model
+Sat, 13 May 2023 09:32:05  INFO train loss = 0.12396205961704254
+Sat, 13 May 2023 09:32:09  INFO loss: 0.17731229960918427, Performance is better... saving the model
+Sat, 13 May 2023 09:32:13  INFO train loss = 0.12218090891838074
+Sat, 13 May 2023 09:32:16  INFO loss: 0.17597068846225739, Performance is better... saving the model
+Sat, 13 May 2023 09:32:20  INFO train loss = 0.12040285021066666
+Sat, 13 May 2023 09:32:24  INFO loss: 0.17494013905525208, Performance is better... saving the model
+Sat, 13 May 2023 09:32:28  INFO train loss = 0.11862925440073013
+Sat, 13 May 2023 09:32:32  INFO loss: 0.17406095564365387, Performance is better... saving the model
+Sat, 13 May 2023 09:32:36  INFO train loss = 0.11696004867553711
+Sat, 13 May 2023 09:32:39  INFO loss: 0.17310182750225067, Performance is better... saving the model
+Sat, 13 May 2023 09:32:43  INFO train loss = 0.11514817178249359
+Sat, 13 May 2023 09:32:47  INFO loss: 0.17229680716991425, Performance is better... saving the model
+Sat, 13 May 2023 09:32:51  INFO train loss = 0.11339744180440903
+Sat, 13 May 2023 09:32:55  INFO loss: 0.1715635359287262, Performance is better... saving the model
+Sat, 13 May 2023 09:32:59  INFO train loss = 0.11169267445802689
+Sat, 13 May 2023 09:33:02  INFO loss: 0.17045842111110687, Performance is better... saving the model
+Sat, 13 May 2023 09:33:06  INFO train loss = 0.10993406176567078
+Sat, 13 May 2023 09:33:09  INFO loss: 0.1699184775352478, Performance is better... saving the model
+Sat, 13 May 2023 09:33:13  INFO train loss = 0.10822617262601852
+Sat, 13 May 2023 09:33:17  INFO loss: 0.1688642054796219, Performance is better... saving the model
+Sat, 13 May 2023 09:33:21  INFO train loss = 0.10649814456701279
+Sat, 13 May 2023 09:33:24  INFO loss: 0.16802100837230682, Performance is better... saving the model
+Sat, 13 May 2023 09:33:28  INFO train loss = 0.10469602048397064
+Sat, 13 May 2023 09:33:32  INFO loss: 0.1671333611011505, Performance is better... saving the model
+Sat, 13 May 2023 09:33:36  INFO train loss = 0.10295896232128143
+Sat, 13 May 2023 09:33:40  INFO loss: 0.16590741276741028, Performance is better... saving the model
+Sat, 13 May 2023 09:33:44  INFO train loss = 0.10128998756408691
+Sat, 13 May 2023 09:33:47  INFO loss: 0.16498249769210815, Performance is better... saving the model
+Sat, 13 May 2023 09:33:52  INFO train loss = 0.09948249161243439
+Sat, 13 May 2023 09:33:55  INFO loss: 0.16378623247146606, Performance is better... saving the model
+Sat, 13 May 2023 09:34:00  INFO train loss = 0.09778051823377609
+Sat, 13 May 2023 09:34:03  INFO loss: 0.16273072361946106, Performance is better... saving the model
+Sat, 13 May 2023 09:34:07  INFO train loss = 0.09606248140335083
+Sat, 13 May 2023 09:34:11  INFO loss: 0.1613055169582367, Performance is better... saving the model
+Sat, 13 May 2023 09:34:15  INFO train loss = 0.09434941411018372
+Sat, 13 May 2023 09:34:18  INFO loss: 0.1602194458246231, Performance is better... saving the model
+Sat, 13 May 2023 09:34:23  INFO train loss = 0.0926581621170044
+Sat, 13 May 2023 09:34:26  INFO loss: 0.15899433195590973, Performance is better... saving the model
+Sat, 13 May 2023 09:34:30  INFO train loss = 0.09091106057167053
+Sat, 13 May 2023 09:54:33  INFO For top100, metric recall = 0.01761474901091725
+Sat, 13 May 2023 09:54:33  INFO For top300, metric recall = 0.037529466584588896
+Sat, 13 May 2023 09:54:33  INFO For top100, metric hit_ratio = 0.1465395181101981
+Sat, 13 May 2023 09:54:33  INFO For top300, metric hit_ratio = 0.2649425774206431
+Sat, 13 May 2023 09:54:33  INFO For top100, metric coverage = 59.16337298657921
+Sat, 13 May 2023 09:54:33  INFO For top300, metric coverage = 142.3990657485508
+Sat, 13 May 2023 09:54:33  INFO loss: 0.15713614225387573, Performance is better... saving the model
+Sat, 13 May 2023 09:54:37  INFO train loss = 0.08929818123579025
+Sat, 13 May 2023 09:54:41  INFO loss: 0.15636365115642548, Performance is better... saving the model
+Sat, 13 May 2023 09:54:45  INFO train loss = 0.08767940104007721
+Sat, 13 May 2023 09:54:49  INFO loss: 0.15507926046848297, Performance is better... saving the model
+Sat, 13 May 2023 09:54:53  INFO train loss = 0.08598642796278
+Sat, 13 May 2023 09:54:56  INFO loss: 0.15379776060581207, Performance is better... saving the model
+Sat, 13 May 2023 09:55:00  INFO train loss = 0.0844118520617485
+Sat, 13 May 2023 09:55:04  INFO loss: 0.15245988965034485, Performance is better... saving the model
+Sat, 13 May 2023 09:55:08  INFO train loss = 0.08288511633872986
+Sat, 13 May 2023 09:55:11  INFO loss: 0.1508278101682663, Performance is better... saving the model
+Sat, 13 May 2023 09:55:16  INFO train loss = 0.08135919272899628
+Sat, 13 May 2023 09:55:19  INFO loss: 0.14976264536380768, Performance is better... saving the model
+Sat, 13 May 2023 09:55:23  INFO train loss = 0.0798465758562088
+Sat, 13 May 2023 09:55:27  INFO loss: 0.1483663022518158, Performance is better... saving the model
+Sat, 13 May 2023 09:55:31  INFO train loss = 0.07849226891994476
+Sat, 13 May 2023 09:55:34  INFO loss: 0.1471954733133316, Performance is better... saving the model
+Sat, 13 May 2023 09:55:39  INFO train loss = 0.07703258842229843
+Sat, 13 May 2023 09:55:42  INFO loss: 0.14599628746509552, Performance is better... saving the model
+Sat, 13 May 2023 09:55:46  INFO train loss = 0.0756945013999939
+Sat, 13 May 2023 09:55:50  INFO loss: 0.14494138956069946, Performance is better... saving the model
+Sat, 13 May 2023 09:55:54  INFO train loss = 0.07441680133342743
+Sat, 13 May 2023 09:55:57  INFO loss: 0.14367632567882538, Performance is better... saving the model
+Sat, 13 May 2023 09:56:02  INFO train loss = 0.07319311052560806
+Sat, 13 May 2023 09:56:05  INFO loss: 0.14252470433712006, Performance is better... saving the model
+Sat, 13 May 2023 09:56:09  INFO train loss = 0.07205593585968018
+Sat, 13 May 2023 09:56:13  INFO loss: 0.1415027379989624, Performance is better... saving the model
+Sat, 13 May 2023 09:56:17  INFO train loss = 0.07093729823827744
+Sat, 13 May 2023 09:56:20  INFO loss: 0.14050926268100739, Performance is better... saving the model
+Sat, 13 May 2023 09:56:25  INFO train loss = 0.06986445188522339
+Sat, 13 May 2023 09:56:28  INFO loss: 0.1392614096403122, Performance is better... saving the model
+Sat, 13 May 2023 09:56:32  INFO train loss = 0.06888025999069214
+Sat, 13 May 2023 09:56:36  INFO loss: 0.13840368390083313, Performance is better... saving the model
+Sat, 13 May 2023 09:56:40  INFO train loss = 0.06796197593212128
+Sat, 13 May 2023 09:56:44  INFO loss: 0.13727448880672455, Performance is better... saving the model
+Sat, 13 May 2023 09:56:48  INFO train loss = 0.06705572456121445
+Sat, 13 May 2023 09:56:51  INFO loss: 0.13654834032058716, Performance is better... saving the model
+Sat, 13 May 2023 09:56:56  INFO train loss = 0.06616181135177612
+Sat, 13 May 2023 09:56:59  INFO loss: 0.1354675441980362, Performance is better... saving the model
+Sat, 13 May 2023 09:57:03  INFO train loss = 0.06538202613592148
+Sat, 13 May 2023 09:57:07  INFO loss: 0.13473576307296753, Performance is better... saving the model
+Sat, 13 May 2023 09:57:12  INFO train loss = 0.06467850506305695
+Sat, 13 May 2023 09:57:15  INFO loss: 0.13398124277591705, Performance is better... saving the model
+Sat, 13 May 2023 09:57:19  INFO train loss = 0.06402570009231567
+Sat, 13 May 2023 09:57:23  INFO loss: 0.13343431055545807, Performance is better... saving the model
+Sat, 13 May 2023 09:57:27  INFO train loss = 0.06332296133041382
+Sat, 13 May 2023 09:57:31  INFO loss: 0.13255199790000916, Performance is better... saving the model
+Sat, 13 May 2023 09:57:35  INFO train loss = 0.06272140890359879
+Sat, 13 May 2023 09:57:39  INFO loss: 0.13173909485340118, Performance is better... saving the model
+Sat, 13 May 2023 09:57:43  INFO train loss = 0.062058333307504654
+Sat, 13 May 2023 09:57:47  INFO loss: 0.13106705248355865, Performance is better... saving the model
+Sat, 13 May 2023 09:57:51  INFO train loss = 0.06156931817531586
+Sat, 13 May 2023 09:57:54  INFO loss: 0.1304352581501007, Performance is better... saving the model
+Sat, 13 May 2023 09:57:58  INFO train loss = 0.06106394901871681
+Sat, 13 May 2023 09:58:02  INFO loss: 0.1299942582845688, Performance is better... saving the model
+Sat, 13 May 2023 09:58:06  INFO train loss = 0.06055073440074921
+Sat, 13 May 2023 09:58:10  INFO loss: 0.12931793928146362, Performance is better... saving the model
+Sat, 13 May 2023 09:58:14  INFO train loss = 0.060136690735816956
+Sat, 13 May 2023 09:58:17  INFO loss: 0.1285872757434845, Performance is better... saving the model
+Sat, 13 May 2023 09:58:22  INFO train loss = 0.059764206409454346
+Sat, 13 May 2023 09:58:25  INFO loss: 0.12792330980300903, Performance is better... saving the model
+Sat, 13 May 2023 09:58:29  INFO train loss = 0.05931738018989563
+Sat, 13 May 2023 09:58:33  INFO loss: 0.127634659409523, Performance is better... saving the model
+Sat, 13 May 2023 09:58:37  INFO train loss = 0.058904651552438736
+Sat, 13 May 2023 09:58:40  INFO loss: 0.12708543241024017, Performance is better... saving the model
+Sat, 13 May 2023 09:58:44  INFO train loss = 0.0585583858191967
+Sat, 13 May 2023 09:58:48  INFO loss: 0.12646278738975525, Performance is better... saving the model
+Sat, 13 May 2023 09:58:52  INFO train loss = 0.05816759914159775
+Sat, 13 May 2023 09:58:56  INFO loss: 0.12594421207904816, Performance is better... saving the model
+Sat, 13 May 2023 09:59:00  INFO train loss = 0.057901449501514435
+Sat, 13 May 2023 09:59:03  INFO loss: 0.1251884251832962, Performance is better... saving the model
+Sat, 13 May 2023 09:59:08  INFO train loss = 0.05752003937959671
+Sat, 13 May 2023 09:59:11  INFO loss: 0.12513040006160736, Performance is better... saving the model
+Sat, 13 May 2023 09:59:16  INFO train loss = 0.05725301802158356
+Sat, 13 May 2023 09:59:19  INFO loss: 0.12468724697828293, Performance is better... saving the model
+Sat, 13 May 2023 09:59:24  INFO train loss = 0.056883424520492554
+Sat, 13 May 2023 09:59:27  INFO loss: 0.12439953535795212, Performance is better... saving the model
+Sat, 13 May 2023 09:59:31  INFO train loss = 0.05663139000535011
+Sat, 13 May 2023 09:59:35  INFO loss: 0.12409994006156921, Performance is better... saving the model
+Sat, 13 May 2023 09:59:39  INFO train loss = 0.05635260418057442
+Sat, 13 May 2023 09:59:43  INFO loss: 0.12349993735551834, Performance is better... saving the model
+Sat, 13 May 2023 09:59:47  INFO train loss = 0.056044116616249084
+Sat, 13 May 2023 09:59:51  INFO loss: 0.12322020530700684, Performance is better... saving the model
+Sat, 13 May 2023 09:59:55  INFO train loss = 0.055795881897211075
+Sat, 13 May 2023 09:59:59  INFO loss: 0.1227332130074501, Performance is better... saving the model
+Sat, 13 May 2023 10:00:03  INFO train loss = 0.05553195998072624
+Sat, 13 May 2023 10:00:07  INFO loss: 0.12243557721376419, Performance is better... saving the model
+Sat, 13 May 2023 10:00:11  INFO train loss = 0.05522778630256653
+Sat, 13 May 2023 10:00:14  INFO loss: 0.12243993580341339, EarlyStopping counter: 1 out of 10
+Sat, 13 May 2023 10:00:19  INFO train loss = 0.05499644950032234
+Sat, 13 May 2023 10:00:22  INFO loss: 0.12193910777568817, Performance is better... saving the model
+Sat, 13 May 2023 10:00:27  INFO train loss = 0.05473531782627106
+Sat, 13 May 2023 10:00:30  INFO loss: 0.1219739094376564, EarlyStopping counter: 1 out of 10
+Sat, 13 May 2023 10:00:35  INFO train loss = 0.05449923872947693
+Sat, 13 May 2023 10:00:38  INFO loss: 0.12114385515451431, Performance is better... saving the model
+Sat, 13 May 2023 10:00:43  INFO train loss = 0.05421968176960945
+Sat, 13 May 2023 10:00:46  INFO loss: 0.12082412093877792, Performance is better... saving the model
+Sat, 13 May 2023 10:00:50  INFO train loss = 0.05392252653837204
+Sat, 13 May 2023 10:00:54  INFO loss: 0.12083827704191208, EarlyStopping counter: 1 out of 10
+Sat, 13 May 2023 10:00:58  INFO train loss = 0.05376096069812775
+Sat, 13 May 2023 10:21:08  INFO For top100, metric recall = 0.03235256559565714
+Sat, 13 May 2023 10:21:08  INFO For top300, metric recall = 0.06754159548925043
+Sat, 13 May 2023 10:21:08  INFO For top100, metric hit_ratio = 0.23125143707719675
+Sat, 13 May 2023 10:21:08  INFO For top300, metric hit_ratio = 0.3916232013844348
+Sat, 13 May 2023 10:21:08  INFO For top100, metric coverage = 46.11198915687437
+Sat, 13 May 2023 10:21:08  INFO For top300, metric coverage = 108.53852577057592
+Sat, 13 May 2023 10:21:09  INFO loss: 0.12022226303815842, Performance is better... saving the model
+Sat, 13 May 2023 10:21:13  INFO train loss = 0.05350217968225479
+Sat, 13 May 2023 10:21:16  INFO loss: 0.11996064335107803, Performance is better... saving the model
+Sat, 13 May 2023 10:21:20  INFO train loss = 0.05323590338230133
+Sat, 13 May 2023 10:21:24  INFO loss: 0.11983548104763031, Performance is better... saving the model
+Sat, 13 May 2023 10:21:28  INFO train loss = 0.05301014706492424
+Sat, 13 May 2023 10:21:32  INFO loss: 0.11943527311086655, Performance is better... saving the model
+Sat, 13 May 2023 10:21:36  INFO train loss = 0.05279393494129181
+Sat, 13 May 2023 10:21:40  INFO loss: 0.11930727958679199, Performance is better... saving the model
+Sat, 13 May 2023 10:21:44  INFO train loss = 0.05255114659667015
+Sat, 13 May 2023 10:21:47  INFO loss: 0.11888626962900162, Performance is better... saving the model
+Sat, 13 May 2023 10:21:52  INFO train loss = 0.052321672439575195
+Sat, 13 May 2023 10:21:55  INFO loss: 0.1188189834356308, Performance is better... saving the model
+Sat, 13 May 2023 10:22:00  INFO train loss = 0.05207091569900513
+Sat, 13 May 2023 10:22:03  INFO loss: 0.11878814548254013, Performance is better... saving the model
+Sat, 13 May 2023 10:22:07  INFO train loss = 0.05188822001218796
+Sat, 13 May 2023 10:22:11  INFO loss: 0.11815159022808075, Performance is better... saving the model
+Sat, 13 May 2023 10:22:15  INFO train loss = 0.05173337087035179
+Sat, 13 May 2023 10:22:19  INFO loss: 0.11795949935913086, Performance is better... saving the model
+Sat, 13 May 2023 10:22:23  INFO train loss = 0.05147300288081169
+Sat, 13 May 2023 10:22:26  INFO loss: 0.1182481199502945, EarlyStopping counter: 1 out of 10
+Sat, 13 May 2023 10:22:30  INFO train loss = 0.051304928958415985
+Sat, 13 May 2023 10:22:34  INFO loss: 0.11782630532979965, Performance is better... saving the model
+Sat, 13 May 2023 10:22:38  INFO train loss = 0.0511118546128273
+Sat, 13 May 2023 10:22:42  INFO loss: 0.11769036948680878, Performance is better... saving the model
+Sat, 13 May 2023 10:22:46  INFO train loss = 0.050898149609565735
+Sat, 13 May 2023 10:22:50  INFO loss: 0.11737910658121109, Performance is better... saving the model
+Sat, 13 May 2023 10:22:54  INFO train loss = 0.050727494060993195
+Sat, 13 May 2023 10:22:57  INFO loss: 0.11712894588708878, Performance is better... saving the model
+Sat, 13 May 2023 10:23:01  INFO train loss = 0.05052191764116287
+Sat, 13 May 2023 10:23:05  INFO loss: 0.1172291487455368, EarlyStopping counter: 1 out of 10
+Sat, 13 May 2023 10:23:09  INFO train loss = 0.05035442113876343
+Sat, 13 May 2023 10:23:12  INFO loss: 0.11667830497026443, Performance is better... saving the model
+Sat, 13 May 2023 10:23:16  INFO train loss = 0.05017823725938797
+Sat, 13 May 2023 10:23:20  INFO loss: 0.1163230761885643, Performance is better... saving the model
+Sat, 13 May 2023 10:23:24  INFO train loss = 0.050030697137117386
+Sat, 13 May 2023 10:23:28  INFO loss: 0.1163310781121254, EarlyStopping counter: 1 out of 10
+Sat, 13 May 2023 10:23:32  INFO train loss = 0.049860209226608276
+Sat, 13 May 2023 10:23:35  INFO loss: 0.11623404175043106, Performance is better... saving the model
+Sat, 13 May 2023 10:23:40  INFO train loss = 0.04972562566399574
+Sat, 13 May 2023 10:23:43  INFO loss: 0.11632901430130005, EarlyStopping counter: 1 out of 10
+Sat, 13 May 2023 10:23:47  INFO train loss = 0.049527402967214584
+Sat, 13 May 2023 10:23:51  INFO loss: 0.1158885657787323, Performance is better... saving the model
+Sat, 13 May 2023 10:23:55  INFO train loss = 0.049382299184799194
+Sat, 13 May 2023 10:23:59  INFO loss: 0.11583171784877777, Performance is better... saving the model
+Sat, 13 May 2023 10:24:03  INFO train loss = 0.049210790544748306
+Sat, 13 May 2023 10:24:06  INFO loss: 0.11555729806423187, Performance is better... saving the model
+Sat, 13 May 2023 10:24:11  INFO train loss = 0.04905039072036743
+Sat, 13 May 2023 10:24:14  INFO loss: 0.11535493284463882, Performance is better... saving the model
+Sat, 13 May 2023 10:24:19  INFO train loss = 0.04893758147954941
+Sat, 13 May 2023 10:24:22  INFO loss: 0.1155458316206932, EarlyStopping counter: 1 out of 10
+Sat, 13 May 2023 10:24:26  INFO train loss = 0.0488077737390995
+Sat, 13 May 2023 10:24:30  INFO loss: 0.11515691131353378, Performance is better... saving the model
+Sat, 13 May 2023 10:24:34  INFO train loss = 0.048689719289541245
+Sat, 13 May 2023 10:24:38  INFO loss: 0.11488473415374756, Performance is better... saving the model
+Sat, 13 May 2023 10:24:43  INFO train loss = 0.048530563712120056
+Sat, 13 May 2023 10:24:46  INFO loss: 0.11495541781187057, EarlyStopping counter: 1 out of 10
+Sat, 13 May 2023 10:24:51  INFO train loss = 0.048367395997047424
+Sat, 13 May 2023 10:24:54  INFO loss: 0.11461299657821655, Performance is better... saving the model
+Sat, 13 May 2023 10:24:59  INFO train loss = 0.0482541024684906
+Sat, 13 May 2023 10:25:02  INFO loss: 0.11458098143339157, Performance is better... saving the model
+Sat, 13 May 2023 10:25:07  INFO train loss = 0.04813137650489807
+Sat, 13 May 2023 10:25:10  INFO loss: 0.11450354009866714, Performance is better... saving the model
+Sat, 13 May 2023 10:25:14  INFO train loss = 0.047976475208997726
+Sat, 13 May 2023 10:25:18  INFO loss: 0.11454660445451736, EarlyStopping counter: 1 out of 10
+Sat, 13 May 2023 10:25:22  INFO train loss = 0.047833189368247986
+Sat, 13 May 2023 10:25:26  INFO loss: 0.11403847485780716, Performance is better... saving the model
+Sat, 13 May 2023 10:25:30  INFO train loss = 0.04777552932500839
+Sat, 13 May 2023 10:25:33  INFO loss: 0.11408037692308426, EarlyStopping counter: 1 out of 10
+Sat, 13 May 2023 10:25:38  INFO train loss = 0.04763944447040558
+Sat, 13 May 2023 10:25:41  INFO loss: 0.11421012133359909, EarlyStopping counter: 2 out of 10
+Sat, 13 May 2023 10:25:45  INFO train loss = 0.047507382929325104
+Sat, 13 May 2023 10:25:48  INFO loss: 0.1139356791973114, Performance is better... saving the model
+Sat, 13 May 2023 10:25:52  INFO train loss = 0.047402024269104004
+Sat, 13 May 2023 10:25:56  INFO loss: 0.11368394643068314, Performance is better... saving the model
+Sat, 13 May 2023 10:26:00  INFO train loss = 0.047250665724277496
+Sat, 13 May 2023 10:26:04  INFO loss: 0.11397524178028107, EarlyStopping counter: 1 out of 10
+Sat, 13 May 2023 10:26:08  INFO train loss = 0.04718645662069321
+Sat, 13 May 2023 10:26:12  INFO loss: 0.1134638786315918, Performance is better... saving the model
+Sat, 13 May 2023 10:26:15  INFO train loss = 0.04710720479488373
+Sat, 13 May 2023 10:26:19  INFO loss: 0.11320443451404572, Performance is better... saving the model
+Sat, 13 May 2023 10:26:23  INFO train loss = 0.04697798192501068
+Sat, 13 May 2023 10:26:27  INFO loss: 0.11339474469423294, EarlyStopping counter: 1 out of 10
+Sat, 13 May 2023 10:26:31  INFO train loss = 0.046886034309864044
+Sat, 13 May 2023 10:26:35  INFO loss: 0.11324788630008698, EarlyStopping counter: 2 out of 10
+Sat, 13 May 2023 10:26:39  INFO train loss = 0.046769119799137115
+Sat, 13 May 2023 10:26:42  INFO loss: 0.11303834617137909, Performance is better... saving the model
+Sat, 13 May 2023 10:26:46  INFO train loss = 0.04665030539035797
+Sat, 13 May 2023 10:26:50  INFO loss: 0.1131083145737648, EarlyStopping counter: 1 out of 10
+Sat, 13 May 2023 10:26:54  INFO train loss = 0.04657936468720436
+Sat, 13 May 2023 10:26:57  INFO loss: 0.11312826722860336, EarlyStopping counter: 2 out of 10
+Sat, 13 May 2023 10:27:01  INFO train loss = 0.04644269868731499
+Sat, 13 May 2023 10:27:05  INFO loss: 0.11284179985523224, Performance is better... saving the model
+Sat, 13 May 2023 10:27:09  INFO train loss = 0.046337973326444626
+Sat, 13 May 2023 10:27:13  INFO loss: 0.112822525203228, Performance is better... saving the model
+Sat, 13 May 2023 10:27:17  INFO train loss = 0.04627811536192894
+Sat, 13 May 2023 10:27:21  INFO loss: 0.1127873957157135, Performance is better... saving the model
+Sat, 13 May 2023 10:27:25  INFO train loss = 0.04614976793527603
+Sat, 13 May 2023 10:27:28  INFO loss: 0.11264064908027649, Performance is better... saving the model
+Sat, 13 May 2023 10:27:32  INFO train loss = 0.046123020350933075
+Sat, 13 May 2023 10:47:58  INFO For top100, metric recall = 0.037692659773713236
+Sat, 13 May 2023 10:47:58  INFO For top300, metric recall = 0.07713960472187746
+Sat, 13 May 2023 10:47:58  INFO For top100, metric hit_ratio = 0.2593999975796595
+Sat, 13 May 2023 10:47:58  INFO For top300, metric hit_ratio = 0.4262461728365181
+Sat, 13 May 2023 10:47:58  INFO For top100, metric coverage = 43.29604395338424
+Sat, 13 May 2023 10:47:58  INFO For top300, metric coverage = 101.23575327048516
+Sat, 13 May 2023 10:47:58  INFO loss: 0.11238207668066025, Performance is better... saving the model
+Sat, 13 May 2023 10:48:03  INFO train loss = 0.045960184186697006
+Sat, 13 May 2023 10:48:06  INFO loss: 0.112541064620018, EarlyStopping counter: 1 out of 10
+Sat, 13 May 2023 10:48:10  INFO train loss = 0.04591578245162964
+Sat, 13 May 2023 10:48:14  INFO loss: 0.11232884973287582, Performance is better... saving the model
+Sat, 13 May 2023 10:48:18  INFO train loss = 0.045808736234903336
+Sat, 13 May 2023 10:48:22  INFO loss: 0.11238621175289154, EarlyStopping counter: 1 out of 10
+Sat, 13 May 2023 10:48:26  INFO train loss = 0.04576177895069122
+Sat, 13 May 2023 10:48:29  INFO loss: 0.11222628504037857, Performance is better... saving the model
+Sat, 13 May 2023 10:48:33  INFO train loss = 0.045677829533815384
+Sat, 13 May 2023 10:48:37  INFO loss: 0.11197736114263535, Performance is better... saving the model
+Sat, 13 May 2023 10:48:41  INFO train loss = 0.04560740292072296
+Sat, 13 May 2023 10:48:45  INFO loss: 0.11198274046182632, EarlyStopping counter: 1 out of 10
+Sat, 13 May 2023 10:48:49  INFO train loss = 0.045485805720090866
+Sat, 13 May 2023 10:48:53  INFO loss: 0.1118403747677803, Performance is better... saving the model
+Sat, 13 May 2023 10:48:57  INFO train loss = 0.04545481503009796
+Sat, 13 May 2023 10:49:00  INFO loss: 0.11190284788608551, EarlyStopping counter: 1 out of 10
+Sat, 13 May 2023 10:49:05  INFO train loss = 0.045354392379522324
+Sat, 13 May 2023 10:49:09  INFO loss: 0.11195702105760574, EarlyStopping counter: 2 out of 10
+Sat, 13 May 2023 10:49:13  INFO train loss = 0.04525960609316826
+Sat, 13 May 2023 10:49:16  INFO loss: 0.11182887107133865, Performance is better... saving the model
+Sat, 13 May 2023 10:49:20  INFO train loss = 0.045192159712314606
+Sat, 13 May 2023 10:49:24  INFO loss: 0.11161703616380692, Performance is better... saving the model
+Sat, 13 May 2023 10:49:28  INFO train loss = 0.04515988379716873
+Sat, 13 May 2023 10:49:31  INFO loss: 0.11176952719688416, EarlyStopping counter: 1 out of 10
+Sat, 13 May 2023 10:49:36  INFO train loss = 0.04503129795193672
+Sat, 13 May 2023 10:49:39  INFO loss: 0.1113094910979271, Performance is better... saving the model
+Sat, 13 May 2023 10:49:44  INFO train loss = 0.045004360377788544
+Sat, 13 May 2023 10:49:47  INFO loss: 0.11112173646688461, Performance is better... saving the model
+Sat, 13 May 2023 10:49:51  INFO train loss = 0.044958923012018204
+Sat, 13 May 2023 10:49:55  INFO loss: 0.11131590604782104, EarlyStopping counter: 1 out of 10
+Sat, 13 May 2023 10:49:59  INFO train loss = 0.04484746605157852
+Sat, 13 May 2023 10:50:03  INFO loss: 0.11126788705587387, EarlyStopping counter: 2 out of 10
+Sat, 13 May 2023 10:50:07  INFO train loss = 0.04480670019984245
+Sat, 13 May 2023 10:50:10  INFO loss: 0.11126483976840973, EarlyStopping counter: 3 out of 10
+Sat, 13 May 2023 10:50:14  INFO train loss = 0.04473321884870529
+Sat, 13 May 2023 10:50:18  INFO loss: 0.11147654801607132, EarlyStopping counter: 4 out of 10
+Sat, 13 May 2023 10:50:22  INFO train loss = 0.04467199742794037
+Sat, 13 May 2023 10:50:25  INFO loss: 0.11127056181430817, EarlyStopping counter: 5 out of 10
+Sat, 13 May 2023 10:50:30  INFO train loss = 0.044585153460502625
+Sat, 13 May 2023 10:50:33  INFO loss: 0.11118172109127045, EarlyStopping counter: 6 out of 10
+Sat, 13 May 2023 10:50:37  INFO train loss = 0.04453431814908981
+Sat, 13 May 2023 10:50:41  INFO loss: 0.11098620295524597, Performance is better... saving the model
+Sat, 13 May 2023 10:50:45  INFO train loss = 0.044462766498327255
+Sat, 13 May 2023 10:50:49  INFO loss: 0.11062407493591309, Performance is better... saving the model
+Sat, 13 May 2023 10:50:53  INFO train loss = 0.044371508061885834
+Sat, 13 May 2023 10:50:56  INFO loss: 0.11086681485176086, EarlyStopping counter: 1 out of 10
+Sat, 13 May 2023 10:51:00  INFO train loss = 0.044367581605911255
+Sat, 13 May 2023 10:51:04  INFO loss: 0.11097796261310577, EarlyStopping counter: 2 out of 10
+Sat, 13 May 2023 10:51:08  INFO train loss = 0.044307101517915726
+Sat, 13 May 2023 10:51:12  INFO loss: 0.11054964363574982, Performance is better... saving the model
+Sat, 13 May 2023 10:51:16  INFO train loss = 0.04423452541232109
+Sat, 13 May 2023 10:51:19  INFO loss: 0.11060948669910431, EarlyStopping counter: 1 out of 10
+Sat, 13 May 2023 10:51:24  INFO train loss = 0.044119615107774734
+Sat, 13 May 2023 10:51:27  INFO loss: 0.11088739335536957, EarlyStopping counter: 2 out of 10
+Sat, 13 May 2023 10:51:31  INFO train loss = 0.04411965236067772
+Sat, 13 May 2023 10:51:35  INFO loss: 0.11050230264663696, Performance is better... saving the model
+Sat, 13 May 2023 10:51:39  INFO train loss = 0.044055212289094925
+Sat, 13 May 2023 10:51:42  INFO loss: 0.11079820990562439, EarlyStopping counter: 1 out of 10
+Sat, 13 May 2023 10:51:47  INFO train loss = 0.044022880494594574
+Sat, 13 May 2023 10:51:50  INFO loss: 0.11047083139419556, Performance is better... saving the model
+Sat, 13 May 2023 10:51:54  INFO train loss = 0.04395206272602081
+Sat, 13 May 2023 10:51:58  INFO loss: 0.1103162094950676, Performance is better... saving the model
+Sat, 13 May 2023 10:52:02  INFO train loss = 0.043916620314121246
+Sat, 13 May 2023 10:52:05  INFO loss: 0.11040814965963364, EarlyStopping counter: 1 out of 10
+Sat, 13 May 2023 10:52:10  INFO train loss = 0.04380163550376892
+Sat, 13 May 2023 10:52:13  INFO loss: 0.11039792746305466, EarlyStopping counter: 2 out of 10
+Sat, 13 May 2023 10:52:17  INFO train loss = 0.0437815822660923
+Sat, 13 May 2023 10:52:21  INFO loss: 0.11020165681838989, Performance is better... saving the model
+Sat, 13 May 2023 10:52:25  INFO train loss = 0.043750714510679245
+Sat, 13 May 2023 10:52:29  INFO loss: 0.1102963462471962, EarlyStopping counter: 1 out of 10
+Sat, 13 May 2023 10:52:33  INFO train loss = 0.043685149401426315
+Sat, 13 May 2023 10:52:37  INFO loss: 0.1104140356183052, EarlyStopping counter: 2 out of 10
+Sat, 13 May 2023 10:52:41  INFO train loss = 0.043610408902168274
+Sat, 13 May 2023 10:52:44  INFO loss: 0.11032214015722275, EarlyStopping counter: 3 out of 10
+Sat, 13 May 2023 10:52:49  INFO train loss = 0.04357977211475372
+Sat, 13 May 2023 10:52:52  INFO loss: 0.11020354926586151, EarlyStopping counter: 4 out of 10
+Sat, 13 May 2023 10:52:56  INFO train loss = 0.0435200035572052
+Sat, 13 May 2023 10:53:00  INFO loss: 0.11027228832244873, EarlyStopping counter: 5 out of 10
+Sat, 13 May 2023 10:53:04  INFO train loss = 0.043466463685035706
+Sat, 13 May 2023 10:53:08  INFO loss: 0.11007867008447647, Performance is better... saving the model
+Sat, 13 May 2023 10:53:12  INFO train loss = 0.04340895265340805
+Sat, 13 May 2023 10:53:16  INFO loss: 0.11007989197969437, EarlyStopping counter: 1 out of 10
+Sat, 13 May 2023 10:53:20  INFO train loss = 0.04339926317334175
+Sat, 13 May 2023 10:53:24  INFO loss: 0.11011722683906555, EarlyStopping counter: 2 out of 10
+Sat, 13 May 2023 10:53:28  INFO train loss = 0.04333484172821045
+Sat, 13 May 2023 10:53:31  INFO loss: 0.10994065552949905, Performance is better... saving the model
+Sat, 13 May 2023 10:53:35  INFO train loss = 0.043299123644828796
+Sat, 13 May 2023 10:53:39  INFO loss: 0.10994573682546616, EarlyStopping counter: 1 out of 10
+Sat, 13 May 2023 10:53:42  INFO train loss = 0.04325234144926071
+Sat, 13 May 2023 10:53:46  INFO loss: 0.11000476032495499, EarlyStopping counter: 2 out of 10
+Sat, 13 May 2023 10:53:50  INFO train loss = 0.043199338018894196
+Sat, 13 May 2023 10:53:54  INFO loss: 0.11010576784610748, EarlyStopping counter: 3 out of 10
+Sat, 13 May 2023 10:53:58  INFO train loss = 0.0431380569934845
+Sat, 13 May 2023 10:54:02  INFO loss: 0.11002147942781448, EarlyStopping counter: 4 out of 10
+Sat, 13 May 2023 10:54:06  INFO train loss = 0.04311549663543701
+Sat, 13 May 2023 10:54:09  INFO loss: 0.10958264768123627, Performance is better... saving the model
+Sat, 13 May 2023 10:54:13  INFO train loss = 0.043071191757917404
+Sat, 13 May 2023 10:54:17  INFO loss: 0.10951484739780426, Performance is better... saving the model
+Sat, 13 May 2023 10:54:21  INFO train loss = 0.043034590780735016
+Sat, 13 May 2023 11:14:59  INFO For top100, metric recall = 0.03986268924025479
+Sat, 13 May 2023 11:14:59  INFO For top300, metric recall = 0.08123898069207355
+Sat, 13 May 2023 11:14:59  INFO For top100, metric hit_ratio = 0.2703883436399501
+Sat, 13 May 2023 11:14:59  INFO For top300, metric hit_ratio = 0.4397032662495613
+Sat, 13 May 2023 11:14:59  INFO For top100, metric coverage = 42.3059794513088
+Sat, 13 May 2023 11:14:59  INFO For top300, metric coverage = 98.67497246862634
+Sat, 13 May 2023 11:14:59  INFO loss: 0.10957663506269455, EarlyStopping counter: 1 out of 10
+Sat, 13 May 2023 11:15:03  INFO train loss = 0.04297308623790741
+Sat, 13 May 2023 11:15:07  INFO loss: 0.10972391068935394, EarlyStopping counter: 2 out of 10
+Sat, 13 May 2023 11:15:11  INFO train loss = 0.0429525226354599
+Sat, 13 May 2023 11:15:15  INFO loss: 0.10969071835279465, EarlyStopping counter: 3 out of 10
+Sat, 13 May 2023 11:15:19  INFO train loss = 0.04291699454188347
+Sat, 13 May 2023 11:15:23  INFO loss: 0.10965052247047424, EarlyStopping counter: 4 out of 10
+Sat, 13 May 2023 11:15:27  INFO train loss = 0.04289412871003151
+Sat, 13 May 2023 11:15:31  INFO loss: 0.10965736210346222, EarlyStopping counter: 5 out of 10
+Sat, 13 May 2023 11:15:35  INFO train loss = 0.042835939675569534
+Sat, 13 May 2023 11:15:39  INFO loss: 0.10929226875305176, Performance is better... saving the model
+Sat, 13 May 2023 11:15:44  INFO train loss = 0.04282302409410477
+Sat, 13 May 2023 11:15:47  INFO loss: 0.10957522690296173, EarlyStopping counter: 1 out of 10
+Sat, 13 May 2023 11:15:52  INFO train loss = 0.04276695102453232
+Sat, 13 May 2023 11:15:55  INFO loss: 0.10935977101325989, EarlyStopping counter: 2 out of 10
+Sat, 13 May 2023 11:15:59  INFO train loss = 0.042720526456832886
+Sat, 13 May 2023 11:16:03  INFO loss: 0.10933534055948257, EarlyStopping counter: 3 out of 10
+Sat, 13 May 2023 11:16:07  INFO train loss = 0.04268163442611694
+Sat, 13 May 2023 11:16:10  INFO loss: 0.10974456369876862, EarlyStopping counter: 4 out of 10
+Sat, 13 May 2023 11:16:15  INFO train loss = 0.042630426585674286
+Sat, 13 May 2023 11:16:18  INFO loss: 0.10921303182840347, Performance is better... saving the model
+Sat, 13 May 2023 11:16:22  INFO train loss = 0.042553193867206573
+Sat, 13 May 2023 11:16:26  INFO loss: 0.1094943955540657, EarlyStopping counter: 1 out of 10
+Sat, 13 May 2023 11:16:30  INFO train loss = 0.0425594300031662
+Sat, 13 May 2023 11:16:33  INFO loss: 0.10943368822336197, EarlyStopping counter: 2 out of 10
+Sat, 13 May 2023 11:16:38  INFO train loss = 0.04249834269285202
+Sat, 13 May 2023 11:16:41  INFO loss: 0.10921717435121536, EarlyStopping counter: 3 out of 10
+Sat, 13 May 2023 11:16:46  INFO train loss = 0.042508721351623535
+Sat, 13 May 2023 11:16:49  INFO loss: 0.10922175645828247, EarlyStopping counter: 4 out of 10
+Sat, 13 May 2023 11:16:53  INFO train loss = 0.04243939369916916
+Sat, 13 May 2023 11:16:57  INFO loss: 0.10937686264514923, EarlyStopping counter: 5 out of 10
+Sat, 13 May 2023 11:17:01  INFO train loss = 0.04241371527314186
+Sat, 13 May 2023 11:17:04  INFO loss: 0.10916703194379807, Performance is better... saving the model
+Sat, 13 May 2023 11:17:09  INFO train loss = 0.042388174682855606
+Sat, 13 May 2023 11:17:12  INFO loss: 0.10934264957904816, EarlyStopping counter: 1 out of 10
+Sat, 13 May 2023 11:17:17  INFO train loss = 0.042339228093624115
+Sat, 13 May 2023 11:17:20  INFO loss: 0.1091260239481926, Performance is better... saving the model
+Sat, 13 May 2023 11:17:24  INFO train loss = 0.04231405258178711
+Sat, 13 May 2023 11:17:28  INFO loss: 0.10896481573581696, Performance is better... saving the model
+Sat, 13 May 2023 11:17:32  INFO train loss = 0.04225754737854004
+Sat, 13 May 2023 11:17:35  INFO loss: 0.10907860100269318, EarlyStopping counter: 1 out of 10
+Sat, 13 May 2023 11:17:40  INFO train loss = 0.04221682623028755
+Sat, 13 May 2023 11:17:43  INFO loss: 0.10899975150823593, EarlyStopping counter: 2 out of 10
+Sat, 13 May 2023 11:17:47  INFO train loss = 0.04220885783433914
+Sat, 13 May 2023 11:17:51  INFO loss: 0.10909020155668259, EarlyStopping counter: 3 out of 10
+Sat, 13 May 2023 11:17:55  INFO train loss = 0.04216523468494415
+Sat, 13 May 2023 11:17:59  INFO loss: 0.10903610289096832, EarlyStopping counter: 4 out of 10
+Sat, 13 May 2023 11:18:03  INFO train loss = 0.04212428256869316
+Sat, 13 May 2023 11:18:07  INFO loss: 0.10926035046577454, EarlyStopping counter: 5 out of 10
+Sat, 13 May 2023 11:18:11  INFO train loss = 0.042090222239494324
+Sat, 13 May 2023 11:18:14  INFO loss: 0.10905618965625763, EarlyStopping counter: 6 out of 10
+Sat, 13 May 2023 11:18:19  INFO train loss = 0.042098984122276306
+Sat, 13 May 2023 11:18:22  INFO loss: 0.10891897231340408, Performance is better... saving the model
+Sat, 13 May 2023 11:18:27  INFO train loss = 0.04201739653944969
+Sat, 13 May 2023 11:18:31  INFO loss: 0.1087266355752945, Performance is better... saving the model
+Sat, 13 May 2023 11:18:35  INFO train loss = 0.04202751815319061
+Sat, 13 May 2023 11:18:38  INFO loss: 0.10866732150316238, Performance is better... saving the model
+Sat, 13 May 2023 11:18:42  INFO train loss = 0.04201364144682884
+Sat, 13 May 2023 11:18:46  INFO loss: 0.10886423289775848, EarlyStopping counter: 1 out of 10
+Sat, 13 May 2023 11:18:51  INFO train loss = 0.04194528982043266
+Sat, 13 May 2023 11:18:54  INFO loss: 0.1090773418545723, EarlyStopping counter: 2 out of 10
+Sat, 13 May 2023 11:18:58  INFO train loss = 0.041941024363040924
+Sat, 13 May 2023 11:19:02  INFO loss: 0.10887782275676727, EarlyStopping counter: 3 out of 10
+Sat, 13 May 2023 11:19:06  INFO train loss = 0.04192781075835228
+Sat, 13 May 2023 11:19:09  INFO loss: 0.10853789746761322, Performance is better... saving the model
+Sat, 13 May 2023 11:19:13  INFO train loss = 0.0419028103351593
+Sat, 13 May 2023 11:19:17  INFO loss: 0.1085858941078186, EarlyStopping counter: 1 out of 10
+Sat, 13 May 2023 11:19:22  INFO train loss = 0.04186025261878967
+Sat, 13 May 2023 11:19:25  INFO loss: 0.10828474909067154, Performance is better... saving the model
+Sat, 13 May 2023 11:19:30  INFO train loss = 0.041870344430208206
+Sat, 13 May 2023 11:19:33  INFO loss: 0.10850856453180313, EarlyStopping counter: 1 out of 10
+Sat, 13 May 2023 11:19:38  INFO train loss = 0.041808921843767166
+Sat, 13 May 2023 11:19:42  INFO loss: 0.10875429958105087, EarlyStopping counter: 2 out of 10
+Sat, 13 May 2023 11:19:46  INFO train loss = 0.04175844043493271
+Sat, 13 May 2023 11:19:50  INFO loss: 0.10880636423826218, EarlyStopping counter: 3 out of 10
+Sat, 13 May 2023 11:19:54  INFO train loss = 0.04174014925956726
+Sat, 13 May 2023 11:19:57  INFO loss: 0.10866246372461319, EarlyStopping counter: 4 out of 10
+Sat, 13 May 2023 11:20:02  INFO train loss = 0.041716307401657104
+Sat, 13 May 2023 11:20:05  INFO loss: 0.10865557938814163, EarlyStopping counter: 5 out of 10
+Sat, 13 May 2023 11:20:10  INFO train loss = 0.041732966899871826
+Sat, 13 May 2023 11:20:13  INFO loss: 0.10860562324523926, EarlyStopping counter: 6 out of 10
+Sat, 13 May 2023 11:20:18  INFO train loss = 0.041667390614748
+Sat, 13 May 2023 11:20:21  INFO loss: 0.1084902212023735, EarlyStopping counter: 7 out of 10
+Sat, 13 May 2023 11:20:25  INFO train loss = 0.04164482280611992
+Sat, 13 May 2023 11:20:29  INFO loss: 0.10874900221824646, EarlyStopping counter: 8 out of 10
+Sat, 13 May 2023 11:20:33  INFO train loss = 0.041639454662799835
+Sat, 13 May 2023 11:20:36  INFO loss: 0.10864274203777313, EarlyStopping counter: 9 out of 10
+Sat, 13 May 2023 11:20:41  INFO train loss = 0.041596684604883194
+Sat, 13 May 2023 11:20:44  INFO loss: 0.10841168463230133, EarlyStopping counter: 10 out of 10
+Sat, 13 May 2023 11:20:44  INFO loading best model for test
+Sat, 13 May 2023 11:20:44  INFO begin testing
+Sat, 13 May 2023 11:41:04  INFO For top100, metric recall = 0.040685321112951436
+Sat, 13 May 2023 11:41:04  INFO For top300, metric recall = 0.08267194258463628
+Sat, 13 May 2023 11:41:04  INFO For top100, metric hit_ratio = 0.2739946510474024
+Sat, 13 May 2023 11:41:04  INFO For top300, metric hit_ratio = 0.4442172013602314
+Sat, 13 May 2023 11:41:04  INFO For top100, metric coverage = 41.848244648021975
+Sat, 13 May 2023 11:41:04  INFO For top300, metric coverage = 97.66882480364987

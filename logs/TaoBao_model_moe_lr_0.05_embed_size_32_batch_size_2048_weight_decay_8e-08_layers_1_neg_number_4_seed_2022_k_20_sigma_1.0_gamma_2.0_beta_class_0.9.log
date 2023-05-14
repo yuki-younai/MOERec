@@ -1,0 +1,16 @@
+Sat, 13 May 2023 13:01:18  DEBUG Failed checking if running in CYGWIN due to: FileNotFoundError(2, 'No such file or directory')
+Sat, 13 May 2023 13:01:18  DEBUG git repository is invalid
+Sat, 13 May 2023 13:01:19  DEBUG Starting new HTTPS connection (1): api.wandb.ai:443
+Sat, 13 May 2023 13:01:19  DEBUG https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 602
+Sat, 13 May 2023 13:01:19  DEBUG Starting new HTTPS connection (1): api.wandb.ai:443
+Sat, 13 May 2023 13:01:20  DEBUG https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 333
+Sat, 13 May 2023 13:01:25  INFO loadding data
+Sat, 13 May 2023 13:01:25  INFO reading category information
+Sat, 13 May 2023 13:01:38  INFO reading train data
+Sat, 13 May 2023 13:01:46  INFO reading valid data
+Sat, 13 May 2023 13:01:48  INFO reading test data
+Sat, 13 May 2023 13:01:50  INFO get weight for each sample
+Sat, 13 May 2023 13:02:21  DEBUG Starting new HTTPS connection (1): o151352.ingest.sentry.io:443
+Sat, 13 May 2023 13:02:21  DEBUG https://o151352.ingest.sentry.io:443 "POST /api/5288891/envelope/ HTTP/1.1" 200 2
+Sat, 13 May 2023 13:02:23  INFO train loss = 0.24724596738815308
+Sat, 13 May 2023 13:03:03  INFO loss: 0.3251078724861145, Performance is better... saving the model

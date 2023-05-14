@@ -1,0 +1,18 @@
+{
+    "os": "Linux-4.4.0-186-generic-x86_64-with-glibc2.17",
+    "python": "3.8.13",
+    "heartbeatAt": "2023-05-07T11:20:06.345034",
+    "startedAt": "2023-05-07T11:20:04.834965",
+    "docker": null,
+    "gpu": "NVIDIA GeForce RTX 3080",
+    "gpu_count": 4,
+    "cpu_count": 48,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "main.py",
+    "codePath": "main.py",
+    "host": "linux2",
+    "username": "gwy",
+    "executable": "/home/gwy/anaconda3/envs/PyTorch/bin/python"
+}

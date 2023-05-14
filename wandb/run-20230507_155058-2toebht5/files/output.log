@@ -1,0 +1,1170 @@
+loadding data
+reading category information
+
+
+
+
+
+
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 136710/136710 [00:14<00:00, 9644.66it/s]
+reading train data
+
+
+
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 2571752/2571752 [00:06<00:00, 424346.28it/s]
+reading valid data
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 845781/845781 [00:01<00:00, 456336.66it/s]
+reading test data
+get weight for each sample
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 136710/136710 [00:00<00:00, 1988573.92it/s]
+train loss = 1.2836737632751465
+loss: 1.4166021347045898, Performance is better... saving the model
+train loss = 1.1551927328109741
+loss: 1.330539584159851, Performance is better... saving the model
+train loss = 1.0382498502731323
+Starting new HTTPS connection (1): o151352.ingest.sentry.io:443
+https://o151352.ingest.sentry.io:443 "POST /api/5288891/envelope/ HTTP/1.1" 200 2
+loss: 1.2564966678619385, Performance is better... saving the model
+train loss = 0.9470778703689575
+loss: 1.2087992429733276, Performance is better... saving the model
+train loss = 0.8829814195632935
+loss: 1.1644151210784912, Performance is better... saving the model
+train loss = 0.8295544385910034
+loss: 1.1269255876541138, Performance is better... saving the model
+train loss = 0.7834476232528687
+loss: 1.0975286960601807, Performance is better... saving the model
+train loss = 0.7443059086799622
+loss: 1.062545657157898, Performance is better... saving the model
+train loss = 0.7108046412467957
+loss: 1.0391086339950562, Performance is better... saving the model
+train loss = 0.6796765327453613
+loss: 1.014173984527588, Performance is better... saving the model
+train loss = 0.6531471014022827
+loss: 0.9872421622276306, Performance is better... saving the model
+train loss = 0.6292967796325684
+loss: 0.9662969708442688, Performance is better... saving the model
+train loss = 0.606499195098877
+loss: 0.945110559463501, Performance is better... saving the model
+train loss = 0.5860463976860046
+loss: 0.9278807044029236, Performance is better... saving the model
+train loss = 0.5677281618118286
+loss: 0.9110022783279419, Performance is better... saving the model
+train loss = 0.550275444984436
+loss: 0.8972054719924927, Performance is better... saving the model
+train loss = 0.5342414975166321
+loss: 0.8855987787246704, Performance is better... saving the model
+train loss = 0.519644558429718
+loss: 0.872261106967926, Performance is better... saving the model
+train loss = 0.5056802034378052
+loss: 0.8617802262306213, Performance is better... saving the model
+train loss = 0.4933096170425415
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 41/41 [00:32<00:00,  1.28it/s]
+For top100, metric recall = 0.00904646276008637
+For top300, metric recall = 0.017648310946533012
+For top100, metric hit_ratio = 0.07954449191001174
+For top300, metric hit_ratio = 0.14535355124466012
+For top100, metric coverage = 51.97756344317646
+For top300, metric coverage = 116.26818583374681
+loss: 0.8511456251144409, Performance is better... saving the model
+train loss = 0.4815737009048462
+loss: 0.8457357287406921, Performance is better... saving the model
+train loss = 0.4706318974494934
+loss: 0.8383554220199585, Performance is better... saving the model
+train loss = 0.46046286821365356
+loss: 0.8358728885650635, Performance is better... saving the model
+train loss = 0.45091211795806885
+loss: 0.8290590643882751, Performance is better... saving the model
+train loss = 0.4420158565044403
+loss: 0.8278669714927673, Performance is better... saving the model
+train loss = 0.43379515409469604
+loss: 0.8212701082229614, Performance is better... saving the model
+train loss = 0.4257626533508301
+loss: 0.8195540308952332, Performance is better... saving the model
+train loss = 0.4174231290817261
+loss: 0.8151512742042542, Performance is better... saving the model
+train loss = 0.4083802103996277
+loss: 0.8089854121208191, Performance is better... saving the model
+train loss = 0.40034517645835876
+loss: 0.8057309985160828, Performance is better... saving the model
+train loss = 0.39242273569107056
+loss: 0.7983683943748474, Performance is better... saving the model
+train loss = 0.3844952881336212
+loss: 0.7938516736030579, Performance is better... saving the model
+train loss = 0.37585148215293884
+loss: 0.7890176177024841, Performance is better... saving the model
+train loss = 0.36695238947868347
+loss: 0.7800337076187134, Performance is better... saving the model
+train loss = 0.3594170808792114
+loss: 0.7767571806907654, Performance is better... saving the model
+train loss = 0.3521210551261902
+loss: 0.7668468952178955, Performance is better... saving the model
+train loss = 0.34527987241744995
+loss: 0.7640565633773804, Performance is better... saving the model
+train loss = 0.33770817518234253
+loss: 0.7546995282173157, Performance is better... saving the model
+train loss = 0.3303573727607727
+loss: 0.7447313070297241, Performance is better... saving the model
+train loss = 0.3205394744873047
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 41/41 [00:29<00:00,  1.38it/s]
+For top100, metric recall = 0.014089540380406456
+For top300, metric recall = 0.029058998187130813
+For top100, metric hit_ratio = 0.12643858990960027
+For top300, metric hit_ratio = 0.22645916280420655
+For top100, metric coverage = 44.510171481127394
+For top300, metric coverage = 100.78767562596057
+loss: 0.7422343492507935, Performance is better... saving the model
+train loss = 0.3153822422027588
+loss: 0.7335768938064575, Performance is better... saving the model
+train loss = 0.30936768651008606
+loss: 0.7227461934089661, Performance is better... saving the model
+train loss = 0.2993675172328949
+loss: 0.7156806588172913, Performance is better... saving the model
+train loss = 0.2935098707675934
+loss: 0.7083225250244141, Performance is better... saving the model
+train loss = 0.28497225046157837
+loss: 0.702608048915863, Performance is better... saving the model
+train loss = 0.2788309156894684
+loss: 0.695127546787262, Performance is better... saving the model
+train loss = 0.2720438838005066
+loss: 0.685118556022644, Performance is better... saving the model
+train loss = 0.26467281579971313
+loss: 0.6779709458351135, Performance is better... saving the model
+train loss = 0.2593792974948883
+loss: 0.6704510450363159, Performance is better... saving the model
+train loss = 0.2521958351135254
+loss: 0.6636847853660583, Performance is better... saving the model
+train loss = 0.2469227910041809
+loss: 0.6561135053634644, Performance is better... saving the model
+train loss = 0.2402745932340622
+loss: 0.6514211893081665, Performance is better... saving the model
+train loss = 0.23575450479984283
+loss: 0.645167887210846, Performance is better... saving the model
+train loss = 0.22981791198253632
+loss: 0.6388252377510071, Performance is better... saving the model
+train loss = 0.22464203834533691
+loss: 0.632415771484375, Performance is better... saving the model
+train loss = 0.21885405480861664
+loss: 0.6285847425460815, Performance is better... saving the model
+train loss = 0.2145061194896698
+loss: 0.6224738955497742, Performance is better... saving the model
+train loss = 0.20908227562904358
+loss: 0.6198247671127319, Performance is better... saving the model
+train loss = 0.20491069555282593
+loss: 0.6149861812591553, Performance is better... saving the model
+train loss = 0.19996872544288635
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 41/41 [00:29<00:00,  1.39it/s]
+For top100, metric recall = 0.022245571185038688
+For top300, metric recall = 0.04508984483062341
+For top100, metric hit_ratio = 0.17617658804593805
+For top300, metric hit_ratio = 0.3020584996308981
+For top100, metric coverage = 45.34406350973582
+For top300, metric coverage = 102.70592862415742
+loss: 0.6089577674865723, Performance is better... saving the model
+train loss = 0.19557565450668335
+loss: 0.6055545806884766, Performance is better... saving the model
+train loss = 0.19165411591529846
+loss: 0.6016618609428406, Performance is better... saving the model
+train loss = 0.187297984957695
+loss: 0.5986616611480713, Performance is better... saving the model
+train loss = 0.1836971640586853
+loss: 0.5943678617477417, Performance is better... saving the model
+train loss = 0.17986464500427246
+loss: 0.5903290510177612, Performance is better... saving the model
+train loss = 0.17650452256202698
+loss: 0.5870432257652283, Performance is better... saving the model
+train loss = 0.1733405441045761
+loss: 0.5839704871177673, Performance is better... saving the model
+train loss = 0.17000000178813934
+loss: 0.5806697010993958, Performance is better... saving the model
+train loss = 0.16685953736305237
+loss: 0.5781005024909973, Performance is better... saving the model
+train loss = 0.1636853814125061
+loss: 0.577212393283844, Performance is better... saving the model
+train loss = 0.16122084856033325
+loss: 0.572593629360199, Performance is better... saving the model
+train loss = 0.15859581530094147
+loss: 0.5687017440795898, Performance is better... saving the model
+train loss = 0.15575148165225983
+loss: 0.5670649409294128, Performance is better... saving the model
+train loss = 0.15326204895973206
+loss: 0.5633811354637146, Performance is better... saving the model
+train loss = 0.1508755385875702
+loss: 0.5625232458114624, Performance is better... saving the model
+train loss = 0.14862480759620667
+loss: 0.5587189197540283, Performance is better... saving the model
+train loss = 0.14656475186347961
+loss: 0.5569760799407959, Performance is better... saving the model
+train loss = 0.14419007301330566
+loss: 0.5538479685783386, Performance is better... saving the model
+train loss = 0.14226579666137695
+loss: 0.5527493953704834, Performance is better... saving the model
+train loss = 0.14057859778404236
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 41/41 [00:29<00:00,  1.40it/s]
+For top100, metric recall = 0.027540050532254536
+For top300, metric recall = 0.0552345028671211
+For top100, metric hit_ratio = 0.2057410477654206
+For top300, metric hit_ratio = 0.34395459441143367
+For top100, metric coverage = 44.62505294494935
+For top300, metric coverage = 100.38047753318892
+loss: 0.5491271615028381, Performance is better... saving the model
+train loss = 0.1387341022491455
+loss: 0.5483660101890564, Performance is better... saving the model
+train loss = 0.13686731457710266
+loss: 0.5463024377822876, Performance is better... saving the model
+train loss = 0.13510319590568542
+loss: 0.5433198809623718, Performance is better... saving the model
+train loss = 0.13350830972194672
+loss: 0.5418479442596436, Performance is better... saving the model
+train loss = 0.13196516036987305
+loss: 0.53910893201828, Performance is better... saving the model
+train loss = 0.13044953346252441
+loss: 0.5382669568061829, Performance is better... saving the model
+train loss = 0.12905295193195343
+loss: 0.5379458069801331, Performance is better... saving the model
+train loss = 0.12749969959259033
+loss: 0.5352626442909241, Performance is better... saving the model
+train loss = 0.1262989640235901
+loss: 0.5334936380386353, Performance is better... saving the model
+train loss = 0.12508165836334229
+loss: 0.5331098437309265, Performance is better... saving the model
+train loss = 0.12364763766527176
+loss: 0.531086266040802, Performance is better... saving the model
+train loss = 0.12234377861022949
+loss: 0.529852569103241, Performance is better... saving the model
+train loss = 0.12133043259382248
+loss: 0.5287863612174988, Performance is better... saving the model
+train loss = 0.12001634389162064
+loss: 0.5256339311599731, Performance is better... saving the model
+train loss = 0.11892403662204742
+loss: 0.5263543725013733, EarlyStopping counter: 1 out of 10
+train loss = 0.11781421303749084
+loss: 0.5252172350883484, Performance is better... saving the model
+train loss = 0.11696232855319977
+loss: 0.5228756070137024, Performance is better... saving the model
+train loss = 0.11579146981239319
+loss: 0.5203688144683838, Performance is better... saving the model
+train loss = 0.1146848201751709
+loss: 0.5216003060340881, EarlyStopping counter: 1 out of 10
+train loss = 0.11380212754011154
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 41/41 [00:29<00:00,  1.37it/s]
+For top100, metric recall = 0.0307709143209986
+For top300, metric recall = 0.06155298483329217
+For top100, metric hit_ratio = 0.22308278774823617
+For top300, metric hit_ratio = 0.36774654193845074
+For top100, metric coverage = 42.899906816889136
+For top300, metric coverage = 96.0491934215144
+loss: 0.5190107822418213, Performance is better... saving the model
+train loss = 0.11302100867033005
+loss: 0.516666829586029, Performance is better... saving the model
+train loss = 0.11201466619968414
+loss: 0.5177246332168579, EarlyStopping counter: 1 out of 10
+train loss = 0.11109375953674316
+loss: 0.5162525177001953, Performance is better... saving the model
+train loss = 0.11045236140489578
+loss: 0.5161870121955872, Performance is better... saving the model
+train loss = 0.10957857966423035
+loss: 0.5132262706756592, Performance is better... saving the model
+train loss = 0.10873746871948242
+loss: 0.5120994448661804, Performance is better... saving the model
+train loss = 0.10780461877584457
+loss: 0.5116667151451111, Performance is better... saving the model
+train loss = 0.1071503534913063
+loss: 0.5099050402641296, Performance is better... saving the model
+train loss = 0.1064935028553009
+loss: 0.5098001956939697, Performance is better... saving the model
+train loss = 0.10581614077091217
+loss: 0.509510338306427, Performance is better... saving the model
+train loss = 0.10520178079605103
+loss: 0.5090938806533813, Performance is better... saving the model
+train loss = 0.10462626814842224
+loss: 0.5077233910560608, Performance is better... saving the model
+train loss = 0.10373474657535553
+loss: 0.506509006023407, Performance is better... saving the model
+train loss = 0.1030929908156395
+loss: 0.50582355260849, Performance is better... saving the model
+train loss = 0.10255424678325653
+loss: 0.5060310363769531, EarlyStopping counter: 1 out of 10
+train loss = 0.10194945335388184
+loss: 0.5029199123382568, Performance is better... saving the model
+train loss = 0.10130294412374496
+loss: 0.5029880404472351, EarlyStopping counter: 1 out of 10
+train loss = 0.1009080708026886
+loss: 0.5038422346115112, EarlyStopping counter: 2 out of 10
+train loss = 0.1002064123749733
+loss: 0.5016155242919922, Performance is better... saving the model
+train loss = 0.09979697316884995
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 41/41 [00:29<00:00,  1.41it/s]
+For top100, metric recall = 0.033474250219933326
+For top300, metric recall = 0.06729842246520751
+For top100, metric hit_ratio = 0.2361163215664444
+For top300, metric hit_ratio = 0.38823472462575487
+For top100, metric coverage = 41.60398388053199
+For top300, metric coverage = 92.48404390497743
+loss: 0.5014287233352661, Performance is better... saving the model
+train loss = 0.098993219435215
+loss: 0.49871644377708435, Performance is better... saving the model
+train loss = 0.09851554781198502
+loss: 0.4995611310005188, EarlyStopping counter: 1 out of 10
+train loss = 0.09799008816480637
+loss: 0.4991655647754669, EarlyStopping counter: 2 out of 10
+train loss = 0.09754505753517151
+loss: 0.4970652759075165, Performance is better... saving the model
+train loss = 0.0970630943775177
+loss: 0.4967776834964752, Performance is better... saving the model
+train loss = 0.09649068117141724
+loss: 0.497757226228714, EarlyStopping counter: 1 out of 10
+train loss = 0.09614580869674683
+loss: 0.496223121881485, Performance is better... saving the model
+train loss = 0.09570867568254471
+loss: 0.4967974126338959, EarlyStopping counter: 1 out of 10
+train loss = 0.09508895874023438
+loss: 0.49459803104400635, Performance is better... saving the model
+train loss = 0.09479290246963501
+loss: 0.49416640400886536, Performance is better... saving the model
+train loss = 0.09432593733072281
+loss: 0.4929421544075012, Performance is better... saving the model
+train loss = 0.09376391768455505
+loss: 0.49234849214553833, Performance is better... saving the model
+train loss = 0.09328566491603851
+loss: 0.49154335260391235, Performance is better... saving the model
+train loss = 0.093131884932518
+loss: 0.49094659090042114, Performance is better... saving the model
+train loss = 0.09279823303222656
+loss: 0.49198153614997864, EarlyStopping counter: 1 out of 10
+train loss = 0.09227301925420761
+loss: 0.4892701804637909, Performance is better... saving the model
+train loss = 0.09199179708957672
+loss: 0.4893355071544647, EarlyStopping counter: 1 out of 10
+train loss = 0.09154600650072098
+loss: 0.4887152314186096, Performance is better... saving the model
+train loss = 0.09124702215194702
+loss: 0.4876837730407715, Performance is better... saving the model
+train loss = 0.09094467759132385
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 41/41 [00:29<00:00,  1.37it/s]
+For top100, metric recall = 0.035886686536918184
+For top300, metric recall = 0.07139225773774745
+For top100, metric hit_ratio = 0.24703205741047765
+For top300, metric hit_ratio = 0.40334975131000933
+For top100, metric coverage = 40.256761826388974
+For top300, metric coverage = 89.21992424334104
+loss: 0.48688679933547974, Performance is better... saving the model
+train loss = 0.09038008004426956
+loss: 0.4882338345050812, EarlyStopping counter: 1 out of 10
+train loss = 0.09017429500818253
+loss: 0.48649847507476807, Performance is better... saving the model
+train loss = 0.08990281820297241
+loss: 0.48531052470207214, Performance is better... saving the model
+train loss = 0.08942082524299622
+loss: 0.4848002791404724, Performance is better... saving the model
+train loss = 0.08919425308704376
+loss: 0.48568418622016907, EarlyStopping counter: 1 out of 10
+train loss = 0.08881010860204697
+loss: 0.48430317640304565, Performance is better... saving the model
+train loss = 0.08856219053268433
+loss: 0.4839088022708893, Performance is better... saving the model
+train loss = 0.08826880156993866
+loss: 0.48344239592552185, Performance is better... saving the model
+train loss = 0.08803978562355042
+loss: 0.4823835790157318, Performance is better... saving the model
+train loss = 0.087760329246521
+loss: 0.4815196692943573, Performance is better... saving the model
+train loss = 0.08731435984373093
+loss: 0.4822565019130707, EarlyStopping counter: 1 out of 10
+train loss = 0.08716922998428345
+loss: 0.4817439019680023, EarlyStopping counter: 2 out of 10
+train loss = 0.08680537343025208
+loss: 0.48103341460227966, Performance is better... saving the model
+train loss = 0.0866057500243187
+loss: 0.48079052567481995, Performance is better... saving the model
+train loss = 0.0863933339715004
+loss: 0.47991329431533813, Performance is better... saving the model
+train loss = 0.08608760684728622
+loss: 0.47922593355178833, Performance is better... saving the model
+train loss = 0.0857686772942543
+loss: 0.4783451557159424, Performance is better... saving the model
+train loss = 0.08558287471532822
+loss: 0.47830161452293396, Performance is better... saving the model
+train loss = 0.08555733412504196
+loss: 0.47795388102531433, Performance is better... saving the model
+train loss = 0.08513160049915314
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 41/41 [00:29<00:00,  1.37it/s]
+For top100, metric recall = 0.03803684365888742
+For top300, metric recall = 0.07512150056532234
+For top100, metric hit_ratio = 0.2567860297943921
+For top300, metric hit_ratio = 0.414761656965135
+For top100, metric coverage = 39.19314317524476
+For top300, metric coverage = 86.59612987547348
+loss: 0.4780924320220947, EarlyStopping counter: 1 out of 10
+train loss = 0.08496557921171188
+loss: 0.4772799015045166, Performance is better... saving the model
+train loss = 0.08488041162490845
+loss: 0.47822409868240356, EarlyStopping counter: 1 out of 10
+train loss = 0.08444659411907196
+loss: 0.47605273127555847, Performance is better... saving the model
+train loss = 0.08426779508590698
+loss: 0.4742705821990967, Performance is better... saving the model
+train loss = 0.08412708342075348
+loss: 0.4754589796066284, EarlyStopping counter: 1 out of 10
+train loss = 0.08379065990447998
+loss: 0.4743124842643738, EarlyStopping counter: 2 out of 10
+train loss = 0.08377048373222351
+loss: 0.4742889106273651, EarlyStopping counter: 3 out of 10
+train loss = 0.08349163830280304
+loss: 0.4751937687397003, EarlyStopping counter: 4 out of 10
+train loss = 0.08331099152565002
+loss: 0.47490912675857544, EarlyStopping counter: 5 out of 10
+train loss = 0.0830811858177185
+loss: 0.47330039739608765, Performance is better... saving the model
+train loss = 0.0828208401799202
+loss: 0.4731217324733734, Performance is better... saving the model
+train loss = 0.08260595798492432
+loss: 0.47032877802848816, Performance is better... saving the model
+train loss = 0.08256722241640091
+loss: 0.4719008207321167, EarlyStopping counter: 1 out of 10
+train loss = 0.0822613388299942
+loss: 0.4727095067501068, EarlyStopping counter: 2 out of 10
+train loss = 0.08227196335792542
+loss: 0.4713080823421478, EarlyStopping counter: 3 out of 10
+train loss = 0.08198534697294235
+loss: 0.4714133143424988, EarlyStopping counter: 4 out of 10
+train loss = 0.08169174194335938
+loss: 0.47127071022987366, EarlyStopping counter: 5 out of 10
+train loss = 0.08176330476999283
+loss: 0.4710637032985687, EarlyStopping counter: 6 out of 10
+train loss = 0.08140778541564941
+loss: 0.4710002839565277, EarlyStopping counter: 7 out of 10
+train loss = 0.08126725256443024
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 41/41 [00:28<00:00,  1.42it/s]
+For top100, metric recall = 0.03958041032544968
+For top300, metric recall = 0.07828150076675451
+For top100, metric hit_ratio = 0.26541454382631635
+For top300, metric hit_ratio = 0.4262340711338085
+For top100, metric coverage = 38.35076785303692
+For top300, metric coverage = 84.55212808442148
+loss: 0.4705923795700073, EarlyStopping counter: 8 out of 10
+train loss = 0.08107945322990417
+loss: 0.4688391387462616, Performance is better... saving the model
+train loss = 0.08090905100107193
+loss: 0.47047972679138184, EarlyStopping counter: 1 out of 10
+train loss = 0.08071807026863098
+loss: 0.469145268201828, EarlyStopping counter: 2 out of 10
+train loss = 0.08066673576831818
+loss: 0.4675101935863495, Performance is better... saving the model
+train loss = 0.08054332435131073
+loss: 0.4685022532939911, EarlyStopping counter: 1 out of 10
+train loss = 0.08037352561950684
+loss: 0.46907010674476624, EarlyStopping counter: 2 out of 10
+train loss = 0.08015067130327225
+loss: 0.46798840165138245, EarlyStopping counter: 3 out of 10
+train loss = 0.08005544543266296
+loss: 0.46808260679244995, EarlyStopping counter: 4 out of 10
+train loss = 0.07965096831321716
+loss: 0.4668092131614685, Performance is better... saving the model
+train loss = 0.0796765387058258
+loss: 0.4665088951587677, Performance is better... saving the model
+train loss = 0.07956986874341965
+loss: 0.4668419659137726, EarlyStopping counter: 1 out of 10
+train loss = 0.07942426204681396
+loss: 0.46725040674209595, EarlyStopping counter: 2 out of 10
+train loss = 0.0793100893497467
+loss: 0.4659067690372467, Performance is better... saving the model
+train loss = 0.07909645140171051
+loss: 0.46570050716400146, Performance is better... saving the model
+train loss = 0.07910004258155823
+loss: 0.4664333462715149, EarlyStopping counter: 1 out of 10
+train loss = 0.07896821200847626
+loss: 0.4652220606803894, Performance is better... saving the model
+train loss = 0.07866960763931274
+loss: 0.46579617261886597, EarlyStopping counter: 1 out of 10
+train loss = 0.07861219346523285
+loss: 0.4642266035079956, Performance is better... saving the model
+train loss = 0.0785122811794281
+loss: 0.464420884847641, EarlyStopping counter: 1 out of 10
+train loss = 0.07844960689544678
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 41/41 [00:29<00:00,  1.41it/s]
+For top100, metric recall = 0.040942995236856516
+For top300, metric recall = 0.08078871632357935
+For top100, metric hit_ratio = 0.2711023440998148
+For top300, metric hit_ratio = 0.43452373748986484
+For top100, metric coverage = 37.62559752157129
+For top300, metric coverage = 82.96065736449118
+loss: 0.46423599123954773, EarlyStopping counter: 2 out of 10
+train loss = 0.07828264683485031
+loss: 0.4636686146259308, Performance is better... saving the model
+train loss = 0.07819706946611404
+loss: 0.46282273530960083, Performance is better... saving the model
+train loss = 0.07808295637369156
+loss: 0.4637776017189026, EarlyStopping counter: 1 out of 10
+train loss = 0.078025221824646
+loss: 0.4654511511325836, EarlyStopping counter: 2 out of 10
+train loss = 0.0777595043182373
+loss: 0.46176815032958984, Performance is better... saving the model
+train loss = 0.07768285274505615
+loss: 0.4630504250526428, EarlyStopping counter: 1 out of 10
+train loss = 0.07758547365665436
+loss: 0.46265795826911926, EarlyStopping counter: 2 out of 10
+train loss = 0.07740779966115952
+loss: 0.46255719661712646, EarlyStopping counter: 3 out of 10
+train loss = 0.07742271572351456
+loss: 0.4627107083797455, EarlyStopping counter: 4 out of 10
+train loss = 0.07719969749450684
+loss: 0.4610052704811096, Performance is better... saving the model
+train loss = 0.07702131569385529
+loss: 0.462593138217926, EarlyStopping counter: 1 out of 10
+train loss = 0.07698927819728851
+loss: 0.46150892972946167, EarlyStopping counter: 2 out of 10
+train loss = 0.07691807299852371
+loss: 0.46053922176361084, Performance is better... saving the model
+train loss = 0.07683500647544861
+loss: 0.4613458812236786, EarlyStopping counter: 1 out of 10
+train loss = 0.07673730701208115
+loss: 0.4615229070186615, EarlyStopping counter: 2 out of 10
+train loss = 0.07660330086946487
+loss: 0.46075475215911865, EarlyStopping counter: 3 out of 10
+train loss = 0.07657120376825333
+loss: 0.46099039912223816, EarlyStopping counter: 4 out of 10
+train loss = 0.07646641880273819
+loss: 0.46002325415611267, Performance is better... saving the model
+train loss = 0.07636602222919464
+loss: 0.45962294936180115, Performance is better... saving the model
+train loss = 0.07618316262960434
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 41/41 [00:28<00:00,  1.46it/s]
+For top100, metric recall = 0.042091492532274434
+For top300, metric recall = 0.08300663244487042
+For top100, metric hit_ratio = 0.2768869579949899
+For top300, metric hit_ratio = 0.44230513233211916
+For top100, metric coverage = 37.14370771967616
+For top300, metric coverage = 81.79878498904796
+loss: 0.45933401584625244, Performance is better... saving the model
+train loss = 0.0760478749871254
+loss: 0.45967355370521545, EarlyStopping counter: 1 out of 10
+train loss = 0.07611079514026642
+loss: 0.45958295464515686, EarlyStopping counter: 2 out of 10
+train loss = 0.07588314265012741
+loss: 0.45927903056144714, Performance is better... saving the model
+train loss = 0.07584856450557709
+loss: 0.4595906138420105, EarlyStopping counter: 1 out of 10
+train loss = 0.07572990655899048
+loss: 0.45917683839797974, Performance is better... saving the model
+train loss = 0.0757637470960617
+loss: 0.4586431384086609, Performance is better... saving the model
+train loss = 0.07535576820373535
+loss: 0.45845454931259155, Performance is better... saving the model
+train loss = 0.07550093531608582
+loss: 0.45793968439102173, Performance is better... saving the model
+train loss = 0.07533667981624603
+loss: 0.45752260088920593, Performance is better... saving the model
+train loss = 0.07524636387825012
+loss: 0.45856335759162903, EarlyStopping counter: 1 out of 10
+train loss = 0.07523102313280106
+loss: 0.4572814106941223, Performance is better... saving the model
+train loss = 0.07513658702373505
+loss: 0.45614710450172424, Performance is better... saving the model
+train loss = 0.07504186779260635
+loss: 0.45742061734199524, EarlyStopping counter: 1 out of 10
+train loss = 0.07490397989749908
+loss: 0.45567741990089417, Performance is better... saving the model
+train loss = 0.07487384974956512
+loss: 0.45605283975601196, EarlyStopping counter: 1 out of 10
+train loss = 0.07470432668924332
+loss: 0.4571419954299927, EarlyStopping counter: 2 out of 10
+train loss = 0.0746089369058609
+loss: 0.4565761387348175, EarlyStopping counter: 3 out of 10
+train loss = 0.07449652999639511
+loss: 0.4564652144908905, EarlyStopping counter: 4 out of 10
+train loss = 0.07455773651599884
+loss: 0.45574790239334106, EarlyStopping counter: 5 out of 10
+train loss = 0.0744500681757927
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 41/41 [00:28<00:00,  1.41it/s]
+For top100, metric recall = 0.043166620879385116
+For top300, metric recall = 0.08466326303598201
+For top100, metric hit_ratio = 0.2812072658623068
+For top300, metric hit_ratio = 0.4478719155785219
+For top100, metric coverage = 36.695642176854285
+For top300, metric coverage = 80.75670736872678
+loss: 0.4548688232898712, Performance is better... saving the model
+train loss = 0.07440274208784103
+loss: 0.45439308881759644, Performance is better... saving the model
+train loss = 0.07431749999523163
+loss: 0.4555758237838745, EarlyStopping counter: 1 out of 10
+train loss = 0.07423374056816101
+loss: 0.4562050402164459, EarlyStopping counter: 2 out of 10
+train loss = 0.07410603016614914
+loss: 0.45530250668525696, EarlyStopping counter: 3 out of 10
+train loss = 0.0740581601858139
+loss: 0.45368584990501404, Performance is better... saving the model
+train loss = 0.07407709211111069
+loss: 0.45517441630363464, EarlyStopping counter: 1 out of 10
+train loss = 0.07400752604007721
+loss: 0.45359039306640625, Performance is better... saving the model
+train loss = 0.0738188773393631
+loss: 0.4550774097442627, EarlyStopping counter: 1 out of 10
+train loss = 0.07364825159311295
+loss: 0.4542929232120514, EarlyStopping counter: 2 out of 10
+train loss = 0.07364348322153091
+loss: 0.45344600081443787, Performance is better... saving the model
+train loss = 0.07360288500785828
+loss: 0.45279988646507263, Performance is better... saving the model
+train loss = 0.0735686868429184
+loss: 0.45486152172088623, EarlyStopping counter: 1 out of 10
+train loss = 0.07340618968009949
+loss: 0.4531465768814087, EarlyStopping counter: 2 out of 10
+train loss = 0.07331439852714539
+loss: 0.45325562357902527, EarlyStopping counter: 3 out of 10
+train loss = 0.07327605038881302
+loss: 0.4526337683200836, Performance is better... saving the model
+train loss = 0.0732024535536766
+loss: 0.4531767666339874, EarlyStopping counter: 1 out of 10
+train loss = 0.07322577387094498
+loss: 0.4532090723514557, EarlyStopping counter: 2 out of 10
+train loss = 0.07324258238077164
+loss: 0.45257511734962463, Performance is better... saving the model
+train loss = 0.0731058195233345
+loss: 0.45136985182762146, Performance is better... saving the model
+train loss = 0.07283337414264679
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 41/41 [00:29<00:00,  1.39it/s]
+For top100, metric recall = 0.04397084998731286
+For top300, metric recall = 0.08622625228258211
+For top100, metric hit_ratio = 0.28553967543233333
+For top300, metric hit_ratio = 0.4530877494463471
+For top100, metric coverage = 36.28222380888991
+For top300, metric coverage = 80.00033884767586
+loss: 0.4516916275024414, EarlyStopping counter: 1 out of 10
+train loss = 0.07281842827796936
+loss: 0.4515014588832855, EarlyStopping counter: 2 out of 10
+train loss = 0.07291620224714279
+loss: 0.45091164112091064, Performance is better... saving the model
+train loss = 0.07279814779758453
+loss: 0.4518407881259918, EarlyStopping counter: 1 out of 10
+train loss = 0.07258670032024384
+loss: 0.4522162079811096, EarlyStopping counter: 2 out of 10
+train loss = 0.07265573740005493
+loss: 0.45241984724998474, EarlyStopping counter: 3 out of 10
+train loss = 0.07246388494968414
+loss: 0.4514724910259247, EarlyStopping counter: 4 out of 10
+train loss = 0.07238610088825226
+loss: 0.45090439915657043, Performance is better... saving the model
+train loss = 0.07251136749982834
+loss: 0.4515906572341919, EarlyStopping counter: 1 out of 10
+train loss = 0.072308748960495
+loss: 0.45040225982666016, Performance is better... saving the model
+train loss = 0.07224614173173904
+loss: 0.45171651244163513, EarlyStopping counter: 1 out of 10
+train loss = 0.07215955853462219
+loss: 0.4512561857700348, EarlyStopping counter: 2 out of 10
+train loss = 0.07209628075361252
+loss: 0.4512173533439636, EarlyStopping counter: 3 out of 10
+train loss = 0.0720943808555603
+loss: 0.45010119676589966, Performance is better... saving the model
+train loss = 0.07204052805900574
+loss: 0.45140746235847473, EarlyStopping counter: 1 out of 10
+train loss = 0.0720197781920433
+loss: 0.4496653378009796, Performance is better... saving the model
+train loss = 0.07193589210510254
+loss: 0.4490169584751129, Performance is better... saving the model
+train loss = 0.07187437266111374
+loss: 0.4517841935157776, EarlyStopping counter: 1 out of 10
+train loss = 0.07182782143354416
+loss: 0.4503718614578247, EarlyStopping counter: 2 out of 10
+train loss = 0.07163650542497635
+loss: 0.45025864243507385, EarlyStopping counter: 3 out of 10
+train loss = 0.07170847058296204
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 41/41 [00:28<00:00,  1.42it/s]
+For top100, metric recall = 0.044479658451412545
+For top300, metric recall = 0.08745772773706594
+For top100, metric hit_ratio = 0.288032626190505
+For top300, metric hit_ratio = 0.45627049725896435
+For top100, metric coverage = 36.03712802391296
+For top300, metric coverage = 79.40994517928672
+loss: 0.4494876563549042, EarlyStopping counter: 4 out of 10
+train loss = 0.07160938531160355
+loss: 0.45027583837509155, EarlyStopping counter: 5 out of 10
+train loss = 0.07153506577014923
+loss: 0.44794291257858276, Performance is better... saving the model
+train loss = 0.07147436589002609
+loss: 0.4490589201450348, EarlyStopping counter: 1 out of 10
+train loss = 0.0714154839515686
+loss: 0.44910022616386414, EarlyStopping counter: 2 out of 10
+train loss = 0.07137223333120346
+loss: 0.44864532351493835, EarlyStopping counter: 3 out of 10
+train loss = 0.07133994996547699
+loss: 0.4503227472305298, EarlyStopping counter: 4 out of 10
+train loss = 0.07137686014175415
+loss: 0.44853246212005615, EarlyStopping counter: 5 out of 10
+train loss = 0.0711010992527008
+loss: 0.44892755150794983, EarlyStopping counter: 6 out of 10
+train loss = 0.07106313109397888
+loss: 0.4483744502067566, EarlyStopping counter: 7 out of 10
+train loss = 0.07099507749080658
+loss: 0.44695550203323364, Performance is better... saving the model
+train loss = 0.07101933658123016
+loss: 0.4462510645389557, Performance is better... saving the model
+train loss = 0.07086177170276642
+loss: 0.44733381271362305, EarlyStopping counter: 1 out of 10
+train loss = 0.07089156657457352
+loss: 0.4469880759716034, EarlyStopping counter: 2 out of 10
+train loss = 0.0708443745970726
+loss: 0.44654738903045654, EarlyStopping counter: 3 out of 10
+train loss = 0.07076890766620636
+loss: 0.44715747237205505, EarlyStopping counter: 4 out of 10
+train loss = 0.0706319659948349
+loss: 0.4474812150001526, EarlyStopping counter: 5 out of 10
+train loss = 0.07068952918052673
+loss: 0.44667044281959534, EarlyStopping counter: 6 out of 10
+train loss = 0.07061408460140228
+loss: 0.4472332000732422, EarlyStopping counter: 7 out of 10
+train loss = 0.07064774632453918
+loss: 0.446779727935791, EarlyStopping counter: 8 out of 10
+train loss = 0.07055427879095078
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 41/41 [00:29<00:00,  1.39it/s]
+For top100, metric recall = 0.044806397577537044
+For top300, metric recall = 0.08842150652744783
+For top100, metric hit_ratio = 0.28910967773165686
+For top300, metric hit_ratio = 0.45976788934203044
+For top100, metric coverage = 35.70529933561652
+For top300, metric coverage = 78.77369815933102
+loss: 0.44599783420562744, Performance is better... saving the model
+train loss = 0.0705203041434288
+loss: 0.44666460156440735, EarlyStopping counter: 1 out of 10
+train loss = 0.07026313245296478
+loss: 0.44666120409965515, EarlyStopping counter: 2 out of 10
+train loss = 0.0704323798418045
+loss: 0.4463006556034088, EarlyStopping counter: 3 out of 10
+train loss = 0.07028008997440338
+loss: 0.446900337934494, EarlyStopping counter: 4 out of 10
+train loss = 0.07033639401197433
+loss: 0.4466780424118042, EarlyStopping counter: 5 out of 10
+train loss = 0.07015140354633331
+loss: 0.4465392529964447, EarlyStopping counter: 6 out of 10
+train loss = 0.07016722857952118
+loss: 0.44654133915901184, EarlyStopping counter: 7 out of 10
+train loss = 0.07011298835277557
+loss: 0.4458065927028656, Performance is better... saving the model
+train loss = 0.07005435973405838
+loss: 0.44595885276794434, EarlyStopping counter: 1 out of 10
+train loss = 0.07004744559526443
+loss: 0.44524186849594116, Performance is better... saving the model
+train loss = 0.07002659887075424
+loss: 0.4458385705947876, EarlyStopping counter: 1 out of 10
+train loss = 0.06982527673244476
+loss: 0.4451741576194763, Performance is better... saving the model
+train loss = 0.06977438181638718
+loss: 0.44627243280410767, EarlyStopping counter: 1 out of 10
+train loss = 0.06972922384738922
+loss: 0.4452466070652008, EarlyStopping counter: 2 out of 10
+train loss = 0.06964652985334396
+loss: 0.4452598989009857, EarlyStopping counter: 3 out of 10
+train loss = 0.06962544471025467
+loss: 0.445810467004776, EarlyStopping counter: 4 out of 10
+train loss = 0.06950412690639496
+loss: 0.44662320613861084, EarlyStopping counter: 5 out of 10
+train loss = 0.06964224576950073
+loss: 0.4444345533847809, Performance is better... saving the model
+train loss = 0.06940151005983353
+loss: 0.44434088468551636, Performance is better... saving the model
+train loss = 0.06944070756435394
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 41/41 [00:29<00:00,  1.39it/s]
+For top100, metric recall = 0.04555407926611047
+For top300, metric recall = 0.08968963904840116
+For top100, metric hit_ratio = 0.29260706981472295
+For top300, metric hit_ratio = 0.46330158653322523
+For top100, metric coverage = 35.483342006220276
+For top300, metric coverage = 78.25828664093038
+loss: 0.4446446895599365, EarlyStopping counter: 1 out of 10
+train loss = 0.0693403109908104
+loss: 0.4446241855621338, EarlyStopping counter: 2 out of 10
+train loss = 0.06935439258813858
+loss: 0.44487521052360535, EarlyStopping counter: 3 out of 10
+train loss = 0.0693487673997879
+loss: 0.44515150785446167, EarlyStopping counter: 4 out of 10
+train loss = 0.06929673254489899
+loss: 0.444102942943573, Performance is better... saving the model
+train loss = 0.06919775158166885
+loss: 0.44325879216194153, Performance is better... saving the model
+train loss = 0.06923981010913849
+loss: 0.44371894001960754, EarlyStopping counter: 1 out of 10
+train loss = 0.0690988153219223
+loss: 0.44335445761680603, EarlyStopping counter: 2 out of 10
+train loss = 0.06909751147031784
+loss: 0.4441837668418884, EarlyStopping counter: 3 out of 10
+train loss = 0.06913702189922333
+loss: 0.44292396306991577, Performance is better... saving the model
+train loss = 0.06901666522026062
+loss: 0.4441338777542114, EarlyStopping counter: 1 out of 10
+train loss = 0.06883495301008224
+loss: 0.44355297088623047, EarlyStopping counter: 2 out of 10
+train loss = 0.06902021169662476
+loss: 0.4427865147590637, Performance is better... saving the model
+train loss = 0.06885259598493576
+loss: 0.4443402588367462, EarlyStopping counter: 1 out of 10
+train loss = 0.06878432631492615
+loss: 0.442891001701355, EarlyStopping counter: 2 out of 10
+train loss = 0.06869091093540192
+loss: 0.44397616386413574, EarlyStopping counter: 3 out of 10
+train loss = 0.0686962753534317
+loss: 0.44199061393737793, Performance is better... saving the model
+train loss = 0.06865769624710083
+loss: 0.44277310371398926, EarlyStopping counter: 1 out of 10
+train loss = 0.06869126856327057
+loss: 0.4427524507045746, EarlyStopping counter: 2 out of 10
+train loss = 0.06875467300415039
+loss: 0.4430893361568451, EarlyStopping counter: 3 out of 10
+train loss = 0.06859919428825378
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 41/41 [00:28<00:00,  1.42it/s]
+For top100, metric recall = 0.0458545440991274
+For top300, metric recall = 0.09041112411656582
+For top100, metric hit_ratio = 0.2945070371401256
+For top300, metric hit_ratio = 0.4656735202643012
+For top100, metric coverage = 35.33711713238053
+For top300, metric coverage = 77.927038834364
+loss: 0.44411998987197876, EarlyStopping counter: 4 out of 10
+train loss = 0.06845348328351974
+loss: 0.44303739070892334, EarlyStopping counter: 5 out of 10
+train loss = 0.06848776340484619
+loss: 0.44286033511161804, EarlyStopping counter: 6 out of 10
+train loss = 0.06836403906345367
+loss: 0.44301068782806396, EarlyStopping counter: 7 out of 10
+train loss = 0.06843128055334091
+loss: 0.44353389739990234, EarlyStopping counter: 8 out of 10
+train loss = 0.06838349252939224
+loss: 0.4423203766345978, EarlyStopping counter: 9 out of 10
+train loss = 0.0684429258108139
+loss: 0.4413704574108124, Performance is better... saving the model
+train loss = 0.06831678003072739
+loss: 0.441191703081131, Performance is better... saving the model
+train loss = 0.06830219179391861
+loss: 0.4417255222797394, EarlyStopping counter: 1 out of 10
+train loss = 0.0682670846581459
+loss: 0.44175323843955994, EarlyStopping counter: 2 out of 10
+train loss = 0.06832224130630493
+loss: 0.442166268825531, EarlyStopping counter: 3 out of 10
+train loss = 0.06826992332935333
+loss: 0.4424924850463867, EarlyStopping counter: 4 out of 10
+train loss = 0.06812609732151031
+loss: 0.4417676329612732, EarlyStopping counter: 5 out of 10
+train loss = 0.06811800599098206
+loss: 0.44148778915405273, EarlyStopping counter: 6 out of 10
+train loss = 0.06802824884653091
+loss: 0.4415270984172821, EarlyStopping counter: 7 out of 10
+train loss = 0.06808759272098541
+loss: 0.44045913219451904, Performance is better... saving the model
+train loss = 0.06798171997070312
+loss: 0.44191208481788635, EarlyStopping counter: 1 out of 10
+train loss = 0.06789348274469376
+loss: 0.4417334794998169, EarlyStopping counter: 2 out of 10
+train loss = 0.06794504076242447
+loss: 0.4418799579143524, EarlyStopping counter: 3 out of 10
+train loss = 0.0678526759147644
+loss: 0.44137895107269287, EarlyStopping counter: 4 out of 10
+train loss = 0.06790976971387863
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 41/41 [00:29<00:00,  1.37it/s]
+For top100, metric recall = 0.04611565135617741
+For top300, metric recall = 0.0915083509967475
+For top100, metric hit_ratio = 0.29592293635714545
+For top300, metric hit_ratio = 0.46831169145498774
+For top100, metric coverage = 35.15884694976583
+For top300, metric coverage = 77.56519792334781
+loss: 0.440683513879776, EarlyStopping counter: 5 out of 10
+train loss = 0.06774404644966125
+loss: 0.4416738748550415, EarlyStopping counter: 6 out of 10
+train loss = 0.06768634170293808
+loss: 0.4410800337791443, EarlyStopping counter: 7 out of 10
+train loss = 0.0676964521408081
+loss: 0.4414442777633667, EarlyStopping counter: 8 out of 10
+train loss = 0.06772875785827637
+loss: 0.43986931443214417, Performance is better... saving the model
+train loss = 0.06752164661884308
+loss: 0.44034990668296814, EarlyStopping counter: 1 out of 10
+train loss = 0.06759355962276459
+loss: 0.43996626138687134, EarlyStopping counter: 2 out of 10
+train loss = 0.06764280796051025
+loss: 0.44073960185050964, EarlyStopping counter: 3 out of 10
+train loss = 0.06756545603275299
+loss: 0.44051802158355713, EarlyStopping counter: 4 out of 10
+train loss = 0.0676039382815361
+loss: 0.4399375915527344, EarlyStopping counter: 5 out of 10
+train loss = 0.06756488233804703
+loss: 0.4403616189956665, EarlyStopping counter: 6 out of 10
+train loss = 0.0673539936542511
+loss: 0.4399593770503998, EarlyStopping counter: 7 out of 10
+train loss = 0.06737856566905975
+loss: 0.4405144453048706, EarlyStopping counter: 8 out of 10
+train loss = 0.0673627033829689
+loss: 0.43992844223976135, EarlyStopping counter: 9 out of 10
+train loss = 0.06737418472766876
+loss: 0.44007349014282227, EarlyStopping counter: 10 out of 10
+loading best model for test
+begin testing
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 41/41 [00:29<00:00,  1.38it/s]
+For top100, metric recall = 0.046295957161319325
+For top300, metric recall = 0.09166658956490581
+For top100, metric hit_ratio = 0.29655222489804317
+For top300, metric hit_ratio = 0.4688320646714993
+For top100, metric coverage = 35.140452361647284
+For top300, metric coverage = 77.49439086079411
+Traceback (most recent call last):
+  File "main.py", line 101, in <module>
+    wandb.log({"recall_100":res[0],"hit_ratio_100":res[1],"coverage_100":res[2],racall_300:res[3],"hit_ratio_300":res[4],"coverage_300":res[5],"loss":loss_val})
+NameError: name 'racall_300' is not defined

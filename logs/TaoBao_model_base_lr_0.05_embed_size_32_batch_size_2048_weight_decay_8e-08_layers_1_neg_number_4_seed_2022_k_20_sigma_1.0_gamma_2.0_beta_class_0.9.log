@@ -1,0 +1,8 @@
+Fri, 12 May 2023 20:16:30  INFO loadding data
+Fri, 12 May 2023 20:16:30  INFO reading category information
+Fri, 12 May 2023 20:16:43  INFO reading train data
+Fri, 12 May 2023 20:16:50  INFO reading valid data
+Fri, 12 May 2023 20:16:52  INFO reading test data
+Fri, 12 May 2023 20:16:55  INFO get weight for each sample
+Fri, 12 May 2023 20:17:00  INFO train loss = 0.6995192170143127
+Fri, 12 May 2023 20:17:06  INFO loss: 0.6982526779174805, Performance is better... saving the model
