@@ -11,6 +11,7 @@ from dgl.nn import GraphConv
 from models.layers import DGRecLayer
 from models.layers import BaseLayer
 from models.layers import MOERecLayer
+from models.layers import BasetestLayer
 from torch.distributions.normal import Normal
 from models.layers import *
 
@@ -45,7 +46,7 @@ class BaseGraphModel(nn.Module):
         self.data_split=self.data[0:self.user_num:32]
 
     def build_layer(self, idx):
-        return BaseLayer(self.args)
+        return BasetestLayer(self.args)
 
     def build_model(self):
         self.layers = nn.ModuleList()
