@@ -252,7 +252,7 @@ class BasetestLayer(nn.Module):
         neighbor=torch.randint(neighbor_size,[0])
         for i in range(batch_size):
             item_select=torch.randint(neighbor_size,[1,1])
-            while item_select.shape[1]<20:
+            while item_select.shape[1]<self.k:
                 item=torch.randint(neighbor_size,[1,1])
                 while item in item_select:
                    item=torch.randint(neighbor_size,[1,1])
