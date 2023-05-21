@@ -10,6 +10,7 @@ import os
 from torch import nn
 from models.models import MOERec
 from models.models import BaseGraphModel
+from models.models import BasetestRec
 from torch.utils.data import Dataset, DataLoader
 
 def load_mf_model(args, dataloader):
@@ -23,6 +24,8 @@ def choose_model(args, dataloader):
         return DGRec(args, dataloader)
     elif args.model=='moe':
         return MOERec(args,dataloader)
+    elif args.model=='test':
+        return BasetestRec(args,dataloader)
     else:    
         return BaseGraphModel(args, dataloader)
 class NegativeGraph(object):
