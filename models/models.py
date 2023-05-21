@@ -93,16 +93,16 @@ class BaseGraphModel(nn.Module):
 class DGRec(BaseGraphModel):
     def __init__(self, args, dataloader):
         super(DGRec, self).__init__(args, dataloader)
-        self.W = torch.nn.Parameter(torch.randn(self.args.embed_size, self.args.embed_size))
-        self.a = torch.nn.Parameter(torch.randn(self.args.embed_size))
+        self.W = torch.nn.Parameter(torch.randn(self.args.embed_size, self.args.embed_size))#32 32
+        self.a = torch.nn.Parameter(torch.randn(self.args.embed_size))#32
 
     def build_layer(self, idx):
         return DGRecLayer(self.args)
 
     def layer_attention(self, ls, W, a):
-        tensor_layers = torch.stack(ls, dim = 0)
-        weight = torch.matmul(tensor_layers, W)
-        weight = F.softmax(torch.matmul(weight, a), dim = 0).unsqueeze(-1)
+        tensor_layers = torch.stack(ls, dim = 0)#2 76000 32
+        weight = torch.matmul(tensor_layers, W)#2 76000 32
+        weight = F.softmax(torch.matmul(weight, a), dim = 0).unsqueeze(-1)#2 76000 1
         tensor_layers = torch.sum(tensor_layers * weight, dim = 0)
         return tensor_layers
 
@@ -122,7 +122,33 @@ class DGRec(BaseGraphModel):
         item_embed = self.layer_attention(item_embed, self.W, self.a)
         h = {'user': user_embed, 'item': item_embed}
         return h
-    
+
+class BasetestRec(BaseGraphModel):
+    def __init__(self, args, dataloader):
+        super(DGRec, self).__init__(args, dataloader)
+        self.attention_experts=TargetAttention(args) 
+    def build_layer(self, idx):
+        return BasetestLayer(self.args)
+
+    def get_embedding(self):
+        user_embed = [self.user_embedding]
+        item_embed = [self.item_embedding]
+        h = self.node_features
+
+        for layer in self.layers:
+
+            h_item = layer(self.graph, h, ('user', 'rate', 'item'))
+            h_user = layer(self.graph, h, ('item', 'rated by', 'user'))
+            h = {'user': h_user, 'item': h_item}
+       
+       
+        h_user=self.attention_experts(h_user)
+        h = {'user': h_user, 'item': h_item}
+        return h
+
+
+
+
 class MOERec(BaseGraphModel):
     def __init__(self, args, dataloader):
         super(MOERec, self).__init__(args, dataloader)
