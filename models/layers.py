@@ -285,7 +285,7 @@ class BasetestLayer(nn.Module):
         if (-1 in nodes.mailbox['c']) or nodes.mailbox['m'].shape[1] <= self.k:
             
             muti_int=self.poly_attn(embeddings=mail, attn_mask=0, bias=None)
-            muti_int=muti_int.sum(dim=1)
+            #muti_int=muti_int.sum(dim=1)
             mail=mail.sum(dim=1)
         else:
             if self.sub=="sub":
@@ -294,22 +294,19 @@ class BasetestLayer(nn.Module):
                 neighbors = self.submodular_selection_feature(nodes)     
             mail = mail[th.arange(batch_size, dtype = th.long, device = mail.device).unsqueeze(-1), neighbors]
             muti_int=self.poly_attn(embeddings=mail, attn_mask=0, bias=None)#12 20 32
-            muti_int=muti_int.sum(dim=1)
+            #muti_int=muti_int.sum(dim=1)
             mail = mail.sum(dim = 1)
       
-        return {'h': muti_int,'i':muti_int}
+        return {'h': mail,'i':muti_int}
     
     def sub_reduction_user_item(self, nodes):
         # -1 indicate user-> node, which does not include category information
         mail = nodes.mailbox['m']
         batch_size, neighbor_size, feature_size = mail.shape
 
-        if (-1 in nodes.mailbox['c']) or nodes.mailbox['m'].shape[1] <= self.k:
-            mail = mail.sum(dim = 1)
-        else:
-            neighbors = self.submodular_selection_feature(nodes)
-            mail = mail[th.arange(batch_size, dtype = th.long, device = mail.device).unsqueeze(-1), neighbors]
-            mail = mail.sum(dim = 1)
+        
+        mail = mail.sum(dim = 1)
+        
         return {'h': mail}
     
     def category_aggregation(self, edges):
@@ -340,8 +337,10 @@ class BasetestLayer(nn.Module):
             shp = norm.shape + (1,) * (feat_dst.dim() - 1)
             norm = th.reshape(norm, shp)
             rst = rst * norm
-            
-            return rst        
+            if src=='item':
+                return rst,muti_int
+            else:
+                return rst        
 class PolyAttention(nn.Module):
     r"""
     Implementation of Poly attention scheme that extracts `K` attention vectors through `K` additive attentions

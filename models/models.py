@@ -125,7 +125,7 @@ class DGRec(BaseGraphModel):
 
 class BasetestRec(BaseGraphModel):
     def __init__(self, args, dataloader):
-        super(DGRec, self).__init__(args, dataloader)
+        super(BasetestRec, self).__init__(args, dataloader)
         self.attention_experts=TargetAttention(args) 
     def build_layer(self, idx):
         return BasetestLayer(self.args)
@@ -138,12 +138,13 @@ class BasetestRec(BaseGraphModel):
         for layer in self.layers:
 
             h_item = layer(self.graph, h, ('user', 'rate', 'item'))
-            h_user = layer(self.graph, h, ('item', 'rated by', 'user'))
+            h_user,muti_int = layer(self.graph, h, ('item', 'rated by', 'user'))
+            h_user=self.attention_experts(muti_int)
             h = {'user': h_user, 'item': h_item}
        
-       
-        h_user=self.attention_experts(h_user)
-        h = {'user': h_user, 'item': h_item}
+
+        
+        
         return h
 
 
