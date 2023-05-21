@@ -21,12 +21,7 @@ class BaseLayer(nn.Module):
         batch_size, neighbor_size, feature_size = mail.shape
         neighbor=torch.randint(neighbor_size,[0])
         for i in range(batch_size):
-            item_select=torch.randint(neighbor_size,[1,1])
-            while item_select.shape[1]<20:
-                item=torch.randint(neighbor_size,[1,1])
-                while item in item_select:
-                   item=torch.randint(neighbor_size,[1,1])
-                item_select=torch.cat([item_select,item],dim=1)
+            item_select=torch.randint(neighbor_size,[1,self.k])
             neighbor=torch.cat([neighbor,item_select],dim=0)
 
         return neighbor
@@ -251,12 +246,7 @@ class BasetestLayer(nn.Module):
         batch_size, neighbor_size, feature_size = mail.shape
         neighbor=torch.randint(neighbor_size,[0])
         for i in range(batch_size):
-            item_select=torch.randint(neighbor_size,[1,1])
-            while item_select.shape[1]<self.k:
-                item=torch.randint(neighbor_size,[1,1])
-                while item in item_select:
-                   item=torch.randint(neighbor_size,[1,1])
-                item_select=torch.cat([item_select,item],dim=1)
+            item_select=torch.randint(neighbor_size,[1,self.k])
             neighbor=torch.cat([neighbor,item_select],dim=0)
 
         return neighbor
