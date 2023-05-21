@@ -12,7 +12,7 @@ def parse_args():
                         help = 'learning rate')
     parser.add_argument('--weight_decay', default = 8e-8, type = float,
                         help = "weight decay for adam optimizer")
-    parser.add_argument('--model', default ='dgrec',type = str,
+    parser.add_argument('--model', default ='base',type = str,
                         help = 'model selection')#dgrec base moe
     parser.add_argument('--epoch', default = 1000, type = int,
                         help = 'epoch number')
@@ -53,6 +53,8 @@ def parse_args():
     parser.add_argument('--k_experts', default = 2, type = int,
                                 help = 'n_experts')
     parser.add_argument('--moe', default = False, type = bool,
+                             help = 'layer number')
+    parser.add_argument('--sub', default = 'sub', type = str,
                              help = 'layer number')
 
     args = parser.parse_args()

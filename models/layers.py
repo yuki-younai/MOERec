@@ -238,6 +238,31 @@ class BasetestLayer(nn.Module):
         self.sigma = args.sigma
         self.gamma = args.gamma
         self.poly_attn=PolyAttention(args)
+        self.sub=args.sub
+
+    def similarity_matrix(self, X, sigma = 1.0, gamma = 2.0):
+        dists = th.cdist(X, X)
+        sims = th.exp(-dists / (sigma * dists.mean(dim = -1).mean(dim = -1).reshape(-1, 1, 1)))
+        return sims
+
+    def submodular_selection_feature(self, nodes):
+        device = nodes.mailbox['m'].device
+        feature = nodes.mailbox['m']
+        sims = self.similarity_matrix(feature, self.sigma, self.gamma)
+
+        batch_num, neighbor_num, feature_size = feature.shape
+        nodes_selected = []
+        cache = th.zeros((batch_num, 1, neighbor_num), device = device)
+
+        for i in range(self.k):
+            gain = th.sum(th.maximum(sims, cache) - cache, dim = -1)
+
+            selected = th.argmax(gain, dim = 1)
+            cache = th.maximum(sims[th.arange(batch_num, device = device), selected].unsqueeze(1), cache)
+
+            nodes_selected.append(selected)
+
+        return th.stack(nodes_selected).t()
 
 
     def submodular_selection_randn(self, nodes):
@@ -263,7 +288,10 @@ class BasetestLayer(nn.Module):
             muti_int=muti_int.sum(dim=1)
             mail=mail.sum(dim=1)
         else:
-            neighbors = self.submodular_selection_randn(nodes)
+            if self.sub=="sub":
+                neighbors = self.submodular_selection_randn(nodes)
+            else:
+                neighbors = self.submodular_selection_feature(nodes)     
             mail = mail[th.arange(batch_size, dtype = th.long, device = mail.device).unsqueeze(-1), neighbors]
             muti_int=self.poly_attn(embeddings=mail, attn_mask=0, bias=None)#12 20 32
             muti_int=muti_int.sum(dim=1)
