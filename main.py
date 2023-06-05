@@ -19,7 +19,7 @@ import wandb
 if __name__ == '__main__':
     args = parse_args()
     early_stop = config(args)
-    os.environ['CUDA_VISIBLE_DEVICES'] = '1,0'
+    os.environ['CUDA_VISIBLE_DEVICES'] = '0'
     if args.wandb_enable:
        wandb.init(project="DGRec",name="DGRec_test",notes=str(args))
        wandb.config.update(args)
