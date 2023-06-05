@@ -12,8 +12,8 @@ def parse_args():
                         help = 'learning rate')
     parser.add_argument('--weight_decay', default = 8e-8, type = float,
                         help = "weight decay for adam optimizer")
-    parser.add_argument('--model', default ='base',type = str,
-                        help = 'model selection')#dgrec base moe
+    parser.add_argument('--model', default ='test',type = str,
+                        help = 'model selection')#dgrec base moe test
     parser.add_argument('--epoch', default = 1000, type = int,
                         help = 'epoch number')
     parser.add_argument('--patience', default = 10, type = int,
@@ -31,6 +31,7 @@ def parse_args():
     parser.add_argument('--neg_number', default = 4, type = int,
                         help = 'negative sampler number for each positive pair')
     parser.add_argument('--metrics', default = ['recall', 'hit_ratio', 'coverage'])
+
 
     parser.add_argument('--sigma', default = 1.0, type = float,
                         help = 'sigma for gaussian kernel')
@@ -54,7 +55,7 @@ def parse_args():
                                 help = 'n_experts')
     parser.add_argument('--moe', default = False, type = bool,
                              help = 'layer number')
-    parser.add_argument('--sub', default = 'sub', type = str,
+    parser.add_argument('--sub', default = 'rand', type = str,
                              help = 'layer number')
 
     args = parser.parse_args()

@@ -143,8 +143,8 @@ class BasetestRec(BaseGraphModel):
             h = {'user': h_user, 'item': h_item}
        
 
-        
-        
+         
+        h = {'user': muti_int, 'item': h_item}
         return h
 
 

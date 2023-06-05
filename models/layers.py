@@ -288,7 +288,7 @@ class BasetestLayer(nn.Module):
             #muti_int=muti_int.sum(dim=1)
             mail=mail.sum(dim=1)
         else:
-            if self.sub=="sub":
+            if self.sub=="rand":
                 neighbors = self.submodular_selection_randn(nodes)
             else:
                 neighbors = self.submodular_selection_feature(nodes)     
@@ -340,7 +340,8 @@ class BasetestLayer(nn.Module):
             if src=='item':
                 return rst,muti_int
             else:
-                return rst        
+                return rst   
+                 
 class PolyAttention(nn.Module):
     r"""
     Implementation of Poly attention scheme that extracts `K` attention vectors through `K` additive attentions
