@@ -12,6 +12,7 @@ def parse_args():
                         help = 'learning rate')
     parser.add_argument('--weight_decay', default = 8e-8, type = float,
                         help = "weight decay for adam optimizer")
+    #######################################################################
     parser.add_argument('--model', default ='test',type = str,
                         help = 'model selection')#dgrec base moe test
     parser.add_argument('--epoch', default = 1000, type = int,
@@ -37,6 +38,7 @@ def parse_args():
                         help = 'sigma for gaussian kernel')
     parser.add_argument('--gamma', default = 2.0, type = float,
                         help = 'gamma for gaussian kernel')
+    ################################################################################
     parser.add_argument('--category_balance', default = True, type = bool,
                         help = 'whether make loss category balance')
     parser.add_argument('--beta_class', default = 0.9, type = float,
@@ -47,6 +49,7 @@ def parse_args():
                         help = 'interest dim')
     parser.add_argument('--n_experts', default = 5, type = int,
                         help = 'n_experts')
+    ##########################################################################################
     parser.add_argument('--wandb_enable', default = True, type = bool,
                         help = 'layer number')
     parser.add_argument('--hidden_size', default = 32, type = int,
@@ -55,6 +58,7 @@ def parse_args():
                                 help = 'n_experts')
     parser.add_argument('--moe', default = False, type = bool,
                              help = 'layer number')
+    ################################################################################
     parser.add_argument('--sub', default = 'rand', type = str,
                              help = 'layer number')
 

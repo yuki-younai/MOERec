@@ -86,7 +86,7 @@ if __name__ == '__main__':
             weight = sample_weight[items]
             loss_val = (weight * loss.squeeze(1)).mean()+0.2*loss_moe
         eval_num=eval_num+1
-        if(eval_num==50):
+        if(eval_num==5000):
             eval_num=0
             tester=Tester(args,model,dataloader)
             res,ndcg5_std,ndcg10_std,mrr_std,auc_std=tester.test()

@@ -139,12 +139,13 @@ class BasetestRec(BaseGraphModel):
 
             h_item = layer(self.graph, h, ('user', 'rate', 'item'))
             h_user,muti_int = layer(self.graph, h, ('item', 'rated by', 'user'))
-            h_user=self.attention_experts(muti_int)
+            #h_user=self.attention_experts(muti_int)
+            h_user=muti_int.sum(dim=1)
             h = {'user': h_user, 'item': h_item}
        
 
          
-        h = {'user': muti_int, 'item': h_item}
+        #h = {'user': muti_int, 'item': h_item}
         return h
 
 
