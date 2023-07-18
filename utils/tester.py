@@ -87,11 +87,7 @@ class Tester(object):
             count += users.shape[0]
             # count += len(users)
             scores = self.model.get_score(h, users)
-            
-            
-
-            
-
+        
             users = users.tolist()
             mask = torch.tensor(self.history_csr[users].todense(), device = scores.device).bool()
             scores[mask] = -float('inf')
