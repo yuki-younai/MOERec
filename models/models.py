@@ -205,8 +205,8 @@ class BasetestRec(BaseGraphModel):
 
             h_item = layer(self.graph, h, ('user', 'rate', 'item'))
             h_user,muti_int = layer(self.graph, h, ('item', 'rated by', 'user'))
-            #h_user=self.attention_experts(muti_int)
-            h_user=muti_int.sum(dim=1)
+            h_user=self.attention_experts(muti_int)
+            #h_user=muti_int.sum(dim=1)
             h = {'user': h_user, 'item': h_item}
        
 
@@ -338,13 +338,13 @@ class MOERec(BaseGraphModel):
 class TargetAttention(nn.Module):
     def __init__(self, args):
         super().__init__()
-        self.W = torch.nn.Parameter(torch.randn(args.embed_size, args.embed_size))
-        self.a = torch.nn.Parameter(torch.randn(args.embed_size))
+        #self.W = torch.nn.Parameter(torch.randn(args.embed_size, args.embed_size))
+        self.a = torch.nn.Parameter(torch.randn(args.embed_size,1))
         
         
     def forward(self,muti_int): 
         
-        weight = torch.matmul(muti_int, self.W)#32 32 32 32
-        weight = F.softmax(torch.matmul(weight, self.a), dim = 0).unsqueeze(-1)#32 32 *32-->32 1
-        muti_int = torch.sum(muti_int * weight, dim = 1)#65000 32 32 32 1
+        # weight = torch.matmul(muti_int, self.W)#32 32 32 32
+        # weight = F.softmax(torch.matmul(weight, self.a), dim = 0).unsqueeze(-1)#32 32 *32-->32 1
+        muti_int = torch.sum(muti_int *self.a, dim = 1)#65000 32 32 32 1
         return muti_int
