@@ -107,6 +107,7 @@ if __name__ == '__main__':
     tester = Tester(args, model, dataloader)
     logging.info('begin testing')
     res,ndcg5_std,ndcg10_std,mrr_std,auc_std=tester.test()
+    print(ndcg5_std,ndcg10_std,mrr_std,auc_std)
     if args.wandb_enable:
         wandb.log({"recall_100":res[0],"hit_ratio_100":res[1],"coverage_100":res[2],"racall_300":res[3],"hit_ratio_300":res[4],"coverage_300":res[5],"loss":loss_val,"ndcg10_std":ndcg10_std,"ndcg5_std":ndcg5_std,"mrr_std":mrr_std,"auc_std":auc_std})
         
