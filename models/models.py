@@ -229,7 +229,7 @@ class MOERec(BaseGraphModel):
         self.softmax=nn.Softmax(dim=1)
         self.register_buffer("mean", torch.tensor([0.0]))
         self.register_buffer("std", torch.tensor([1.0]))
-        self.attention_experts=nn.ModuleList([TargetAttention(args) for i in range(self.n_experts)])
+        self.attention_experts=TargetAttention(args)
         
         
     def _gates_to_load(self, gates):
@@ -338,13 +338,15 @@ class MOERec(BaseGraphModel):
 class TargetAttention(nn.Module):
     def __init__(self, args):
         super().__init__()
-        #self.W = torch.nn.Parameter(torch.randn(args.embed_size, args.embed_size))
-        self.a = torch.nn.Parameter(torch.randn(args.embed_size,1))
-        
+        self.W = torch.nn.Parameter(torch.randn(args.embed_size, args.embed_size))
+        self.a = torch.nn.Parameter(torch.randn(args.embed_size))
+        self.prelu = nn.PReLU()
+        self.dropout = nn.Dropout(p=0.3) 
         
     def forward(self,muti_int): 
         
-        # weight = torch.matmul(muti_int, self.W)#32 32 32 32
-        # weight = F.softmax(torch.matmul(weight, self.a), dim = 0).unsqueeze(-1)#32 32 *32-->32 1
+        weight = torch.matmul(muti_int, self.W)#32 32 32 32
+        weight = self.prelu(torch.matmul(weight, self.a)).unsqueeze(-1)#32 32 *32-->32 1
+        muti_int=self.dropout(muti_int)
         muti_int = torch.sum(muti_int *self.a, dim = 1)#65000 32 32 32 1
         return muti_int
