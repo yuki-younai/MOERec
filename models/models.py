@@ -135,7 +135,8 @@ class BasetestRec(BaseGraphModel):
         self.softmax=nn.Softmax(dim=1)
         self.register_buffer("mean", torch.tensor([0.0]))
         self.register_buffer("std", torch.tensor([1.0]))
-        self.attention_experts=nn.ModuleList([TargetAttention(args) for i in range(self.n_experts)])
+        #self.attention_experts=nn.ModuleList([TargetAttention(args) for i in range(self.n_experts)])
+        self.attention_experts=TargetAttention(args) 
     def _gates_to_load(self, gates):
      
         return (gates > 0).sum(0)

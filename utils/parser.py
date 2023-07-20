@@ -39,7 +39,7 @@ def parse_args():
     parser.add_argument('--gamma', default = 2.0, type = float,
                         help = 'gamma for gaussian kernel')
     ################################################################################
-    parser.add_argument('--category_balance', default = True, type = bool,
+    parser.add_argument('--category_balance', default = False, type = bool,
                         help = 'whether make loss category balance')
     parser.add_argument('--beta_class', default = 0.9, type = float,
                         help = 'class re-balanced loss beta')
@@ -50,7 +50,7 @@ def parse_args():
     parser.add_argument('--n_experts', default = 5, type = int,
                         help = 'n_experts')
     ##########################################################################################
-    parser.add_argument('--wandb_enable', default = True, type = bool,
+    parser.add_argument('--wandb_enable', default = False, type = bool,
                         help = 'layer number')
     parser.add_argument('--hidden_size', default = 32, type = int,
                             help = 'n_experts')
