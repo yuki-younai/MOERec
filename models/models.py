@@ -222,7 +222,7 @@ class BasetestRec(BaseGraphModel):
                 kk=1    
         expert_outputs=dispatcher.combine(expert_outputs) 
         loss = self.cv_squared(importance) + self.cv_squared(load)
-        h = {'user': muti_int, 'item': h_item}
+        h = {'user': expert_outputs, 'item': h_item}
 
         return h,loss
 
