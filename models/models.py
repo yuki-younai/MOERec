@@ -135,8 +135,8 @@ class BasetestRec(BaseGraphModel):
         self.softmax=nn.Softmax(dim=1)
         self.register_buffer("mean", torch.tensor([0.0]))
         self.register_buffer("std", torch.tensor([1.0]))
-        #self.attention_experts=nn.ModuleList([TargetAttention(args) for i in range(self.n_experts)])
-        self.attention_experts=TargetAttention(args) 
+        self.attention_experts=nn.ModuleList([TargetAttention(args) for i in range(self.n_experts)])
+        #self.attention_experts=TargetAttention(args) 
     def _gates_to_load(self, gates):
      
         return (gates > 0).sum(0)
@@ -206,14 +206,25 @@ class BasetestRec(BaseGraphModel):
 
             h_item = layer(self.graph, h, ('user', 'rate', 'item'))
             h_user,muti_int = layer(self.graph, h, ('item', 'rated by', 'user'))
-            h_user=self.attention_experts(muti_int)
+            #h_user=self.attention_experts(muti_int)
             #h_user=muti_int.sum(dim=1)
             h = {'user': h_user, 'item': h_item}
-       
 
-         
-        #h = {'user': muti_int, 'item': h_item}
-        return h
+        gate,load=self.noisy_top_k_gating(muti_int.view(muti_int.shape[0],-1),True)
+        importance = gate.sum(0)
+        dispatcher = SparseDispatcher(self.n_experts, gate)
+        expert_inputs_user = dispatcher.dispatch(muti_int)
+        expert_outputs=[]
+        for i in range(self.n_experts):
+            if len(expert_inputs_user[i])>0:
+                expert_outputs.append(self.attention_experts[i](expert_inputs_user[i]))
+            else:
+                kk=1    
+        expert_outputs=dispatcher.combine(expert_outputs) 
+        loss = self.cv_squared(importance) + self.cv_squared(load)
+        h = {'user': muti_int, 'item': h_item}
+
+        return h,loss
 
 
 
@@ -339,15 +350,16 @@ class MOERec(BaseGraphModel):
 class TargetAttention(nn.Module):
     def __init__(self, args):
         super().__init__()
-        self.W = torch.nn.Parameter(torch.randn(args.embed_size, args.embed_size))
-        self.a = torch.nn.Parameter(torch.randn(args.embed_size))
+        # self.W = torch.nn.Parameter(torch.randn(args.embed_size, args.embed_size))
+        self.a = torch.nn.Parameter(torch.randn(args.embed_size,1))
         self.prelu = nn.PReLU()
-        self.dropout = nn.Dropout(p=0.3) 
+        self.dropout = nn.Dropout(p=0.5) 
         
     def forward(self,muti_int): 
         
-        weight = torch.matmul(muti_int, self.W)#32 32 32 32
-        weight = self.prelu(torch.matmul(weight, self.a)).unsqueeze(-1)#32 32 *32-->32 1
+        #weight = torch.matmul(muti_int, self.W)#32 32 32 32
+        #weight = self.prelu(torch.matmul(weight, self.a)).unsqueeze(-1)#32 32 *32-->32 1
+        weight = self.prelu(self.a)
         muti_int=self.dropout(muti_int)
-        muti_int = torch.sum(muti_int *self.a, dim = 1)#65000 32 32 32 1
+        muti_int = torch.sum(muti_int *weight, dim = 1)#65000 32 32 32 1
         return muti_int
