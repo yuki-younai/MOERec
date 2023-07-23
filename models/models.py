@@ -154,7 +154,7 @@ class BasetestRec(BaseGraphModel):
 
 class MOERec(BaseGraphModel):
     def __init__(self, args, dataloader):
-        super(BasetestRec, self).__init__(args, dataloader)
+        super(MOERec, self).__init__(args, dataloader)
         self.k=args.k_experts
         self.n_experts=args.n_experts
         self.noisy_gating=True
