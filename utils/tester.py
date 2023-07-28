@@ -72,7 +72,10 @@ class Tester(object):
 
     def test(self):
         results = {}
-        h = self.model.get_embedding()
+        if self.args.moe:
+              h,loss= self.model.get_embedding()
+        else:
+              h= self.model.get_embedding()
         count = 0
         all_ndcg5={}
         all_ndcg10={}
