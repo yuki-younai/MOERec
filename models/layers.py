@@ -7,6 +7,8 @@ import dgl.function as fn
 import dgl.nn as dglnn
 import numpy as np
 import torch
+import math
+import random
 
 class BaseLayer(nn.Module):
     def __init__(self, args):
@@ -244,6 +246,45 @@ class BasetestLayer(nn.Module):
         dists = th.cdist(X, X)
         sims = th.exp(-dists / (sigma * dists.mean(dim = -1).mean(dim = -1).reshape(-1, 1, 1)))
         return sims
+    def submodular_selection_moe(self, nodes):
+        
+        mail = nodes.mailbox['m']
+        batch_size, neighbor_size, feature_size = mail.shape
+        cat=nodes.mailbox['c']
+        user_select=[]
+        for i in range(batch_size):
+            select=[]
+            line=cat[i].reshape(1,-1)[0].tolist()
+            unique_elements = list(set(line))
+            element_counts = [line.count(element) for element in unique_elements]
+            element_indices = {}
+            for index, element in enumerate(line):
+                if element in element_indices:
+                   element_indices[element].append(index)
+                else:
+                   element_indices[element] = [index]
+            avg=math.ceil(sum(element_counts)/len(element_counts))
+
+            sorted_indices = sorted(range(len(element_counts)), key=lambda i: element_counts[i], reverse=True)
+
+            for i in sorted_indices:
+               my_list=element_indices[unique_elements[i]]
+               if int(len(my_list)/2)>avg:
+                   random_elements = random.sample(my_list,int(len(my_list)/2))
+               else:
+                   random_elements=random.sample(my_list, k=min(avg,len(my_list)))
+               select=select+random_elements
+               if len(select)>=self.k:
+                   break
+            if len(select)>=self.k:
+                select=select[0:self.k]
+            else:
+                select=select+select[0:self.k-len(select)]
+            user_select.append(select)
+            
+        user_select=torch.tensor(user_select)
+
+        return user_select
 
     def submodular_selection_feature(self, nodes):
         device = nodes.mailbox['m'].device
@@ -290,6 +331,8 @@ class BasetestLayer(nn.Module):
         else:
             if self.sub=="rand":
                 neighbors = self.submodular_selection_randn(nodes)
+            elif self.sub=="moe":
+                neighbors = self.submodular_selection_moe(nodes)
             else:
                 neighbors = self.submodular_selection_feature(nodes)     
             mail = mail[th.arange(batch_size, dtype = th.long, device = mail.device).unsqueeze(-1), neighbors]
