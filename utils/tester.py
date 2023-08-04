@@ -43,6 +43,7 @@ class Tester(object):
         self.history_csr = dataloader.train_csr
         self.dataloader = dataloader.dataloader_test
         self.test_dic = dataloader.test_dic
+        self.train_dic=dataloader.train_dic
         self.cate = np.array(list(dataloader.category_dic.values()))
         self.metrics = args.metrics
         self.item_number=dataloader.item_number
@@ -104,7 +105,7 @@ class Tester(object):
                 for metric in self.metrics:
                     results[k][metric] += results_batch[metric]
             for i in range(len(users)):
-                his=self.test_dic[users[i]]
+                his=self.train_dic[users[i]]
                 uid=users[i]
                 for j in range(len(his)):
                     items=[]

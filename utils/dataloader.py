@@ -36,7 +36,7 @@ class Dataloader(object):
         logging.info('reading category information')
         self.category_dic, self.category_num = self.read_category(self.category_path)
         logging.info('reading train data')
-        self.train_graph, self.dataloader_train = self.read_train_graph(self.train_path)
+        self.train_graph, self.dataloader_train ,self.train_dic= self.read_train_graph(self.train_path)
         logging.info('reading valid data')
         self.val_graph, self.dataloader_val = self.read_val_graph(self.val_path)
         logging.info('reading test data')
@@ -110,7 +110,7 @@ class Dataloader(object):
                 if user in self.historical_dict:
                     self.historical_dict[user].add(item)
                 else:
-                    self.historical_dict[user] = set([item])
+                    self.historical_dict[user] = [item]
 
         train_data = torch.tensor(train_data)
         self.user_number = max(self.user_number, train_data[:, 0].max() + 1)
@@ -140,7 +140,7 @@ class Dataloader(object):
         #     num_workers = 4
         # )
 
-        return graph.to(self.device), dataloader
+        return graph.to(self.device), dataloader,self.historical_dict
 
     def read_val_graph(self, path):
         val_data = []
