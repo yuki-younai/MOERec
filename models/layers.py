@@ -246,6 +246,17 @@ class BasetestLayer(nn.Module):
         dists = th.cdist(X, X)
         sims = th.exp(-dists / (sigma * dists.mean(dim = -1).mean(dim = -1).reshape(-1, 1, 1)))
         return sims
+    
+    def cate_topsis(self,numbers):
+        square_sum=math.sqrt(sum(i**2 for i in numbers))
+        numbers = [math.exp(x/square_sum) for x in numbers]
+        ma=max(numbers)
+        mi=0.5*min(numbers)
+        result=[(x-mi) /(ma-mi) for x in numbers]
+        result = [x / sum(result) for x in result]
+        result=[int(x*self.k) for x in result]
+        return result
+
     def submodular_selection_moe(self, nodes):
         
         mail = nodes.mailbox['m']
@@ -263,16 +274,12 @@ class BasetestLayer(nn.Module):
                    element_indices[element].append(index)
                 else:
                    element_indices[element] = [index]
-            avg=math.ceil(sum(element_counts)/len(element_counts))
-
+        
             sorted_indices = sorted(range(len(element_counts)), key=lambda i: element_counts[i], reverse=True)
-
+            cat_number=self.cate_topsis(element_counts)
             for i in sorted_indices:
                my_list=element_indices[unique_elements[i]]
-               if int(len(my_list)/2)>avg:
-                   random_elements = random.sample(my_list,int(len(my_list)/2))
-               else:
-                   random_elements=random.sample(my_list, k=min(avg,len(my_list)))
+               random_elements=random.sample(my_list, k=cat_number[i])
                select=select+random_elements
                if len(select)>=self.k:
                    break

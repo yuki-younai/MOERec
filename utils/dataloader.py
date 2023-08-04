@@ -108,7 +108,7 @@ class Dataloader(object):
                 train_data.append([user, item])
 
                 if user in self.historical_dict:
-                    self.historical_dict[user].add(item)
+                    self.historical_dict[user].append(item)
                 else:
                     self.historical_dict[user] = [item]
 
