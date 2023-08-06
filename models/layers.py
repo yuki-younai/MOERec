@@ -279,7 +279,7 @@ class BasetestLayer(nn.Module):
             cat_number=self.cate_topsis(element_counts)
             for i in sorted_indices:
                my_list=element_indices[unique_elements[i]]
-               random_elements=random.sample(my_list, k=cat_number[i])
+               random_elements=random.choices(my_list, k=cat_number[i])
                select=select+random_elements
                if len(select)>=self.k:
                    break
