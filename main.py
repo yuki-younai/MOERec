@@ -59,9 +59,11 @@ if __name__ == '__main__':
                 loss_train += -(score_pos - score_neg).sigmoid().log().mean()+0.2*loss_moe
             else:
                 loss = -(score_pos - score_neg).sigmoid().log()
+                print(loss.shape,type(loss))
                 items = graph_pos.edges(etype = 'rate')[1]
                 weight = sample_weight[items]
                 loss_train += (weight * loss.squeeze(1)).mean()+0.2*loss_moe
+                print((weight * loss.squeeze(1)).mean(),loss_moe)
 
         loss_train = loss_train / args.neg_number
         logging.info('train loss = {}'.format(loss_train.item()))
