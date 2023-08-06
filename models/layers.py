@@ -254,7 +254,7 @@ class BasetestLayer(nn.Module):
         mi=0.5*min(numbers)
         result=[(x-mi) /(ma-mi) for x in numbers]
         result = [x / sum(result) for x in result]
-        result=[int(x*self.k) for x in result]
+        result=[math.ceil(x*self.k) for x in result]
         return result
 
     def submodular_selection_moe(self, nodes):
