@@ -26,6 +26,7 @@ class BaseGraphModel(nn.Module):
     def __init__(self, args, dataloader):
         super().__init__()
         self.args = args
+        self.dataloader=dataloader
         self.hid_dim = args.embed_size
         self.layer_num = args.layers
         self.graph = dataloader.train_graph
@@ -46,7 +47,7 @@ class BaseGraphModel(nn.Module):
         self.data_split=self.data[0:self.user_num:32]
 
     def build_layer(self, idx):
-        return BasetestLayer(self.args)
+        return BasetestLayer(self.args,self.dataloader)
 
     def build_model(self):
         self.layers = nn.ModuleList()
@@ -97,7 +98,7 @@ class DGRec(BaseGraphModel):
         self.a = torch.nn.Parameter(torch.randn(self.args.embed_size))#32
 
     def build_layer(self, idx):
-        return DGRecLayer(self.args)
+        return DGRecLayer(self.args,self.dataloader)
 
     def layer_attention(self, ls, W, a):
         tensor_layers = torch.stack(ls, dim = 0)#2 76000 32
@@ -129,7 +130,7 @@ class BasetestRec(BaseGraphModel):
 
         self.attention_experts=TargetAttention(args)  
     def build_layer(self, idx):
-        return BasetestLayer(self.args)
+        return BasetestLayer(self.args,self.dataloader)
 
     def get_embedding(self):
         user_embed = [self.user_embedding]
@@ -224,7 +225,7 @@ class MOERec(BaseGraphModel):
             return torch.tensor([0], device=x.device, dtype=x.dtype)
         return x.float().var() / (x.float().mean()**2 + eps)    
     def build_layer(self, idx):
-        return BasetestLayer(self.args)
+        return BasetestLayer(self.args,self.dataloader)
 
     def get_embedding(self):
         user_embed = [self.user_embedding]

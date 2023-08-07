@@ -11,7 +11,7 @@ import math
 import random
 
 class BaseLayer(nn.Module):
-    def __init__(self, args):
+    def __init__(self, args, dataloader):
         super().__init__()
         self.k = args.k
         self.sigma = args.sigma
@@ -68,7 +68,7 @@ class BaseLayer(nn.Module):
             return rst
 
 class DGRecLayer(nn.Module):
-    def __init__(self, args):
+    def __init__(self, args, dataloader):
         super().__init__()
         self.k = args.k
         self.sigma = args.sigma
@@ -138,11 +138,13 @@ class DGRecLayer(nn.Module):
             rst = rst * norm
             return rst
 class MOERecLayer(nn.Module):
-    def __init__(self, args):
+    def __init__(self, args, dataloader):
         super().__init__()
         self.k = args.k
         self.sigma = args.sigma
         self.gamma = args.gamma
+        self.cata_num=dataloader.category_num
+        self.cata_embedding = torch.nn.Parameter(torch.randn(self.cata_num, self.hid_dim))
         self.poly_attn=PolyAttention(args)
 
     def similarity_matrix(self, X, sigma = 1.0, gamma = 2.0):
