@@ -236,12 +236,14 @@ class MOERecLayer(nn.Module):
                 return rst
             
 class BasetestLayer(nn.Module):
-    def __init__(self, args):
+    def __init__(self, args,dataloader):
         super().__init__()
         self.k = args.k
         self.sigma = args.sigma
         self.gamma = args.gamma
         self.poly_attn=PolyAttention(args)
+        self.cata_num=dataloader.category_num
+        self.cata_embedding = torch.nn.Parameter(torch.randn(self.cata_num, self.hid_dim))
         self.sub=args.sub
 
     def similarity_matrix(self, X, sigma = 1.0, gamma = 2.0):
@@ -329,8 +331,11 @@ class BasetestLayer(nn.Module):
 
     def sub_reduction_item_user(self, nodes):
         # -1 indicate user-> node, which does not include category information
+        device = nodes.mailbox['m'].device
         mail = nodes.mailbox['m']
         batch_size, neighbor_size, feature_size = mail.shape
+        cat=nodes.mailbox['c']
+        cat_emb=self.cata_embedding[torch.squeeze(cat,dim=2).to(device)]
 
         if (-1 in nodes.mailbox['c']) or nodes.mailbox['m'].shape[1] <= self.k:
             
@@ -345,8 +350,9 @@ class BasetestLayer(nn.Module):
             else:
                 neighbors = self.submodular_selection_feature(nodes)     
             mail = mail[th.arange(batch_size, dtype = th.long, device = mail.device).unsqueeze(-1), neighbors]
-            muti_int=self.poly_attn(embeddings=mail, attn_mask=0, bias=None)#12 20 32
-            #muti_int=muti_int.sum(dim=1)
+            cat_emb=cat_emb[torch.arange(batch_size, dtype = torch.long, device = mail.device).unsqueeze(-1), neighbors]
+            bias=pairwise_cosine_similarity(cat_emb,cat_emb)
+            muti_int=self.poly_attn(embeddings=mail, attn_mask=0, bias=bias)#12 20 32
             mail = mail.sum(dim = 1)
       
         return {'h': mail,'i':muti_int}
@@ -393,7 +399,25 @@ class BasetestLayer(nn.Module):
                 return rst,muti_int
             else:
                 return rst   
-                 
+            
+def pairwise_cosine_similarity(x, y, zero_diagonal: bool = False):
+    r"""
+    Calculates the pairwise cosine similarity matrix
+
+    Args:
+        x: tensor of shape ``(batch_size, M, d)``
+        y: tensor of shape ``(batch_size, N, d)``
+        zero_diagonal: determines if the diagonal of the distance matrix should be set to zero
+
+    Returns:
+        A tensor of shape ``(batch_size, M, N)``
+    """
+    x_norm = torch.linalg.norm(x, dim=2, keepdim=True)
+    y_norm = torch.linalg.norm(y, dim=2, keepdim=True)
+    distance = torch.matmul(torch.div(x, x_norm), torch.div(y, y_norm).permute(0, 2, 1))
+    
+
+    return distance
 class PolyAttention(nn.Module):
     r"""
     Implementation of Poly attention scheme that extracts `K` attention vectors through `K` additive attentions
@@ -410,7 +434,7 @@ class PolyAttention(nn.Module):
         super().__init__()
         self.linear = nn.Linear(in_features=args.embed_size, out_features=args.context_code_dim, bias=False)#32 32
         self.context_codes = nn.Parameter(nn.init.xavier_uniform_(th.empty(args.num_context_codes, args.context_code_dim),
-                                                                  gain=nn.init.calculate_gain('tanh')))
+                                                                  gain=nn.init.calculate_gain('tanh')))#32 32
 
     def forward(self, embeddings, attn_mask, bias):
         r"""
@@ -424,11 +448,11 @@ class PolyAttention(nn.Module):
         Returns:
             A tensor of shape ``(batch_size, num_context_codes, embed_dim)``#12 32 32
         """
-        proj = th.tanh(self.linear(embeddings))
+        proj = th.tanh(self.linear(embeddings))#12 20 32
         if bias is None:
-            weights = th.matmul(proj, self.context_codes.T)
+            weights = th.matmul(proj, self.context_codes.T)#12 20 32*32 32--12 20 32
         else:
-            bias = bias.mean(dim=2).unsqueeze(dim=2)
+            bias = bias.mean(dim=2).unsqueeze(dim=2)#12 20 1
             weights = th.matmul(proj, self.context_codes.T) + bias
         weights = weights.permute(0, 2, 1)
         

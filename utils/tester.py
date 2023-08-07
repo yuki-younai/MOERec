@@ -105,7 +105,7 @@ class Tester(object):
                 for metric in self.metrics:
                     results[k][metric] += results_batch[metric]
             for i in range(len(users)):
-                his=self.train_dic[users[i]]
+                his=self.test_dic[users[i]]
                 uid=users[i]
                 for j in range(len(his)):
                     items=[]
