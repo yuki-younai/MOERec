@@ -443,7 +443,7 @@ class PolyAttention(nn.Module):
         Args:
             embeddings: tensor of shape ``(batch_size, his_length, embed_dim)``#12 20 32
             attn_mask: tensor of shape ``(batch_size, his_length)``
-            bias: tensor of shape ``(batch_size, his_length, num_candidates)``
+            bias: tensor of shape ``(batch_size, his_length, num_candidates)``12 20 20
 
         Returns:
             A tensor of shape ``(batch_size, num_context_codes, embed_dim)``#12 32 32
@@ -451,13 +451,14 @@ class PolyAttention(nn.Module):
         proj = th.tanh(self.linear(embeddings))#12 20 32
         if bias is None:
             weights = th.matmul(proj, self.context_codes.T)#12 20 32*32 32--12 20 32
+            weights = weights.permute(0, 2, 1)#12 32 20
+            weights = F.softmax(weights, dim=2)
         else:
             bias = bias.mean(dim=2).unsqueeze(dim=2)#12 20 1
             weights = th.matmul(proj, self.context_codes.T) + bias
-        weights = weights.permute(0, 2, 1)
-        
-        weights = F.softmax(weights, dim=2)
-        poly_repr = th.matmul(weights, embeddings)
+            weights = weights.permute(0, 2, 1)
+            weights = F.softmax(weights, dim=2)
+        poly_repr = th.matmul(weights, embeddings)#12 32 20*12
 
         return poly_repr
 
