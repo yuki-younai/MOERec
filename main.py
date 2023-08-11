@@ -51,7 +51,9 @@ if __name__ == '__main__':
             graph_neg = construct_negative_graph(graph_pos, ('user', 'rate', 'item'))
             loss_moe=0
             if args.moe:
-                 score_pos, score_neg,loss_moe = model(graph_pos, graph_neg)
+                 score_pos, score_neg,loss_moe ,bias= model(graph_pos, graph_neg)
+            elif args.model=='test':
+                 score_pos, score_neg ,bias= model(graph_pos, graph_neg)
             else:
                  score_pos, score_neg = model(graph_pos, graph_neg)
                  
@@ -74,7 +76,9 @@ if __name__ == '__main__':
         graph_val_pos = dataloader.val_graph
         graph_val_neg = construct_negative_graph(graph_val_pos, ('user', 'rate', 'item'))
         if args.moe:
-              score_pos, score_neg,loss_moe = model(graph_val_pos, graph_val_neg)
+              score_pos, score_neg,loss_moe,bias = model(graph_val_pos, graph_val_neg)
+        elif args.model=='test':
+              score_pos, score_neg ,bias= model(graph_pos, graph_neg)
         else:
               score_pos, score_neg= model(graph_val_pos, graph_val_neg)
 

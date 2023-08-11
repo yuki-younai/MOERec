@@ -74,7 +74,9 @@ class Tester(object):
     def test(self):
         results = {}
         if self.args.moe:
-              h,loss= self.model.get_embedding()
+              h,loss,bias= self.model.get_embedding()
+        elif self.args.model=='test':
+              h,bias= self.model.get_embedding()
         else:
               h= self.model.get_embedding()
         count = 0

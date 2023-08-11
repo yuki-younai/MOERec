@@ -68,7 +68,9 @@ class BaseGraphModel(nn.Module):
 
     def forward(self, graph_pos, graph_neg):
         if self.args.moe:
-             h,loss = self.get_embedding()
+             h,loss,bias = self.get_embedding()
+        elif self.args.model=='test':
+            h,bias=self.get_embedding()
         else:
              h = self.get_embedding()
 
@@ -76,7 +78,9 @@ class BaseGraphModel(nn.Module):
         score_neg = self.predictor(graph_neg, h, 'rate')
 
         if self.args.moe:
-             return score_pos, score_neg,loss
+             return score_pos, score_neg,loss,bias
+        elif self.args.model=='test':
+             return score_pos, score_neg,loss,bias
         else:
              return score_pos, score_neg
 
@@ -140,7 +144,7 @@ class BasetestRec(BaseGraphModel):
         for layer in self.layers:
 
             h_item = layer(self.graph, h, ('user', 'rate', 'item'))
-            h_user,muti_int = layer(self.graph, h, ('item', 'rated by', 'user'))
+            h_user,muti_int ,bias= layer(self.graph, h, ('item', 'rated by', 'user'))
             h_user=self.attention_experts(muti_int)
             #h_user=muti_int.sum(dim=1)
             h = {'user': h_user, 'item': h_item}
@@ -148,7 +152,7 @@ class BasetestRec(BaseGraphModel):
         
         h = {'user': h_user, 'item': h_item}
 
-        return h
+        return h,bias
 
 
 
@@ -235,7 +239,7 @@ class MOERec(BaseGraphModel):
         for layer in self.layers:
 
             h_item = layer(self.graph, h, ('user', 'rate', 'item'))
-            h_user,muti_int = layer(self.graph, h, ('item', 'rated by', 'user'))
+            h_user,muti_int,bias = layer(self.graph, h, ('item', 'rated by', 'user'))
             #h_user=self.attention_experts(muti_int)
             #h_user=muti_int.sum(dim=1)
             h = {'user': h_user, 'item': h_item}
@@ -255,7 +259,7 @@ class MOERec(BaseGraphModel):
         
         h = {'user': expert_outputs, 'item': h_item}
 
-        return h,loss
+        return h,loss,bias
                 
 class TargetAttention(nn.Module):
     def __init__(self, args):

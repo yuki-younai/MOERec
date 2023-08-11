@@ -243,6 +243,7 @@ class BasetestLayer(nn.Module):
         self.gamma = args.gamma
         self.poly_attn=PolyAttention(args)
         self.cata_num=dataloader.category_num
+        self.hid_dim=args.hidden_size
         self.cata_embedding = torch.nn.Parameter(torch.randn(self.cata_num, self.hid_dim))
         self.sub=args.sub
 
@@ -260,6 +261,68 @@ class BasetestLayer(nn.Module):
         result = [x / sum(result) for x in result]
         result=[math.ceil(x*self.k) for x in result]
         return result
+    def pairwise_cosine_similarity(x, y, zero_diagonal: bool = False):
+        r"""
+        Calculates the pairwise cosine similarity matrix
+
+        Args:
+            x: tensor of shape ``(batch_size, M, d)``
+            y: tensor of shape ``(batch_size, N, d)``
+            zero_diagonal: determines if the diagonal of the distance matrix should be set to zero
+
+        Returns:
+            A tensor of shape ``(batch_size, M, N)``
+        """
+        x_norm = torch.linalg.norm(x, dim=1, keepdim=True)
+        y_norm = torch.linalg.norm(y, dim=1, keepdim=True)
+        distance = torch.matmul(torch.div(x, x_norm), torch.div(y, y_norm).permute(1, 0))
+
+
+        return distance
+    def submodular_selection_sim(self, nodes):
+
+        mail = nodes.mailbox['m']
+        batch_size, neighbor_size, feature_size = mail.shape
+        cat=nodes.mailbox['c']
+        user_select=[]
+        for i in range(batch_size):
+            select=[]
+            line=cat[i].reshape(1,-1)[0].tolist()
+            unique_elements = list(set(line))
+            unique_cat=self.cata_embedding[unique_elements]
+            sim=pairwise_cosine_similarity(unique_cat,unique_cat).mean(dim=1)
+            sim=sim.tolist()
+            max_sim=round(max(sim),2)
+            min_sim=round(min(sim),2)
+            if max_sim==min_sim:
+                 max_sim=round(2*max_sim,2)
+            moth=round(max_sim-min_sim,2)
+            element_indices = {}
+            for index, element in enumerate(line):
+                if element in element_indices:
+                   element_indices[element].append(index)
+                else:
+                   element_indices[element] = [index]
+            element_counts = [line.count(element) for element in unique_elements]
+            sorted_indices = sorted(range(len(element_counts)), key=lambda i: element_counts[i], reverse=True)
+            for i in sorted_indices:
+               my_list=element_indices[unique_elements[i]]
+               random_elements=random.choices(my_list, k=math.ceil(0.8*round((max_sim-sim[i])/(moth),2)*len(my_list)))
+               select=select+random_elements
+               if len(select)>=self.k:
+                   break
+            if len(select)>=self.k:
+                select=select[0:self.k]
+            else:
+                while len(select)<self.k:
+                      select=select+select
+                select=select[0:self.k]      
+            user_select.append(select)
+            
+        user_select=torch.tensor(user_select)
+
+        return user_select
+
 
     def submodular_selection_moe(self, nodes):
         
@@ -347,15 +410,17 @@ class BasetestLayer(nn.Module):
                 neighbors = self.submodular_selection_randn(nodes)
             elif self.sub=="moe":
                 neighbors = self.submodular_selection_moe(nodes)
+            elif self.sub=="sim":
+                neighbors = self.submodular_selection_sim(nodes)
             else:
                 neighbors = self.submodular_selection_feature(nodes)     
             mail = mail[th.arange(batch_size, dtype = th.long, device = mail.device).unsqueeze(-1), neighbors]
             cat_emb=cat_emb[torch.arange(batch_size, dtype = torch.long, device = mail.device).unsqueeze(-1), neighbors]
-            bias=pairwise_cosine_similarity(cat_emb,cat_emb)
-            muti_int=self.poly_attn(embeddings=mail, attn_mask=0, bias=bias)#12 20 32
+            bias=pairwise_cosine_similarity(cat_emb,cat_emb).mean(dim=2)
+            muti_int=self.poly_attn(embeddings=mail, attn_mask=0, bias=None)#12 20 32
             mail = mail.sum(dim = 1)
       
-        return {'h': mail,'i':muti_int}
+        return {'h': mail,'i':muti_int,'b':bias}
     
     def sub_reduction_user_item(self, nodes):
         # -1 indicate user-> node, which does not include category information
@@ -386,9 +451,9 @@ class BasetestLayer(nn.Module):
             if src=='item':
                 graph.update_all(self.category_aggregation, self.sub_reduction_item_user, etype = etype)
                 muti_int=graph.nodes[dst].data['i']
+                bias=graph.nodes[dst].data['b']
             else:
                 graph.update_all(self.category_aggregation, self.sub_reduction_user_item, etype = etype)
-            
             rst = graph.nodes[dst].data['h']
             degs = graph.in_degrees(etype = etype).float().clamp(min = 1)
             norm = th.pow(degs, -0.5)
@@ -396,7 +461,7 @@ class BasetestLayer(nn.Module):
             norm = th.reshape(norm, shp)
             rst = rst * norm
             if src=='item':
-                return rst,muti_int
+                return rst,muti_int,bias
             else:
                 return rst   
             
