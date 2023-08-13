@@ -261,7 +261,7 @@ class BasetestLayer(nn.Module):
         result = [x / sum(result) for x in result]
         result=[math.ceil(x*self.k) for x in result]
         return result
-    def pairwise_cosine_similarity(x, y, zero_diagonal: bool = False):
+    def pairwise_cosine_similarity_sim(self,x, y):
         r"""
         Calculates the pairwise cosine similarity matrix
 
@@ -279,6 +279,24 @@ class BasetestLayer(nn.Module):
 
 
         return distance
+    def pairwise_cosine_similarity(self,x, y):
+        r"""
+        Calculates the pairwise cosine similarity matrix
+
+        Args:
+            x: tensor of shape ``(batch_size, M, d)``
+            y: tensor of shape ``(batch_size, N, d)``
+            zero_diagonal: determines if the diagonal of the distance matrix should be set to zero
+
+        Returns:
+            A tensor of shape ``(batch_size, M, N)``
+        """
+        x_norm = torch.linalg.norm(x, dim=2, keepdim=True)
+        y_norm = torch.linalg.norm(y, dim=2, keepdim=True)
+        distance = torch.matmul(torch.div(x, x_norm), torch.div(y, y_norm).permute(0,2,1))
+
+
+        return distance
     def submodular_selection_sim(self, nodes):
 
         mail = nodes.mailbox['m']
@@ -290,7 +308,7 @@ class BasetestLayer(nn.Module):
             line=cat[i].reshape(1,-1)[0].tolist()
             unique_elements = list(set(line))
             unique_cat=self.cata_embedding[unique_elements]
-            sim=pairwise_cosine_similarity(unique_cat,unique_cat).mean(dim=1)
+            sim=self.pairwise_cosine_similarity_sim(unique_cat,unique_cat).mean(dim=1)
             sim=sim.tolist()
             max_sim=round(max(sim),2)
             min_sim=round(min(sim),2)
@@ -417,7 +435,7 @@ class BasetestLayer(nn.Module):
                 neighbors = self.submodular_selection_feature(nodes)     
             mail = mail[th.arange(batch_size, dtype = th.long, device = mail.device).unsqueeze(-1), neighbors]
             cat_emb=cat_emb[torch.arange(batch_size, dtype = torch.long, device = mail.device).unsqueeze(-1), neighbors]
-            bias=pairwise_cosine_similarity(cat_emb,cat_emb).mean(dim=2).mean(dim=1).unsqueeze(dim=-1)
+            bias=self.pairwise_cosine_similarity(cat_emb,cat_emb).mean(dim=2).mean(dim=1).unsqueeze(dim=-1)
             muti_int=self.poly_attn(embeddings=mail, attn_mask=0, bias=None)#12 20 32
             mail = mail.sum(dim = 1)
       
