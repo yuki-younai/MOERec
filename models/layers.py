@@ -404,6 +404,7 @@ class BasetestLayer(nn.Module):
             
             muti_int=self.poly_attn(embeddings=mail, attn_mask=0, bias=None)
             #muti_int=muti_int.sum(dim=1)
+            bias=torch.zeros(batch_size,1).to(device)
             mail=mail.sum(dim=1)
         else:
             if self.sub=="rand":
@@ -416,7 +417,7 @@ class BasetestLayer(nn.Module):
                 neighbors = self.submodular_selection_feature(nodes)     
             mail = mail[th.arange(batch_size, dtype = th.long, device = mail.device).unsqueeze(-1), neighbors]
             cat_emb=cat_emb[torch.arange(batch_size, dtype = torch.long, device = mail.device).unsqueeze(-1), neighbors]
-            bias=pairwise_cosine_similarity(cat_emb,cat_emb).mean(dim=2)
+            bias=pairwise_cosine_similarity(cat_emb,cat_emb).mean(dim=2).mean(dim=1).unsqueeze(dim=-1)
             muti_int=self.poly_attn(embeddings=mail, attn_mask=0, bias=None)#12 20 32
             mail = mail.sum(dim = 1)
       
