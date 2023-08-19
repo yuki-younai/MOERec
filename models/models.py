@@ -68,21 +68,18 @@ class BaseGraphModel(nn.Module):
 
     def forward(self, graph_pos, graph_neg):
         if self.args.moe:
-             h,loss,bias = self.get_embedding()
-        elif self.args.model=='test':
-            h,bias=self.get_embedding()
+             h,loss= self.get_embedding()
         else:
-             h = self.get_embedding()
+            h=self.get_embedding()
+      
 
         score_pos = self.predictor(graph_pos, h, 'rate')
         score_neg = self.predictor(graph_neg, h, 'rate')
 
         if self.args.moe:
-             return score_pos, score_neg,loss,bias
-        elif self.args.model=='test':
-             return score_pos, score_neg,loss,bias
+             return score_pos, score_neg,loss
         else:
-             return score_pos, score_neg
+             return score_pos, score_neg,loss
 
     def get_score(self, h, users):
             user_embed = h['user'][users]
@@ -144,15 +141,14 @@ class BasetestRec(BaseGraphModel):
         for layer in self.layers:
 
             h_item = layer(self.graph, h, ('user', 'rate', 'item'))
-            h_user,muti_int ,bias= layer(self.graph, h, ('item', 'rated by', 'user'))
+            h_user,muti_int= layer(self.graph, h, ('item', 'rated by', 'user'))
             h_user=self.attention_experts(muti_int)
-            #h_user=muti_int.sum(dim=1)
             h = {'user': h_user, 'item': h_item}
 
         
         h = {'user': h_user, 'item': h_item}
 
-        return h,bias
+        return h
 
 
 
@@ -239,7 +235,7 @@ class MOERec(BaseGraphModel):
         for layer in self.layers:
 
             h_item = layer(self.graph, h, ('user', 'rate', 'item'))
-            h_user,muti_int,bias = layer(self.graph, h, ('item', 'rated by', 'user'))
+            h_user,muti_int= layer(self.graph, h, ('item', 'rated by', 'user'))
             #h_user=self.attention_experts(muti_int)
             #h_user=muti_int.sum(dim=1)
             h = {'user': h_user, 'item': h_item}
@@ -259,7 +255,7 @@ class MOERec(BaseGraphModel):
         
         h = {'user': expert_outputs, 'item': h_item}
 
-        return h,loss,bias
+        return h,loss
                 
 class TargetAttention(nn.Module):
     def __init__(self, args):

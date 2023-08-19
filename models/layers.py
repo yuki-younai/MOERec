@@ -416,13 +416,11 @@ class BasetestLayer(nn.Module):
         mail = nodes.mailbox['m']
         batch_size, neighbor_size, feature_size = mail.shape
         cat=nodes.mailbox['c']
-        cat_emb=self.cata_embedding[torch.squeeze(cat,dim=2).to(device)]
+       
 
         if (-1 in nodes.mailbox['c']) or nodes.mailbox['m'].shape[1] <= self.k:
             
-            muti_int=self.poly_attn(embeddings=mail, attn_mask=0, bias=None)
-            #muti_int=muti_int.sum(dim=1)
-            bias=torch.zeros(batch_size,1).to(device)
+            muti_int=self.poly_attn(embeddings=mail, attn_mask=0, bias=None)   
             mail=mail.sum(dim=1)
         else:
             if self.sub=="rand":
@@ -434,12 +432,10 @@ class BasetestLayer(nn.Module):
             else:
                 neighbors = self.submodular_selection_feature(nodes)     
             mail = mail[th.arange(batch_size, dtype = th.long, device = mail.device).unsqueeze(-1), neighbors]
-            cat_emb=cat_emb[torch.arange(batch_size, dtype = torch.long, device = mail.device).unsqueeze(-1), neighbors]
-            bias=self.pairwise_cosine_similarity(cat_emb,cat_emb).mean(dim=2).mean(dim=1).unsqueeze(dim=-1)
             muti_int=self.poly_attn(embeddings=mail, attn_mask=0, bias=None)#12 20 32
             mail = mail.sum(dim = 1)
       
-        return {'h': mail,'i':muti_int,'b':bias}
+        return {'h': mail,'i':muti_int}
     
     def sub_reduction_user_item(self, nodes):
         # -1 indicate user-> node, which does not include category information
@@ -470,7 +466,6 @@ class BasetestLayer(nn.Module):
             if src=='item':
                 graph.update_all(self.category_aggregation, self.sub_reduction_item_user, etype = etype)
                 muti_int=graph.nodes[dst].data['i']
-                bias=graph.nodes[dst].data['b']
             else:
                 graph.update_all(self.category_aggregation, self.sub_reduction_user_item, etype = etype)
             rst = graph.nodes[dst].data['h']
@@ -480,7 +475,7 @@ class BasetestLayer(nn.Module):
             norm = th.reshape(norm, shp)
             rst = rst * norm
             if src=='item':
-                return rst,muti_int,bias
+                return rst,muti_int
             else:
                 return rst   
             
