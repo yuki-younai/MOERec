@@ -79,7 +79,7 @@ class BaseGraphModel(nn.Module):
         if self.args.moe:
              return score_pos, score_neg,loss
         else:
-             return score_pos, score_neg,loss
+             return score_pos, score_neg
 
     def get_score(self, h, users):
             user_embed = h['user'][users]
