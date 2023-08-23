@@ -236,8 +236,6 @@ class MOERec(BaseGraphModel):
 
             h_item = layer(self.graph, h, ('user', 'rate', 'item'))
             h_user,muti_int= layer(self.graph, h, ('item', 'rated by', 'user'))
-            #h_user=self.attention_experts(muti_int)
-            #h_user=muti_int.sum(dim=1)
             h = {'user': h_user, 'item': h_item}
 
         gate,load=self.noisy_top_k_gating(muti_int.view(muti_int.shape[0],-1),True)
