@@ -264,11 +264,11 @@ class BasetestLayer(nn.Module):
         sim_min=min(sim_d)
         final=[]
         for i in range(len(num_d)):
-            D_max=math.sqrt((sim_d[i]-sim_max)**2+(num_d[i]-num_max)**2)
-            D_min=math.sqrt((sim_d[i]-sim_min)**2+(num_d[i]-num_min)**2)
-            final.append(D_min/(D_max+D_min))
+            D_max=round(math.sqrt((sim_d[i]-sim_max)**2+(num_d[i]-num_max)**2)+0.001,3)
+            D_min=round(math.sqrt((sim_d[i]-sim_min)**2+(num_d[i]-num_min)**2)+0.001,3)
+            final.append(round(D_min/(D_max+D_min),3))
         final_sum=sum(final)
-        final=[j/final_sum for j in final]    
+        final=[round(j/final,3)_sum for j in final]    
         result=[math.ceil(x*self.k) for x in final]
         return result
 
@@ -313,10 +313,10 @@ class BasetestLayer(nn.Module):
                    sim_indices[element]=[sim_temp[index]]
             sim_d=[]
             for j in unique_elements:
-                sim_d.append(sum(sim_indices[j])/len(sim_indices[j]))
+                sim_d.append(round(sum(sim_indices[j])/len(sim_indices[j]),3))
             cat_number=self.cate_topsis(element_counts,sim_d)
             for i in range(len(element_counts)):
-               my_list=element_indices[element_counts[i]]
+               my_list=element_indices[unique_elements[i]]
                random_elements=random.choices(my_list, k=cat_number[i])
                select=select+random_elements
                if len(select)>=self.k:
