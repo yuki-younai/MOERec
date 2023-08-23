@@ -252,14 +252,24 @@ class BasetestLayer(nn.Module):
         sims = th.exp(-dists / (sigma * dists.mean(dim = -1).mean(dim = -1).reshape(-1, 1, 1)))
         return sims
     
-    def cate_topsis(self,numbers):
-        square_sum=math.sqrt(sum(i**2 for i in numbers))
-        numbers = [math.exp(x/square_sum) for x in numbers]
-        ma=max(numbers)
-        mi=0.5*min(numbers)
-        result=[(x-mi) /(ma-mi) for x in numbers]
-        result = [x / sum(result) for x in result]
-        result=[math.ceil(x*self.k) for x in result]
+    def cate_topsis(self,num_d,sim_d):
+        square_sum=math.sqrt(sum(i**2 for i in num_d))
+        num_d = [math.exp(x/square_sum) for x in num_d]
+        ma=max(num_d)
+        mi=0.5*min(num_d)
+        num_d=[(x-mi) /(ma-mi) for x in num_d]
+        num_max=max(num_d)
+        num_min=min(num_d)
+        sim_max=max(sim_d)
+        sim_min=min(sim_d)
+        final=[]
+        for i in range(len(num_d)):
+            D_max=math.sqrt((sim_d[i]-sim_max)**2+(num_d[i]-num_max)**2)
+            D_min=math.sqrt((sim_d[i]-sim_min)**2+(num_d[i]-num_min)**2)
+            final.append(D_min/(D_max+D_min))
+        final_sum=sum(final)
+        final=[j/final_sum for j in final]    
+        result=[math.ceil(x*self.k) for x in final]
         return result
 
     def pairwise_cosine_similarity(self,x, y):
@@ -293,25 +303,22 @@ class BasetestLayer(nn.Module):
             unique_elements = list(set(line))
             element_counts = [line.count(element) for element in unique_elements]
             element_indices = {}
+            sim_indices={}
             for index, element in enumerate(line):
                 if element in element_indices:
                    element_indices[element].append(index)
+                   sim_indices[element].append(sim_temp[index])
                 else:
                    element_indices[element] = [index]
-        
-            sorted_indices = sorted(range(len(element_counts)), key=lambda i: element_counts[i], reverse=True)
-            cat_number=self.cate_topsis(element_counts)
-            for i in sorted_indices:
-               my_list=element_indices[unique_elements[i]]
-               sim_list=sim_temp[my_list]
-               sim_sorted_indices = sorted(range(len(sim_list)), key=lambda i: sim_list[i], reverse=True)
-               sorted_list = [sim_sorted_indices[i] for i in sim_sorted_indices]
-               final_list=my_list[sorted_list]
-               if len(final_list)>=cat_number[i]:
-                   select=select+final_list[0:cat_number[i]]
-               else:
-                   random_elements=random.choices(my_list, k=cat_number[i])
-                   select=select+random_elements
+                   sim_indices[element]=[sim_temp[index]]
+            sim_d=[]
+            for j in unique_elements:
+                sim_d.append(sum(sim_indices[j])/len(sim_indices[j]))
+            cat_number=self.cate_topsis(element_counts,sim_d)
+            for i in range(len(element_counts)):
+               my_list=element_indices[element_counts[i]]
+               random_elements=random.choices(my_list, k=cat_number[i])
+               select=select+random_elements
                if len(select)>=self.k:
                    break
             if len(select)>=self.k:
