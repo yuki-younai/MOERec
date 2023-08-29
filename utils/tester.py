@@ -47,6 +47,8 @@ class Tester(object):
         self.cate = np.array(list(dataloader.category_dic.values()))
         self.metrics = args.metrics
         self.item_number=dataloader.item_number
+        self.cate_num=dataloader.cate_num
+        
 
     def judge(self, users, items):
 
@@ -106,6 +108,7 @@ class Tester(object):
 
                 for metric in self.metrics:
                     results[k][metric] += results_batch[metric]
+            cate_ndcg={}
             for i in range(len(users)):
                 his=self.test_dic[users[i]]
                 uid=users[i]
@@ -122,6 +125,10 @@ class Tester(object):
                     y_score=self.model.get_score_part(h,users[i],items)
                     y_score=y_score.tolist()
                     auc,mrr,ndcg5,ndcg10=compute_amn(y_true, y_score)  
+                    if self.cate_num[label] in cate_ndcg:
+                        cate_ndcg[self.cate_num[label]].append(ndcg10)
+                    else:
+                        cate_ndcg[self.cate_num[label]]=[ndcg10]
                     #ndcg_5
                     if uid in all_ndcg5.keys():
                         all_ndcg5[uid]
@@ -163,7 +170,14 @@ class Tester(object):
                         all_auc[uid]={}
                         all_auc[uid][label]=[auc]    
                     
-                    
+        output_file = 'output.txt'
+
+        # 打开文件以写入模式
+        with open(output_file, 'w') as f:
+            for i in cate_ndcg.keys():
+                f.write(str(i)+' '+sum(cate_ndcg[i])/len(cate_ndcg[i])+'\n')
+        f.close()
+
         #ndcg_5        
         ndcg5_std=[]      
         for key1,value1 in all_ndcg5.items():

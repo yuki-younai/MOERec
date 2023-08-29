@@ -36,7 +36,7 @@ class Dataloader(object):
         logging.info('reading category information')
         self.category_dic, self.category_num = self.read_category(self.category_path)
         logging.info('reading train data')
-        self.train_graph, self.dataloader_train ,self.train_dic= self.read_train_graph(self.train_path)
+        self.train_graph, self.dataloader_train ,self.train_dic,self.cate_num= self.read_train_graph(self.train_path)
         logging.info('reading valid data')
         self.val_graph, self.dataloader_val = self.read_val_graph(self.val_path)
         logging.info('reading test data')
@@ -99,12 +99,17 @@ class Dataloader(object):
     def read_train_graph(self, path):
         self.historical_dict = {}
         train_data = []
+        cate_num={}
         with open(path, 'r') as f:
             lines = f.readlines()
             for line in tqdm(lines):
                 line = line.strip().split(',')
                 user = int(line[0])
                 item = int(line[1])
+                if self.category_dic[item] in cate_num:
+                    cate_num[self.category_dic[item]]=cate_num[self.category_dic[item]]+1
+                else:
+                    cate_num[self.category_dic[item]]=1
                 train_data.append([user, item])
 
                 if user in self.historical_dict:
@@ -140,7 +145,7 @@ class Dataloader(object):
         #     num_workers = 4
         # )
 
-        return graph.to(self.device), dataloader,self.historical_dict
+        return graph.to(self.device), dataloader,self.historical_dict,cate_num
 
     def read_val_graph(self, path):
         val_data = []

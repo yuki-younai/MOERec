@@ -78,9 +78,9 @@ if __name__ == '__main__':
         if args.moe:
               score_pos, score_neg,loss_moe= model(graph_val_pos, graph_val_neg)
         else:
-              score_pos, score_neg= model(graph_pos, graph_neg)
+              score_pos, score_neg= model(graph_val_pos, graph_val_neg)
         
-
+        
         if not args.category_balance:
             loss_val = -(score_pos - score_neg).sigmoid().log().mean()+0.2*loss_moe
         else:
